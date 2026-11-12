@@ -1,0 +1,119 @@
+{
+  "phase": "before",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "image_count": 0,
+        "visible_alt_text": true
+      },
+      "reload_image_count": 0,
+      "persisted_inline_media_removed": true,
+      "image": null,
+      "safety": {
+        "raster": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "svg": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "html": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "link": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "srcset": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "script": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        }
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "image_count": 0,
+        "visible_alt_text": true
+      },
+      "reload_image_count": 0,
+      "persisted_inline_media_removed": true,
+      "image": null,
+      "safety": {
+        "raster": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "svg": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "html": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "link": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "srcset": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        },
+        "script": {
+          "src": null,
+          "href": null,
+          "onerror": false,
+          "srcset": false,
+          "script": false
+        }
+      },
+      "page_errors": []
+    }
+  ]
+}

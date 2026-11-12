@@ -1,0 +1,42 @@
+{
+  "baseline_commit": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "source_sha256": {
+    "static/js/markdown.js": "11b250f381c75b4751f56ee36ad0f66dcea50770518c47ec8e6e0adb28fa2708",
+    "static/js/chatRenderer.js": "40f21763c446de55eb6b38645ff7a6b1d0f2871c49bc628846f281159f7ba61f",
+    "tests/test_chat_tool_screenshot_xss.py": "753d56c74aaf12226aa92c23d5eace09f00dfb6eb1446ac3ef7c60a8edb3cdc5",
+    "tests/test_markdown_raster_data_images.py": "9acb70eefc7400c7b10f4940dabd80c02c598645d697da205e390335528a057a"
+  },
+  "screenshots_sha256": {
+    "before-desktop.png": "82cfd795ef56a37120da8908a29552f7b2037e43201b408fb4482a8678594558",
+    "before-mobile.png": "d907adee74652a32cde7b7e658080c9191e082cc8c11cf99291062dfc1ff5d76",
+    "after-desktop.png": "02e0a2ae6acfc16f723d6f938a9ce96cf845be6b106dfcdebb5a57b195388e6f",
+    "after-mobile.png": "5fa3ec0f6afbe507726f4dee39656e32ec705e8fcc43922dff9a43373f66cdcf"
+  },
+  "provider_requests_per_phase": 2,
+  "provider_stream_values": [
+    true,
+    true
+  ],
+  "shutdown": {
+    "before": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "after": {
+      "app_exit": -15,
+      "children_left": []
+    }
+  },
+  "provenance": {
+    "before": {
+      "app_file": "/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/app.py",
+      "base_dir": "/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/",
+      "requested_source": "/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline"
+    },
+    "after": {
+      "app_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/app.py",
+      "base_dir": "/Users/red/Documents/ChatGPT/ODY/odysseus/",
+      "requested_source": "/Users/red/Documents/ChatGPT/ODY/odysseus"
+    }
+  }
+}
