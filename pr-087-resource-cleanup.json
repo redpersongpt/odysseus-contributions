@@ -1,0 +1,34 @@
+{
+  "before-desktop": {
+    "tmux_list_exit": 1,
+    "tmux_list_stderr": "no server running on /Users/red/Documents/ChatGPT/ODY/.runtime/cookbook-queue-before-desktop/tmux.sock",
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    }
+  },
+  "before-mobile": {
+    "tmux_list_exit": 1,
+    "tmux_list_stderr": "no server running on /Users/red/Documents/ChatGPT/ODY/.runtime/cookbook-queue-before-mobile/tmux.sock",
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    }
+  },
+  "after-desktop": {
+    "tmux_list_exit": 1,
+    "tmux_list_stderr": "no server running on /Users/red/Documents/ChatGPT/ODY/.runtime/cookbook-queue-after-desktop/tmux.sock",
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    }
+  },
+  "after-mobile": {
+    "tmux_list_exit": 1,
+    "tmux_list_stderr": "no server running on /Users/red/Documents/ChatGPT/ODY/.runtime/cookbook-queue-after-mobile/tmux.sock",
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    }
+  }
+}

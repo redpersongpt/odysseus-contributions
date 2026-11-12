@@ -1,0 +1,110 @@
+{
+  "phase": "after",
+  "viewport": "desktop",
+  "submission": "public download controller with owned catalog metadata; native catalog Download click not verified",
+  "first_session": "cookbook-bb705426",
+  "placeholder": "queue-mwe74x9m",
+  "observed_pending_status": "queued",
+  "backend_placeholder": {
+    "session_id": "queue-mwe74x9m",
+    "type": "download",
+    "model": "second \u00b7 Q4_K_M",
+    "status": "stopped",
+    "progress": "",
+    "phase": "",
+    "diagnosis": null,
+    "output_tail": "",
+    "exit_code": null,
+    "cmd": "",
+    "tps": null,
+    "reqs": null,
+    "pct": null,
+    "remote": "local"
+  },
+  "downloads": [
+    {
+      "status": 200,
+      "request": {
+        "repo_id": "owned/first",
+        "backend": "llamacpp",
+        "include": "owned-Q4_K_M.gguf",
+        "disable_hf_transfer": true
+      },
+      "reply": {
+        "ok": true,
+        "session_id": "cookbook-bb705426",
+        "remote": "local"
+      }
+    },
+    {
+      "status": 200,
+      "request": {
+        "repo_id": "owned/second",
+        "backend": "llamacpp",
+        "include": "owned-Q4_K_M.gguf",
+        "disable_hf_transfer": true
+      },
+      "reply": {
+        "ok": true,
+        "session_id": "cookbook-a89ef9ef",
+        "remote": "local"
+      }
+    }
+  ],
+  "transitioned": {
+    "id": "cookbook-a89ef9ef",
+    "sessionId": "cookbook-a89ef9ef",
+    "name": "second \u00b7 Q4_K_M",
+    "type": "download",
+    "status": "running",
+    "output": "",
+    "ts": 1794527158378,
+    "payload": {
+      "repo_id": "owned/second",
+      "backend": "llamacpp",
+      "include": "owned-Q4_K_M.gguf",
+      "disable_hf_transfer": true
+    },
+    "remoteHost": "",
+    "remoteServerKey": "",
+    "remoteServerName": "",
+    "sshPort": "",
+    "platform": "",
+    "_startLaunched": true
+  },
+  "transition_method": "explicit Start now click; automatic queue pumping not fixed",
+  "page_errors": [],
+  "artifact_count": 2,
+  "artifact_sha256": "af12ba7d4bd91e72c5733a08180265b9ca251d68272bc0fc7e10d115225a321c",
+  "artifact_size": 262148,
+  "hub_requests": [
+    {
+      "method": "GET",
+      "path": "/api/models/owned/first/revision/main"
+    },
+    {
+      "method": "HEAD",
+      "path": "/owned/first/resolve/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/owned-Q4_K_M.gguf"
+    },
+    {
+      "method": "GET",
+      "path": "/owned/first/resolve/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/owned-Q4_K_M.gguf"
+    },
+    {
+      "method": "GET",
+      "path": "/api/models/owned/second/revision/main"
+    },
+    {
+      "method": "HEAD",
+      "path": "/owned/second/resolve/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb/owned-Q4_K_M.gguf"
+    },
+    {
+      "method": "GET",
+      "path": "/owned/second/resolve/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb/owned-Q4_K_M.gguf"
+    }
+  ],
+  "provenance": {
+    "app_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/app.py",
+    "source": "/Users/red/Documents/ChatGPT/ODY/odysseus"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "baseline": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "fixed_commit": "4252fba11d11efb36503e04a2666e4d7f6733051",
+  "source_sha256": {
+    "static/js/cookbookRunning.js": "0ab95384b78cd94b3dad5a375d2e2066f1e7e1018cb4504faa905e5da546632f",
+    "tests/helpers/cookbook_queued_placeholders.mjs": "f8880eb5ef08db1c79a666d1617164229c9e4484d7704aa903c5b9e12dfe75cd",
+    "tests/test_cookbook_queued_placeholders_js.py": "60b93c33b9a9aa2cfbe279d88d6058bd8d10a7a11e940f505e9d825a8d0a8a3c"
+  },
+  "tmux_version": "3.5a",
+  "tmux_binary_sha256": "377242991eb929af34a7d113c22fa9f949b50c94cbaf6ebc302583c7ebf45345",
+  "hf_cli_version": "0.36.0",
+  "fixture_artifact_bytes": 262148,
+  "fixture_artifact_sha256": "af12ba7d4bd91e72c5733a08180265b9ca251d68272bc0fc7e10d115225a321c",
+  "automatic_queue_advancement_fixed": false,
+  "separate_issue": "https://github.com/odysseus-dev/odysseus/issues/4515"
+}
