@@ -1,0 +1,47 @@
+{
+  "baseline": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "fixed_commit": "22801bd15a15c165d3a21111eb818b2105f00d56",
+  "fixed_sha256": {
+    "src/embeddings.py": "161d9cbb8a9fff95bdc0193a02b9f999b0829c2b01757826303286be143407d2",
+    "tests/test_embeddings_client.py": "79042cfc8b3725d5f3ec85489e54f7c35528ec0d9297636c39f43652f3ed7e70"
+  },
+  "chroma_image": "docker.io/chromadb/chroma:1.5.9@sha256:1e0b73a187a28757c572acba508c46f48c9e8b0acaf5c20e6d95cdedce1acdf6",
+  "shutdown": {
+    "before": {
+      "missing": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "empty": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "late": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "valid": {
+        "app_exit": -15,
+        "children_left": []
+      }
+    },
+    "after": {
+      "missing": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "empty": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "late": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "valid": {
+        "app_exit": -15,
+        "children_left": []
+      }
+    }
+  }
+}

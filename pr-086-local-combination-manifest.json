@@ -1,0 +1,20 @@
+{
+  "base": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "pr85_commit": "cc2ccc60c718059b478f353e32f8b7673ab5e975",
+  "pr86_commit": "22801bd15a15c165d3a21111eb818b2105f00d56",
+  "function_provenance": {
+    "close": "85",
+    "__enter__": "85",
+    "__exit__": "85",
+    "__del__": "85",
+    "_response_error": "86",
+    "encode": "86",
+    "_post_embeddings": "86",
+    "get_embedding_client": "85"
+  },
+  "combined_file_sha256": {
+    "src/embeddings.py": "e0321ae6bc87663c6a4dbe57ddca0bebe551ad07762fdb5205ddb55abb48c203",
+    "tests/test_embeddings_client.py": "2c1ebd313a16a1666080cd5fbe13ea469aee92bf4d1ed1e049384b3f44a20e60"
+  },
+  "kind": "local file assembly with exact-source function assertions; no upstream merge"
+}

@@ -1,0 +1,148 @@
+{
+  "phase": "after",
+  "chroma_version": "1.5.9",
+  "chroma_heartbeat": 1794525265959006285,
+  "cases": [
+    {
+      "rag_collection_rows": 0,
+      "diagnostic": [
+        "2026-11-13 02:14:27,261 - src.embeddings - WARNING - HTTP embedding API unavailable (Invalid embedding API response from http://127.0.0.1:17882/missing (model=owned-lifecycle): missing or empty embedding vector); using local FastEmbed for the rest of this process"
+      ],
+      "mode": "missing",
+      "startup": {
+        "app_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/app.py",
+        "embedding_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/src/embeddings.py",
+        "pools_closed": [
+          false
+        ],
+        "down_latch": true,
+        "rag_available": false,
+        "observer": "retains actual HTTP pool for inspection; no result replacement"
+      },
+      "provider_connections_after_startup": 1,
+      "upload_status": 503,
+      "upload_result": {
+        "detail": "RAG system is not available \u2014 is the embedding service running?"
+      }
+    },
+    {
+      "rag_collection_rows": 0,
+      "diagnostic": [
+        "2026-11-13 02:14:30,978 - src.embeddings - WARNING - HTTP embedding API unavailable (Invalid embedding API response from http://127.0.0.1:17882/empty (model=owned-lifecycle): expected one embedding per input); using local FastEmbed for the rest of this process"
+      ],
+      "mode": "empty",
+      "startup": {
+        "app_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/app.py",
+        "embedding_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/src/embeddings.py",
+        "pools_closed": [
+          false
+        ],
+        "down_latch": true,
+        "rag_available": false,
+        "observer": "retains actual HTTP pool for inspection; no result replacement"
+      },
+      "provider_connections_after_startup": 1,
+      "upload_status": 503,
+      "upload_result": {
+        "detail": "RAG system is not available \u2014 is the embedding service running?"
+      }
+    },
+    {
+      "rag_collection_rows": 0,
+      "diagnostic": [
+        "2026-11-13 02:14:36,904 - src.rag_vector - WARNING - add_document failed in custom lane: Invalid embedding API response from http://127.0.0.1:17882/late (model=owned-lifecycle): missing or empty embedding vector"
+      ],
+      "mode": "late",
+      "startup": {
+        "app_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/app.py",
+        "embedding_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/src/embeddings.py",
+        "pools_closed": [
+          false,
+          false
+        ],
+        "down_latch": false,
+        "rag_available": true,
+        "observer": "retains actual HTTP pool for inspection; no result replacement"
+      },
+      "provider_connections_after_startup": 2,
+      "upload_status": 200,
+      "upload_result": {
+        "success": true,
+        "uploaded": [
+          "owned-lifecycle.txt"
+        ],
+        "indexed_count": 0,
+        "failed_count": 1
+      }
+    },
+    {
+      "rag_collection_rows": 1,
+      "diagnostic": [],
+      "mode": "valid",
+      "startup": {
+        "app_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/app.py",
+        "embedding_file": "/Users/red/Documents/ChatGPT/ODY/odysseus/src/embeddings.py",
+        "pools_closed": [
+          false,
+          false
+        ],
+        "down_latch": false,
+        "rag_available": true,
+        "observer": "retains actual HTTP pool for inspection; no result replacement"
+      },
+      "provider_connections_after_startup": 2,
+      "upload_status": 200,
+      "upload_result": {
+        "success": true,
+        "uploaded": [
+          "owned-lifecycle.txt"
+        ],
+        "indexed_count": 1,
+        "failed_count": 0
+      }
+    }
+  ],
+  "requests": [
+    {
+      "path": "/missing",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    },
+    {
+      "path": "/empty",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    },
+    {
+      "path": "/late",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    },
+    {
+      "path": "/late",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    },
+    {
+      "path": "/late",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    },
+    {
+      "path": "/valid",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    },
+    {
+      "path": "/valid",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    },
+    {
+      "path": "/valid",
+      "model": "owned-lifecycle",
+      "inputs": 1
+    }
+  ],
+  "provider_connections_after_apps": 0
+}
