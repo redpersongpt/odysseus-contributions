@@ -1,0 +1,7 @@
+{
+  "base-compose.yml": "f5fc69287ce40fcb4ae8bb0dfa3dad8f26dc2c187843cf92a9beb51efe0a0714",
+  "validation.compose.yml": "cc6dd734833895d6a02d39560bf5f261ba395cf3d925e10621fcf2b938bf9bc7",
+  "template.yml": "97128c96f496283d48727c819548478e91c778f652982b206714afe984fd1ae8",
+  "before/migrate_searxng_settings.py": "c211d9950fd471acfca176427c3f814e10a5da601fc3664859f8297652d3c927",
+  "after/migrate_searxng_settings.py": "c81e36772b8d43b44bbf00b71da061351a23cc824c250d415c3dc15ecb2621a5"
+}
