@@ -1,0 +1,30 @@
+{
+  "baseline": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "fixed_sha256": {
+    "src/embeddings.py": "6ac610d71d4aa9df0543c06261a7527a1963c8cedf2b04b8a603521504cd4f0e",
+    "tests/test_embeddings_client.py": "af975f628473174f92d1afc7ec16e35781b719b9ac740baef0846c907f474067"
+  },
+  "chroma_image": "docker.io/chromadb/chroma:1.5.9@sha256:1e0b73a187a28757c572acba508c46f48c9e8b0acaf5c20e6d95cdedce1acdf6",
+  "shutdown": {
+    "before": {
+      "missing": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "valid": {
+        "app_exit": -15,
+        "children_left": []
+      }
+    },
+    "after": {
+      "missing": {
+        "app_exit": -15,
+        "children_left": []
+      },
+      "valid": {
+        "app_exit": -15,
+        "children_left": []
+      }
+    }
+  }
+}
