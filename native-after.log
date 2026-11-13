@@ -1,0 +1,5 @@
+{"phase":"after","width":1440,"mutation":"add","active":[false,false,true],"requests":2}
+{"phase":"after","width":1440,"mutation":"remove","active":[false,false,true],"requests":2}
+{"phase":"after","width":390,"mutation":"add","active":[false,false,true],"requests":2}
+{"phase":"after","width":390,"mutation":"remove","active":[false,false,true],"requests":2}
+{"phase": "after", "source": "/Users/red/Documents/ChatGPT/ODY/odysseus", "purpose": "Actual authenticated app; normal HTTP/DOM, browser CDP 1500ms network latency only.", "cleanup": {"app_exit": -15, "children_left": [], "port_closed": true}}

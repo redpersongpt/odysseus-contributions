@@ -1,0 +1,159 @@
+FFFFFFFFF...                                                             [100%]
+=================================== FAILURES ===================================
+_____ test_confirmed_batch_is_independent_of_later_selection[add-confirm] ______
+
+stage = 'confirm', mutation = 'add'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['first', 'second', 'outside'] == ['first', 'second']
+E         
+E         Left contains one more item: 'outside'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+_____ test_confirmed_batch_is_independent_of_later_selection[add-request] ______
+
+stage = 'request', mutation = 'add'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['first', 'second', 'outside'] == ['first', 'second']
+E         
+E         Left contains one more item: 'outside'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+____ test_confirmed_batch_is_independent_of_later_selection[remove-confirm] ____
+
+stage = 'confirm', mutation = 'remove'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['first'] == ['first', 'second']
+E         
+E         Right contains one more item: 'second'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+____ test_confirmed_batch_is_independent_of_later_selection[remove-request] ____
+
+stage = 'request', mutation = 'remove'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['first'] == ['first', 'second']
+E         
+E         Right contains one more item: 'second'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+____ test_confirmed_batch_is_independent_of_later_selection[clear-confirm] _____
+
+stage = 'confirm', mutation = 'clear'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert [] == ['first', 'second']
+E         
+E         Right contains 2 more items, first extra item: 'first'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+____ test_confirmed_batch_is_independent_of_later_selection[clear-request] _____
+
+stage = 'request', mutation = 'clear'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['first'] == ['first', 'second']
+E         
+E         Right contains one more item: 'second'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+___ test_confirmed_batch_is_independent_of_later_selection[replace-confirm] ____
+
+stage = 'confirm', mutation = 'replace'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['outside'] == ['first', 'second']
+E         
+E         At index 0 diff: 'outside' != 'first'
+E         Right contains one more item: 'second'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+___ test_confirmed_batch_is_independent_of_later_selection[replace-request] ____
+
+stage = 'request', mutation = 'replace'
+
+    @pytest.mark.parametrize("stage", ["confirm", "request"])
+    @pytest.mark.parametrize("mutation", ["add", "remove", "clear", "replace"])
+    def test_confirmed_batch_is_independent_of_later_selection(stage, mutation):
+        result = run_batch(mutation, stage)
+        assert result["confirmation"] == "Delete 2 documents?"
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['first', 'outside'] == ['first', 'second']
+E         
+E         At index 1 diff: 'outside' != 'second'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:74: AssertionError
+________ test_failed_request_does_not_allow_later_selection_into_batch _________
+
+    def test_failed_request_does_not_allow_later_selection_into_batch():
+        result = run_batch("add", failure=True)
+>       assert result["calls"] == ["first", "second"]
+E       AssertionError: assert ['first', 'second', 'outside'] == ['first', 'second']
+E         
+E         Left contains one more item: 'outside'
+E         Use -v to get more diff
+
+tests/test_document_library_delete_snapshot.py:81: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[add-confirm]
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[add-request]
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[remove-confirm]
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[remove-request]
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[clear-confirm]
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[clear-request]
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[replace-confirm]
+FAILED tests/test_document_library_delete_snapshot.py::test_confirmed_batch_is_independent_of_later_selection[replace-request]
+FAILED tests/test_document_library_delete_snapshot.py::test_failed_request_does_not_allow_later_selection_into_batch
+9 failed, 3 passed, 1 warning in 1.16s

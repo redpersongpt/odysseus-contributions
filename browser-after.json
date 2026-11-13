@@ -1,0 +1,123 @@
+{
+  "phase": "after",
+  "browser": "157.0.8103.51",
+  "network_latency_ms": 1500,
+  "cases": [
+    {
+      "width": 1440,
+      "mutation": "add",
+      "confirmation": "Delete 2 documents?",
+      "ids": [
+        "dda1a8c5-4aa4-462f-8d91-d9314dd72885",
+        "c9af7f91-4fe8-478f-8d44-1b2ed40b7f31",
+        "e6771183-cc1a-4581-8375-46cbcc56d43c"
+      ],
+      "actual_delete_requests": [
+        "dda1a8c5-4aa4-462f-8d91-d9314dd72885",
+        "c9af7f91-4fe8-478f-8d44-1b2ed40b7f31"
+      ],
+      "GET_statuses": [
+        200,
+        200,
+        200
+      ],
+      "is_active": [
+        false,
+        false,
+        true
+      ],
+      "page_errors": [],
+      "zoom": {
+        "root": "1",
+        "visual": 1
+      }
+    },
+    {
+      "width": 1440,
+      "mutation": "remove",
+      "confirmation": "Delete 2 documents?",
+      "ids": [
+        "37a361e5-7bc8-4d46-814e-a3e86af47f3f",
+        "7b6f5dd2-29f7-4f21-925e-0878ac6bb0a8",
+        "ee00edfd-f092-4833-8cb3-edd967c53a89"
+      ],
+      "actual_delete_requests": [
+        "37a361e5-7bc8-4d46-814e-a3e86af47f3f",
+        "7b6f5dd2-29f7-4f21-925e-0878ac6bb0a8"
+      ],
+      "GET_statuses": [
+        200,
+        200,
+        200
+      ],
+      "is_active": [
+        false,
+        false,
+        true
+      ],
+      "page_errors": [],
+      "zoom": {
+        "root": "1",
+        "visual": 1
+      }
+    },
+    {
+      "width": 390,
+      "mutation": "add",
+      "confirmation": "Delete 2 documents?",
+      "ids": [
+        "09a1022b-8110-4848-ab6f-fc9932c3c4e0",
+        "1595099d-33cc-4c46-84a4-7c359925833e",
+        "cb393621-a252-4bc6-ab6f-c5ec6da0fb41"
+      ],
+      "actual_delete_requests": [
+        "09a1022b-8110-4848-ab6f-fc9932c3c4e0",
+        "1595099d-33cc-4c46-84a4-7c359925833e"
+      ],
+      "GET_statuses": [
+        200,
+        200,
+        200
+      ],
+      "is_active": [
+        false,
+        false,
+        true
+      ],
+      "page_errors": [],
+      "zoom": {
+        "root": "1",
+        "visual": 1
+      }
+    },
+    {
+      "width": 390,
+      "mutation": "remove",
+      "confirmation": "Delete 2 documents?",
+      "ids": [
+        "0cd808fe-1a2f-40d4-8c42-1d2716186af6",
+        "2ca853ec-7cdc-4cc0-869b-75d655a0ee13",
+        "2800ef50-3e5f-442c-bcae-7afa7400e989"
+      ],
+      "actual_delete_requests": [
+        "0cd808fe-1a2f-40d4-8c42-1d2716186af6",
+        "2ca853ec-7cdc-4cc0-869b-75d655a0ee13"
+      ],
+      "GET_statuses": [
+        200,
+        200,
+        200
+      ],
+      "is_active": [
+        false,
+        false,
+        true
+      ],
+      "page_errors": [],
+      "zoom": {
+        "root": "1",
+        "visual": 1
+      }
+    }
+  ]
+}

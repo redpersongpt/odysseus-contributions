@@ -1,0 +1,10 @@
+{
+  "phase": "before",
+  "source": "/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline",
+  "purpose": "Actual authenticated app; normal HTTP/DOM, browser CDP 1500ms network latency only.",
+  "cleanup": {
+    "app_exit": -15,
+    "children_left": [],
+    "port_closed": true
+  }
+}

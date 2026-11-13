@@ -1,0 +1,276 @@
+[
+  {
+    "query": "repo:odysseus-dev/odysseus is:pull-request \"document\" \"selection\" \"delete\"",
+    "total_count": 28,
+    "items": [
+      {
+        "number": 7191,
+        "title": "fix(calendar): reject occurrence UIDs in series mutations",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7191"
+      },
+      {
+        "number": 7125,
+        "title": "fix(reports): preserve section headings used as report titles",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7125"
+      },
+      {
+        "number": 6981,
+        "title": "ci: run omitted Node and Chromium suites authoritatively",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6981"
+      },
+      {
+        "number": 6019,
+        "title": "feat(gallery): AI-generated photo descriptions (OCR/captioning)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6019"
+      },
+      {
+        "number": 6891,
+        "title": "fix(forms): preserve Unicode field names during PDF export",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6891"
+      },
+      {
+        "number": 6742,
+        "title": "feat(email): export selected messages as EML or print to PDF",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6742"
+      },
+      {
+        "number": 6304,
+        "title": "feat: add optional tool approval mode",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6304"
+      },
+      {
+        "number": 5923,
+        "title": "fix(email): make unread opens one authoritative IMAP operation",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5923"
+      },
+      {
+        "number": 694,
+        "title": "Fix Library file import and add Library documents as a Deep Research source (#302)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/694"
+      },
+      {
+        "number": 1376,
+        "title": "Guard the document/notes/calendar Ctrl/Cmd keydown handlers against AltGr false positives",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1376"
+      },
+      {
+        "number": 1154,
+        "title": "feat: context-budget-aware prompt assembly for small-context models",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1154"
+      },
+      {
+        "number": 4247,
+        "title": "fix(agent): always offer web_search/web_fetch when web search is enabled",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4247"
+      },
+      {
+        "number": 3802,
+        "title": "fix(tools): recognise FR/non-URL web-search intent in tool selection",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3802"
+      },
+      {
+        "number": 6020,
+        "title": "refactor(model-routing): centralize explicit foreground fallback policy",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6020"
+      },
+      {
+        "number": 5420,
+        "title": "fix(stabilization): harden attachment lifecycle and agent guard signals",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5420"
+      },
+      {
+        "number": 5276,
+        "title": "feat: ability to add default tools and token estimation for currently active ones",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5276"
+      },
+      {
+        "number": 4246,
+        "title": "feat: New Security & Semantic Retrieval Architecture, regex improvements, context-aware RAG query rewriting, and low-signal tool classification",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4246"
+      },
+      {
+        "number": 1734,
+        "title": "Fix RAG remove_directory wiping the entire shared collection (data loss)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1734"
+      },
+      {
+        "number": 3400,
+        "title": "feat(companion): implement backend-only chat scope and command contract",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3400"
+      },
+      {
+        "number": 6817,
+        "title": "chore(deps): bump the actions group across 1 directory with 12 updates",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6817"
+      },
+      {
+        "number": 2769,
+        "title": "fix(session): serialize history mutations with a per-session asyncio lock",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2769"
+      },
+      {
+        "number": 2940,
+        "title": "feat(notes): sharing, full preview-panel editor, unified image model, MCP + security",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2940"
+      },
+      {
+        "number": 3946,
+        "title": "fix: integrate all open pull requests and fix test regressions",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3946"
+      },
+      {
+        "number": 3944,
+        "title": "Fix/apply all open prs",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3944"
+      },
+      {
+        "number": 3925,
+        "title": "feat: Pydantic router for mcp agents",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3925"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      },
+      {
+        "number": 3779,
+        "title": "fix(agent): match non-English keywords in tool-RAG domain classifier",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3779"
+      },
+      {
+        "number": 3508,
+        "title": "feat(auth): add generic OpenID Connect (OIDC) single sign-on",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3508"
+      }
+    ]
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:issue \"document\" \"selection\" \"delete\"",
+    "total_count": 14,
+    "items": [
+      {
+        "number": 2680,
+        "title": "Organize and tag documents | Project oriented features",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/2680"
+      },
+      {
+        "number": 6672,
+        "title": "Non-English prompts never receive domain tools: tool selection is English-only in three independent layers",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6672"
+      },
+      {
+        "number": 6185,
+        "title": "Tests: cover app-data read routing across Chat, Agent, and model routes",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6185"
+      },
+      {
+        "number": 4203,
+        "title": "data: normalize productivity and integration owners for no-login mode",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4203"
+      },
+      {
+        "number": 6010,
+        "title": "\"Tool names must be unique\" HTTP 400 error when using Poe API",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6010"
+      },
+      {
+        "number": 58,
+        "title": "Add multilingual/i18n support for the UI",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/58"
+      },
+      {
+        "number": 2523,
+        "title": "tests: Test Hardening and Scalability tracker",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/2523"
+      },
+      {
+        "number": 4567,
+        "title": "Deep Research can silently use a different model than the session-selected one when admin overrides are configured",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4567"
+      },
+      {
+        "number": 3041,
+        "title": "Agent Mode Is Broken  and It barely perform as an agent",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/3041"
+      },
+      {
+        "number": 5625,
+        "title": "fix/refactor(models): make selected-model routing strict and fallbacks explicit",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5625"
+      },
+      {
+        "number": 55,
+        "title": "Hermes Agent integration",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/55"
+      },
+      {
+        "number": 6194,
+        "title": "Agent loses email/calendar tools: \"from <word>\" is misread as a machine name and hard-replaces the tool set with the Terminus toolset",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6194"
+      },
+      {
+        "number": 5996,
+        "title": "/api/auth/settings is fetched 4 times and /api/tools 3 times on every page load, by modules unaware of each other",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5996"
+      },
+      {
+        "number": 1333,
+        "title": "Follow up on adding skills issue (cant delete them now)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/1333"
+      }
+    ]
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:pull-request \"BulkDelete\"",
+    "total_count": 0,
+    "items": []
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:pull-request \"librarySelectedIds\"",
+    "total_count": 0,
+    "items": []
+  }
+]
