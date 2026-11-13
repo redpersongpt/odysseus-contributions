@@ -1,0 +1,114 @@
+{
+  "is:issue \"css snapshot\"": {
+    "total_count": 2,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 6703,
+        "title": "CI: Restore green dev pytest baseline after utility reasoning-effort and frontend changes",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6703"
+      },
+      {
+        "number": 6773,
+        "title": "fix(ui): address post-#6396 viewport, scroll and safe-area regressions",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6773"
+      }
+    ]
+  },
+  "is:pull-request \"css snapshot\"": {
+    "total_count": 13,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 6862,
+        "title": "test: decode Node subprocess output as UTF-8 on Windows",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6862"
+      },
+      {
+        "number": 6580,
+        "title": "fix(ui): restore the dropdown caret on settings and sort selects",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6580"
+      },
+      {
+        "number": 7213,
+        "title": "fix(calendar): fit event form controls on narrow screens",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7213"
+      },
+      {
+        "number": 6646,
+        "title": "fix(ui): raise Ctrl+K search above tool windows and scope Gallery Escape",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6646"
+      },
+      {
+        "number": 6704,
+        "title": "fix(ci): restore dev pytest baseline",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6704"
+      },
+      {
+        "number": 6774,
+        "title": "fix(ui): harden iOS viewport and safe-area behavior after #6396",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6774"
+      },
+      {
+        "number": 6840,
+        "title": "fix(sidebar): animate the sidebar toggle instead of snapping",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6840"
+      },
+      {
+        "number": 6607,
+        "title": "fix(chat): center context slider thumbs",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6607"
+      },
+      {
+        "number": 6470,
+        "title": "feat(ui): redesign theme system, typography and sidebar",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6470"
+      },
+      {
+        "number": 6396,
+        "title": "fix(ui): respect iOS safe areas, screen height and landscape layout",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6396"
+      },
+      {
+        "number": 6740,
+        "title": "fix(ui): integrate streaming, model picker and Notes updates",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6740"
+      },
+      {
+        "number": 6782,
+        "title": "fix(ui): keep the confirm dialog's OK button in line with the others",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6782"
+      },
+      {
+        "number": 6921,
+        "title": "fix(chat): export the complete conversation across PDF pages",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6921"
+      }
+    ]
+  },
+  "is:issue \"ECONNRESET\"": {
+    "total_count": 0,
+    "incomplete_results": false,
+    "items": []
+  },
+  "is:pull-request \"request_queue_size\"": {
+    "total_count": 0,
+    "incomplete_results": false,
+    "items": []
+  }
+}
