@@ -1,0 +1,11 @@
+{
+  "source_commit": "35ebc745ec5e8e206f594ea77883295cb674c1e4",
+  "base_commit": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "issue": "https://github.com/odysseus-dev/odysseus/issues/7225",
+  "files": {
+    "mcp_servers/email_server.py": "90f08688ac39e266e06f08cb53661f0f523110d3c2d8a4b482d494542a6b2e2d",
+    "routes/email/email_helpers.py": "5ac69c35b075f10da5bd796ce31da395531f64b0df76f381a6724d6fe33df80c",
+    "routes/email/email_routes.py": "fc5afe1e6278747f5db662e54b963c7b4b3d7fc9c59358d11edb4813108a0544",
+    "tests/test_email_mime_disposition.py": "957f22afb7d181b54b577bf1ab368fef216b1a7f1954b7c3c4c2bb8b9a890aa9"
+  }
+}

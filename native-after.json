@@ -1,0 +1,145 @@
+{
+  "phase": "after",
+  "source": "/Users/red/Documents/ChatGPT/ODY/odysseus",
+  "HTTP": [
+    {
+      "name": "Upper plain",
+      "uid": "1",
+      "status": 200,
+      "body": "Main body only",
+      "body_html": "<p>Main body only</p>",
+      "attachments": [
+        {
+          "index": 0,
+          "filename": "receipt.txt",
+          "content_type": "text/plain",
+          "size": 37,
+          "is_inline": false,
+          "content_id": ""
+        }
+      ],
+      "downloads": [
+        {
+          "index": 0,
+          "status": 200,
+          "body": "Attachment content must stay separate",
+          "expected_bytes_verified": true,
+          "sha256": "abee9c10c0ee679c2fde889b6c31ae0029586329c88499d77ec6688135f7749c"
+        }
+      ]
+    },
+    {
+      "name": "Upper HTML",
+      "uid": "2",
+      "status": 200,
+      "body": "Main body only",
+      "body_html": "<p>Main body only</p>",
+      "attachments": [
+        {
+          "index": 0,
+          "filename": "receipt.html",
+          "content_type": "text/html",
+          "size": 44,
+          "is_inline": false,
+          "content_id": ""
+        }
+      ],
+      "downloads": [
+        {
+          "index": 0,
+          "status": 200,
+          "body": "<p>Attachment content must stay separate</p>",
+          "expected_bytes_verified": true,
+          "sha256": "5801294d5659a43c7c297450846e7e3537c61d528c62d37ffb4fb1bd6f84c498"
+        }
+      ]
+    },
+    {
+      "name": "Inline filename",
+      "uid": "3",
+      "status": 200,
+      "body": "Inline body must stay visible",
+      "body_html": "<p>Main body only</p>",
+      "attachments": [],
+      "downloads": []
+    },
+    {
+      "name": "Lower control",
+      "uid": "4",
+      "status": 200,
+      "body": "Main body only",
+      "body_html": "<p>Main body only</p>",
+      "attachments": [
+        {
+          "index": 0,
+          "filename": "receipt.txt",
+          "content_type": "text/plain",
+          "size": 37,
+          "is_inline": false,
+          "content_id": ""
+        }
+      ],
+      "downloads": [
+        {
+          "index": 0,
+          "status": 200,
+          "body": "Attachment content must stay separate",
+          "expected_bytes_verified": true,
+          "sha256": "abee9c10c0ee679c2fde889b6c31ae0029586329c88499d77ec6688135f7749c"
+        }
+      ]
+    }
+  ],
+  "MCP": [
+    {
+      "name": "Upper plain",
+      "output": "**Subject:** Upper plain\n**From:** Owned Sender (sender@example.invalid)\n**Date:** Fri, 13 Nov 2026 08:00:00 +0000\n**UID:** 1\n**Account:** Owned Unicode mailbox (fixture)\n**Message-ID:** \n\n**Attachments (1):**\n  - [0] receipt.txt (text/plain, 37 bytes)\n\n_Use `download_attachment` with the UID and index to download._\n\n---\n\nMain body only"
+    },
+    {
+      "name": "Upper HTML",
+      "output": "**Subject:** Upper HTML\n**From:** Owned Sender (sender@example.invalid)\n**Date:** Fri, 13 Nov 2026 08:00:00 +0000\n**UID:** 2\n**Account:** Owned Unicode mailbox (fixture)\n**Message-ID:** \n\n**Attachments (1):**\n  - [0] receipt.html (text/html, 44 bytes)\n\n_Use `download_attachment` with the UID and index to download._\n\n---\n\nMain body only"
+    },
+    {
+      "name": "Inline filename",
+      "output": "**Subject:** Inline filename\n**From:** Owned Sender (sender@example.invalid)\n**Date:** Fri, 13 Nov 2026 08:00:00 +0000\n**UID:** 3\n**Account:** Owned Unicode mailbox (fixture)\n**Message-ID:** \n\n---\n\nInline body must stay visible"
+    },
+    {
+      "name": "Lower control",
+      "output": "**Subject:** Lower control\n**From:** Owned Sender (sender@example.invalid)\n**Date:** Fri, 13 Nov 2026 08:00:00 +0000\n**UID:** 4\n**Account:** Owned Unicode mailbox (fixture)\n**Message-ID:** \n\n**Attachments (1):**\n  - [0] receipt.txt (text/plain, 37 bytes)\n\n_Use `download_attachment` with the UID and index to download._\n\n---\n\nMain body only"
+    }
+  ],
+  "independent_IMAP_headers": [
+    {
+      "name": "Upper plain",
+      "uid": "1",
+      "disposition": "ATTACHMENT"
+    },
+    {
+      "name": "Upper HTML",
+      "uid": "2",
+      "disposition": "ATTACHMENT"
+    },
+    {
+      "name": "Inline filename",
+      "uid": "3",
+      "disposition": "inline"
+    },
+    {
+      "name": "Lower control",
+      "uid": "4",
+      "disposition": "attachment"
+    }
+  ],
+  "app_shutdown": {
+    "exit": -15,
+    "children_left": []
+  },
+  "mail_shutdown": {
+    "exit": 143,
+    "children_left": []
+  },
+  "ports_closed": {
+    "17868": true,
+    "17869": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "width": 1440,
+      "uid": "2",
+      "body": "Attachment content must stay separate",
+      "page_errors": [],
+      "zoom": {
+        "root": "1",
+        "visual": 1
+      }
+    },
+    {
+      "width": 390,
+      "uid": "2",
+      "body": "Attachment content must stay separate",
+      "page_errors": [],
+      "zoom": {
+        "root": "1",
+        "visual": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# MIME disposition — actual IMAP, MCP and app evidence
+
+Fixes7225. Source SHA and file hashes in source-manifest.json. Body, attachment metadata/download and index enumeration now use stdlib Message.get_content_disposition() with exact type comparisons, rather than raw-header substrings. RFC2183 section2 says types are case-insensitive: https://www.rfc-editor.org/rfc/rfc2183.html#section-2
+
+57new cases:18fail39pass unchanged production; focused102pass1skip5existingwarnings. The opt-in Ajax fixture skip has no external Ajax URL configured. Initial test instrumentation assumed the MCP disk helper returnsPath; it returnsstr. The final test correctly readsPath(path), and final baseline/focused logs are used. No product contract or assertion disabled.
+
+Real full Uvicorn/auth/disposableSQLite, native macOS/Python3.12, GreenMail2.1.15 with actual IMAP APPEND/FETCH and original case verified on wire; real stdio MCP/email account owner.4HTTPreads+4MCPreads perphase. Upperplain/HTML files wrongly used as body before; inline filename attachment.txt wrongly excluded before; lowercasecontrol retained. After: correctbody,metadataand3realHTTPfiledownloads matchbytes. Before2downloads are recorded separately. No route/dependency/response/DOM replacement or actual LLM inference. GreenMail is a supplied owned mail server, not an external provider. Browser actualEmailreader1440/390px,Chrome157,4originalPNGsinspected,zero pageerrors,zoomscale1. App/mail children stopped and17868/17869closed. Existing firstboot secret-storage import-cycle warnings appeared in both phases; they are not a new testfailure.
+
+Driver uses the existing synthetic-only email-unicode-smoke-app.py wrapper; it configures the owned loopback account and auth only. No credentials, raw DBs or raw application logs included. Native JSON includes public synthetic message contents and actual HTTPdownloadsha256 proof.
+
+Not tested: Docker, otherOSes, externalIMAPprovider, realphone/touch,Safari/Firefox,full local suite. No new policy for unknown disposition types, multipart containers, singlepart attachments, or MIME traversal is introduced. CID/EML route index classification is kept consistent, but those endpoints are not independently exercised in this native scenario; helper image/index controls are unit-covered. Existing HTML sanitizer/styles/auth/transports unchanged.

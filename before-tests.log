@@ -1,0 +1,410 @@
+............FFFFFFFF.......FF.............FFFFFFFF.......                [100%]
+=================================== FAILURES ===================================
+_ test_body_selection_uses_case_insensitive_disposition_type[inline-plain-web] _
+
+extract = <function _extract_text at 0x10ce02980>, kind = 'plain'
+disposition = 'inline'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+_ test_body_selection_uses_case_insensitive_disposition_type[inline-plain-mcp] _
+
+extract = <function _extract_text at 0x10cdcf6a0>, kind = 'plain'
+disposition = 'inline'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+_ test_body_selection_uses_case_insensitive_disposition_type[inline-html-web] __
+
+extract = <function _extract_text at 0x10ce02980>, kind = 'html'
+disposition = 'inline'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+_ test_body_selection_uses_case_insensitive_disposition_type[inline-html-mcp] __
+
+extract = <function _extract_text at 0x10cdcf6a0>, kind = 'html'
+disposition = 'inline'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+_ test_body_selection_uses_case_insensitive_disposition_type[INLINE-plain-web] _
+
+extract = <function _extract_text at 0x10ce02980>, kind = 'plain'
+disposition = 'INLINE'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+_ test_body_selection_uses_case_insensitive_disposition_type[INLINE-plain-mcp] _
+
+extract = <function _extract_text at 0x10cdcf6a0>, kind = 'plain'
+disposition = 'INLINE'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+_ test_body_selection_uses_case_insensitive_disposition_type[INLINE-html-web] __
+
+extract = <function _extract_text at 0x10ce02980>, kind = 'html'
+disposition = 'INLINE'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+_ test_body_selection_uses_case_insensitive_disposition_type[INLINE-html-mcp] __
+
+extract = <function _extract_text at 0x10cdcf6a0>, kind = 'html'
+disposition = 'INLINE'
+
+    @pytest.mark.parametrize("extract", [web._extract_text, mcp._extract_text], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_body_selection_uses_case_insensitive_disposition_type(extract, kind, disposition):
+        attached = disposition and disposition.lower() == "attachment"
+>       assert extract(message(kind, disposition)) == ("Fallback body" if attached else "Inline body")
+E       AssertionError: assert 'Fallback body' == 'Inline body'
+E         
+E         - Inline body
+E         + Fallback body
+
+tests/test_email_mime_disposition.py:33: AssertionError
+________ test_html_selection_ignores_attached_html_in_any_case[inline] _________
+
+disposition = 'inline'
+
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_html_selection_ignores_attached_html_in_any_case(disposition):
+        attached = disposition and disposition.lower() == "attachment"
+        expected = "Fallback body" if attached else "Inline body"
+>       assert web._extract_html(message("html", disposition)) == f"<p>{expected}</p>"
+E       AssertionError: assert '<p>Fallback body</p>' == '<p>Inline body</p>'
+E         
+E         - <p>Inline body</p>
+E         + <p>Fallback body</p>
+
+tests/test_email_mime_disposition.py:40: AssertionError
+________ test_html_selection_ignores_attached_html_in_any_case[INLINE] _________
+
+disposition = 'INLINE'
+
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_html_selection_ignores_attached_html_in_any_case(disposition):
+        attached = disposition and disposition.lower() == "attachment"
+        expected = "Fallback body" if attached else "Inline body"
+>       assert web._extract_html(message("html", disposition)) == f"<p>{expected}</p>"
+E       AssertionError: assert '<p>Fallback body</p>' == '<p>Inline body</p>'
+E         
+E         - <p>Inline body</p>
+E         + <p>Fallback body</p>
+
+tests/test_email_mime_disposition.py:40: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[inline-plain-web] ______
+
+module = <module 'routes.email.email_helpers' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/routes/email/email_helpers.py'>
+kind = 'plain', disposition = 'inline'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do12')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,...ze': 11, ...}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.plain', 'content_type': 'text/plain', 'size': 11, ...}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[inline-plain-mcp] ______
+
+module = <module 'mcp_servers.email_server' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/mcp_servers/email_server.py'>
+kind = 'plain', disposition = 'inline'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do13')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,..., 'size': 11}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.plain', 'content_type': 'text/plain', 'size': 11}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[inline-html-web] _______
+
+module = <module 'routes.email.email_helpers' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/routes/email/email_helpers.py'>
+kind = 'html', disposition = 'inline'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do14')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,...ze': 18, ...}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.html', 'content_type': 'text/html', 'size': 18, ...}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[inline-html-mcp] _______
+
+module = <module 'mcp_servers.email_server' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/mcp_servers/email_server.py'>
+kind = 'html', disposition = 'inline'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do15')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,..., 'size': 18}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.html', 'content_type': 'text/html', 'size': 18}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[INLINE-plain-web] ______
+
+module = <module 'routes.email.email_helpers' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/routes/email/email_helpers.py'>
+kind = 'plain', disposition = 'INLINE'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do16')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,...ze': 11, ...}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.plain', 'content_type': 'text/plain', 'size': 11, ...}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[INLINE-plain-mcp] ______
+
+module = <module 'mcp_servers.email_server' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/mcp_servers/email_server.py'>
+kind = 'plain', disposition = 'INLINE'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do17')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,..., 'size': 11}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.plain', 'content_type': 'text/plain', 'size': 11}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[INLINE-html-web] _______
+
+module = <module 'routes.email.email_helpers' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/routes/email/email_helpers.py'>
+kind = 'html', disposition = 'INLINE'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do18')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,...ze': 18, ...}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.html', 'content_type': 'text/html', 'size': 18, ...}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+______ test_attachment_indices_and_download_bytes_agree[INLINE-html-mcp] _______
+
+module = <module 'mcp_servers.email_server' from '/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/mcp_servers/email_server.py'>
+kind = 'html', disposition = 'INLINE'
+tmp_path = PosixPath('/private/var/folders/6f/dk1_6hkn3kjg4nsqxvz_vqm00000gn/T/ody-main-0w9tzne0/pytest/test_attachment_indices_and_do19')
+
+    @pytest.mark.parametrize("module", [web, mcp], ids=["web", "mcp"])
+    @pytest.mark.parametrize("kind", ["plain", "html"])
+    @pytest.mark.parametrize("disposition", DISPOSITIONS)
+    def test_attachment_indices_and_download_bytes_agree(module, kind, disposition, tmp_path):
+        msg = message(kind, disposition)
+        metadata = module._list_attachments_from_msg(msg)
+        if disposition and disposition.lower() == "attachment":
+            assert len(metadata) == 1
+            assert metadata[0]["index"] == 0
+            assert metadata[0]["filename"] == "attachment." + kind
+            path = module._extract_attachment_to_disk(msg, 0, tmp_path)
+            expected = b"Separate file" if kind == "plain" else b"<p>Separate file</p>"
+            assert Path(path).read_bytes() == expected
+        else:
+>           assert metadata == []
+E           AssertionError: assert [{'index': 0,..., 'size': 18}] == []
+E             
+E             Left contains one more item: {'index': 0, 'filename': 'attachment.html', 'content_type': 'text/html', 'size': 18}
+E             Use -v to get more diff
+
+tests/test_email_mime_disposition.py:57: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[inline-plain-web]
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[inline-plain-mcp]
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[inline-html-web]
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[inline-html-mcp]
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[INLINE-plain-web]
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[INLINE-plain-mcp]
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[INLINE-html-web]
+FAILED tests/test_email_mime_disposition.py::test_body_selection_uses_case_insensitive_disposition_type[INLINE-html-mcp]
+FAILED tests/test_email_mime_disposition.py::test_html_selection_ignores_attached_html_in_any_case[inline]
+FAILED tests/test_email_mime_disposition.py::test_html_selection_ignores_attached_html_in_any_case[INLINE]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[inline-plain-web]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[inline-plain-mcp]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[inline-html-web]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[inline-html-mcp]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[INLINE-plain-web]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[INLINE-plain-mcp]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[INLINE-html-web]
+FAILED tests/test_email_mime_disposition.py::test_attachment_indices_and_download_bytes_agree[INLINE-html-mcp]
+18 failed, 39 passed, 1 warning in 0.79s

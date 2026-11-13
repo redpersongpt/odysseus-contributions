@@ -1,0 +1,517 @@
+[
+  {
+    "query": "repo:odysseus-dev/odysseus is:pull-request \"Content-Disposition\" \"case\"",
+    "total_count": 6,
+    "items": [
+      {
+        "number": 576,
+        "title": "fix: several security vulnerabilities (privilege escalation, SSRF, path traversal)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/576"
+      },
+      {
+        "number": 734,
+        "title": "fix: several security vulnerabilities (privilege escalation, SSRF, path traversal)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/734"
+      },
+      {
+        "number": 6628,
+        "title": "chore(deps): bump the python group across 1 directory with 6 updates",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6628"
+      },
+      {
+        "number": 6245,
+        "title": "build(deps): bump the python group across 1 directory with 5 updates",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6245"
+      },
+      {
+        "number": 6984,
+        "title": "chore(deps): bump the python group across 1 directory with 8 updates",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6984"
+      },
+      {
+        "number": 6745,
+        "title": "chore(deps): bump the python group across 1 directory with 7 updates",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6745"
+      }
+    ]
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:issue \"attachment\" \"body\" \"uppercase\"",
+    "total_count": 0,
+    "items": []
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:pull-request \"MIME\" \"attachment\"",
+    "total_count": 13,
+    "items": [
+      {
+        "number": 5889,
+        "title": "fix: Read safe text attachments consistently",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5889"
+      },
+      {
+        "number": 6148,
+        "title": "fix(chat): caption chat-uploaded images when the chat model is multimodal",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6148"
+      },
+      {
+        "number": 7199,
+        "title": "fix(email): transmit Unicode searches as UTF-8 literals",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7199"
+      },
+      {
+        "number": 6953,
+        "title": "fix(email): decode MIME alternatives without duplicating bodies",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6953"
+      },
+      {
+        "number": 6742,
+        "title": "feat(email): export selected messages as EML or print to PDF",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6742"
+      },
+      {
+        "number": 5205,
+        "title": "fix(chat): give extensionless image/audio uploads a valid MIME subtype",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5205"
+      },
+      {
+        "number": 5449,
+        "title": "fix(chat): restore owner-checked historical attachment access",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5449"
+      },
+      {
+        "number": 1124,
+        "title": "Expose generic attachments to agent tools",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1124"
+      },
+      {
+        "number": 4727,
+        "title": "fix(cookbook): auto-raise ubatch for vision serves and fix diagnosis panel",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4727"
+      },
+      {
+        "number": 1354,
+        "title": "fix(email): guard _decode_header against unknown MIME charset",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1354"
+      },
+      {
+        "number": 1279,
+        "title": "fix(chat): surface file path/name/size for non-text attachments (#1115)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1279"
+      },
+      {
+        "number": 334,
+        "title": "feat(email): Microsoft 365 (Outlook) support via Microsoft Graph",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/334"
+      },
+      {
+        "number": 3400,
+        "title": "feat(companion): implement backend-only chat scope and command contract",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3400"
+      }
+    ]
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:pull-request \"email\" \"disposition\"",
+    "total_count": 4,
+    "items": [
+      {
+        "number": 4053,
+        "title": "fix(email): consolidate the email tool registry around BUILTIN_EMAIL_TOOLS (follow-up to #3681)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4053"
+      },
+      {
+        "number": 734,
+        "title": "fix: several security vulnerabilities (privilege escalation, SSRF, path traversal)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/734"
+      },
+      {
+        "number": 576,
+        "title": "fix: several security vulnerabilities (privilege escalation, SSRF, path traversal)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/576"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      }
+    ]
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:issue \"email\" \"disposition\"",
+    "total_count": 2,
+    "items": [
+      {
+        "number": 5674,
+        "title": "companion: remove the app-specific bridge and stabilize token capabilities",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5674"
+      },
+      {
+        "number": 3220,
+        "title": "Proposal: Odyssey — a first-party terminal CLI client for self-hosted Odysseus",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/3220"
+      }
+    ]
+  },
+  {
+    "query": "repo:odysseus-dev/odysseus is:pull-request \"attachment\" \"body\" \"inline\"",
+    "total_count": 54,
+    "items": [
+      {
+        "number": 6293,
+        "title": "feat(diagnostics): actionable next-step hints for degraded services",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6293"
+      },
+      {
+        "number": 7056,
+        "title": "fix(agent): stop ui_control from enabling shell access (#4512)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7056"
+      },
+      {
+        "number": 6935,
+        "title": "fix(email): retain files in attachment and inline-image pickers",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6935"
+      },
+      {
+        "number": 6470,
+        "title": "feat(ui): redesign theme system, typography and sidebar",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6470"
+      },
+      {
+        "number": 5968,
+        "title": "feat(chat): add Re-run button to the vision text editor",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5968"
+      },
+      {
+        "number": 6597,
+        "title": "fix(gallery): drop the second scrollbar on the photo detail view",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6597"
+      },
+      {
+        "number": 6742,
+        "title": "feat(email): export selected messages as EML or print to PDF",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6742"
+      },
+      {
+        "number": 6713,
+        "title": "refactor(notes): decompose Notes into feature-owned modules",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6713"
+      },
+      {
+        "number": 1498,
+        "title": "Cap inline attachment context across files",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1498"
+      },
+      {
+        "number": 3291,
+        "title": "fix(attachments): preserve original filenames in prompts",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3291"
+      },
+      {
+        "number": 4832,
+        "title": "fix(notes): allow inline editing of checklist items",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4832"
+      },
+      {
+        "number": 1503,
+        "title": "Bound total inlined attachment text so many files don't overflow context (#1492)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1503"
+      },
+      {
+        "number": 4489,
+        "title": "Fix ReferenceError: body is not defined in _showDiagnosis",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4489"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      },
+      {
+        "number": 6695,
+        "title": "feat(oxs): OXS extension system + fix side-snapped windows not reserving workspace",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6695"
+      },
+      {
+        "number": 2004,
+        "title": "fix(pdf): use strip_pdf_content_marker instead of lstrip in build_use",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2004"
+      },
+      {
+        "number": 6038,
+        "title": "feat(companion): owner-scoped mobile surface — data, research, mobile features, push, pairing UI",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6038"
+      },
+      {
+        "number": 4258,
+        "title": "feat(context): library context chips with @ autocomplete and preflight",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4258"
+      },
+      {
+        "number": 475,
+        "title": "Security: email-thread HTML injection, attachment path traversal, diagnostics authz",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/475"
+      },
+      {
+        "number": 4220,
+        "title": "feat(ui): add CustomSelect component for themeable dropdowns",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4220"
+      },
+      {
+        "number": 4724,
+        "title": "fix(modal): keep body-portaled dropdowns above their tool modal at any stack depth (#4720)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4724"
+      },
+      {
+        "number": 2940,
+        "title": "feat(notes): sharing, full preview-panel editor, unified image model, MCP + security",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2940"
+      },
+      {
+        "number": 3340,
+        "title": "feat(search): add Perplexity Search as a selectable provider",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3340"
+      },
+      {
+        "number": 5134,
+        "title": "feat(email): add local custom labels",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5134"
+      },
+      {
+        "number": 5994,
+        "title": "perf(static): vendor KaTeX and Mermaid, and load them on first use",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5994"
+      },
+      {
+        "number": 5267,
+        "title": "feat(ui): added grouping chat sessions into ui",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5267"
+      },
+      {
+        "number": 3095,
+        "title": "fix: make Calendar Settings panel draggable",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3095"
+      },
+      {
+        "number": 2226,
+        "title": "feat (email): Allow user to select a 'from' address when multiple smtp addresses configured",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2226"
+      },
+      {
+        "number": 4076,
+        "title": "feat(notes): unified markdown model + preview-panel editor",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4076"
+      },
+      {
+        "number": 4691,
+        "title": "feat(ui): add toggle for padding around chat area",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4691"
+      },
+      {
+        "number": 4210,
+        "title": "feat(a11y): add a Text size control and an OpenDyslexic font option",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4210"
+      },
+      {
+        "number": 4660,
+        "title": "fix(security): show images in HTML emails",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4660"
+      },
+      {
+        "number": 4621,
+        "title": "fix: tiny crash preventing cookbook error fixes from running (cannot click on cookbook at all)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4621"
+      },
+      {
+        "number": 2893,
+        "title": "feat(projects): add Projects -- grouped sessions with shared context, instructions, and synthesized memory",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2893"
+      },
+      {
+        "number": 4687,
+        "title": "feat: Centralized API client with Axios initial integration",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4687"
+      },
+      {
+        "number": 4014,
+        "title": "feat(media): add local-first media registry with ComfyUI generation routing",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4014"
+      },
+      {
+        "number": 597,
+        "title": "Allow toggling favorite models from the chat model picker",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/597"
+      },
+      {
+        "number": 169,
+        "title": "fix(security): harden online hosting defaults",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/169"
+      },
+      {
+        "number": 3310,
+        "title": "feat(electron): lightweight electron wrapper with custom title bar",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3310"
+      },
+      {
+        "number": 4379,
+        "title": "feat(axios): Centralized API client, better pattern and api handling, added application base path option",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4379"
+      },
+      {
+        "number": 629,
+        "title": "Render emoji shortcodes as icons in chat (#345)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/629"
+      },
+      {
+        "number": 3665,
+        "title": "feat(agent): confine agent file/shell tools to a selectable workspace",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3665"
+      },
+      {
+        "number": 2779,
+        "title": "Improve edge-docked window behavior",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2779"
+      },
+      {
+        "number": 1103,
+        "title": "feat: Add workspace: confine agent tools to a folder",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1103"
+      },
+      {
+        "number": 2546,
+        "title": "feat(notes): Preview button — open note in floating window with markdown rendering",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2546"
+      },
+      {
+        "number": 237,
+        "title": "feat(email): add Google OAuth2 for Google Workspace / .edu IMAP & SMTP",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/237"
+      },
+      {
+        "number": 5818,
+        "title": "fix(agent): sandbox process execution",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5818"
+      },
+      {
+        "number": 2576,
+        "title": "feat(skills): import SKILL.md bundles from public GitHub URLs",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2576"
+      },
+      {
+        "number": 5426,
+        "title": "fix(modals): restore four-edge docking and chip reflow",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5426"
+      },
+      {
+        "number": 3798,
+        "title": "fix(ui): share one z-order stack across Notes and modals",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3798"
+      }
+    ]
+  },
+  {
+    "query": "inline body page2",
+    "total_count": 54,
+    "items": [
+      {
+        "number": 2224,
+        "title": "fix: normalize Gemma 4 thought-channel output",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2224"
+      },
+      {
+        "number": 3195,
+        "title": "fix: expose supports_tools toggle for local endpoints in UI",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3195"
+      },
+      {
+        "number": 2942,
+        "title": "feat(calendar): support multiple CalDAV accounts",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2942"
+      },
+      {
+        "number": 516,
+        "title": "Add OpenAI-Codex via OAuth (sub) provider + Codex Responses transport",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/516"
+      }
+    ]
+  }
+]
