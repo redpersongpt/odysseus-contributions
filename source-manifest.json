@@ -1,0 +1,42 @@
+{
+  "base_dev": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "before_commit": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "issue": "https://github.com/odysseus-dev/odysseus/issues/7218",
+  "before_menu_sha256": "b2d7ff215955d84fc7382d0eba4b86e64f86689c2fbed3941de1fb5a402f61c3",
+  "after_menu_sha256": "20b38149ac8a7d030d6696a8ab346f395f01d49e6bc85f19508b6b448fe8143f",
+  "native_browser": "157.0.8103.51",
+  "cases": 16,
+  "before_hidden": 8,
+  "after_retained_and_error": 8,
+  "after_actual_retry_success": 8,
+  "unit_before": {
+    "failed": 24,
+    "passed": 4
+  },
+  "focused_after_passed": 73,
+  "original_PNGs_visually_inspected": 8,
+  "native_transport": "built-in owned email fixture; no response/route/auth dependency replacement; not an external IMAP provider",
+  "cleanup": {
+    "before": {
+      "app_exit": -15,
+      "children_left": [],
+      "port_closed": true
+    },
+    "after": {
+      "app_exit": -15,
+      "children_left": [],
+      "port_closed": true
+    }
+  },
+  "scope": "Active library archive/spam only; inactive sidebar not changed; bulk/delete existing guards retained",
+  "not_run": [
+    "external IMAP provider",
+    "Docker",
+    "other OSes",
+    "Safari/Firefox",
+    "actual phone/touch gestures",
+    "full local repository suite"
+  ],
+  "known_limit": "Existing narrow-reader text clipping was visible; no layout correction in this change.",
+  "source_commit": "a9fa21b79d3c0860ea0b4fbc0f2a29f725b82a86"
+}

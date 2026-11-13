@@ -1,0 +1,550 @@
+{
+  "repo:odysseus-dev/odysseus is:pull-request email archive failure": {
+    "total_count": 10,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 7188,
+        "title": "fix(email): support boolean OR in MCP search",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7188"
+      },
+      {
+        "number": 6847,
+        "title": "fix(email): reconcile cached messages after full folder refresh",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6847"
+      },
+      {
+        "number": 6981,
+        "title": "ci: run omitted Node and Chromium suites authoritatively",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6981"
+      },
+      {
+        "number": 6742,
+        "title": "feat(email): export selected messages as EML or print to PDF",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6742"
+      },
+      {
+        "number": 6504,
+        "title": "fix(email): discover real IMAP folders on cold loads",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6504"
+      },
+      {
+        "number": 5923,
+        "title": "fix(email): make unread opens one authoritative IMAP operation",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5923"
+      },
+      {
+        "number": 6713,
+        "title": "refactor(notes): decompose Notes into feature-owned modules",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6713"
+      },
+      {
+        "number": 2732,
+        "title": "fix(email): never fall back to sequence-number IMAP ops for move/flag",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2732"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      },
+      {
+        "number": 4101,
+        "title": "feat: Propose data persistence ADR/RFC",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4101"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:pull-request emailInbox delete": {
+    "total_count": 3,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 5923,
+        "title": "fix(email): make unread opens one authoritative IMAP operation",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5923"
+      },
+      {
+        "number": 5151,
+        "title": "Backport MIME sniffing and prompt-injection hardening",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5151"
+      },
+      {
+        "number": 4684,
+        "title": "fix(ui): route transient dropdown menus through escMenuStack to stop listener leaks",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4684"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:issue email archive failed": {
+    "total_count": 5,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 5169,
+        "title": "feat(notifications): add a durable notification inbox",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5169"
+      },
+      {
+        "number": 6424,
+        "title": "Opening an older email can silently return a blank stuck message instead of an error",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6424"
+      },
+      {
+        "number": 6477,
+        "title": "Agent mode appends a raw tool listing (emails/tasks/notes/calendar) after the model's finished answer",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6477"
+      },
+      {
+        "number": 6447,
+        "title": "Accessibility audit of the web UI: keyboard and screen reader barriers (WCAG 2.2 AA)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6447"
+      },
+      {
+        "number": 1707,
+        "title": "Agent tool RAG incorrectly excludes web_search/web_fetch in favour of email tools",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/1707"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:pull-request email \"res.ok\"": {
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 1429,
+        "title": "Add configurable workspace cwd for agent tools",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1429"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:pull-request \"5027\"": {
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 5099,
+        "title": "feat(email): prompt to create Archive folder",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5099"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:pull-request email \"archive\" \"rejected\"": {
+    "total_count": 3,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 7188,
+        "title": "fix(email): support boolean OR in MCP search",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7188"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      },
+      {
+        "number": 4101,
+        "title": "feat: Propose data persistence ADR/RFC",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4101"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:pull-request email \"archive\" \"HTTP\"": {
+    "total_count": 15,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 7188,
+        "title": "fix(email): support boolean OR in MCP search",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7188"
+      },
+      {
+        "number": 6847,
+        "title": "fix(email): reconcile cached messages after full folder refresh",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6847"
+      },
+      {
+        "number": 6916,
+        "title": "fix(notes): advance repeating reminders without browser tabs",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6916"
+      },
+      {
+        "number": 6742,
+        "title": "feat(email): export selected messages as EML or print to PDF",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6742"
+      },
+      {
+        "number": 6848,
+        "title": "fix(documents): retain language extensions in ZIP exports",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6848"
+      },
+      {
+        "number": 6713,
+        "title": "refactor(notes): decompose Notes into feature-owned modules",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6713"
+      },
+      {
+        "number": 5099,
+        "title": "feat(email): prompt to create Archive folder",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5099"
+      },
+      {
+        "number": 5987,
+        "title": "fix(sidebar): keep minimized icon rail in sync with per-tab visibility",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5987"
+      },
+      {
+        "number": 5593,
+        "title": "fix(email): preserve reader folder for message actions",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5593"
+      },
+      {
+        "number": 5019,
+        "title": "feat(email): add manual folder management",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5019"
+      },
+      {
+        "number": 334,
+        "title": "feat(email): Microsoft 365 (Outlook) support via Microsoft Graph",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/334"
+      },
+      {
+        "number": 5838,
+        "title": "feat(i18n): UI translation system",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5838"
+      },
+      {
+        "number": 1735,
+        "title": "Don't force the email toolset onto every \"tell me\" query (#1707)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1735"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      },
+      {
+        "number": 4101,
+        "title": "feat: Propose data persistence ADR/RFC",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4101"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:issue \"delete\" \"email\" \"failure\"": {
+    "total_count": 17,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 6602,
+        "title": "Odysseus displays stale email messages from the local `email_message_index` when the Email view is opened.",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6602"
+      },
+      {
+        "number": 6363,
+        "title": "Library navigation can delete documents or show them as lost",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6363"
+      },
+      {
+        "number": 7149,
+        "title": "Contacts settings discards drafts and reports Saved after rejected writes",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/7149"
+      },
+      {
+        "number": 5014,
+        "title": "feat(email): add manual custom folder creation and management",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5014"
+      },
+      {
+        "number": 5027,
+        "title": "feat(email): prompt to create Archive folder when archiving has no destination",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5027"
+      },
+      {
+        "number": 3999,
+        "title": "feat(email): Microsoft Graph (Exchange/Outlook) mail accounts, server-side search, and agent access",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/3999"
+      },
+      {
+        "number": 4408,
+        "title": "storage(integrity): audit & route non-manager direct-disk accessors before migration (Rule A)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4408"
+      },
+      {
+        "number": 6672,
+        "title": "Non-English prompts never receive domain tools: tool selection is English-only in three independent layers",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6672"
+      },
+      {
+        "number": 2959,
+        "title": "Skills are marked as \"UNTRUSTED SOURCE DATA\"",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/2959"
+      },
+      {
+        "number": 3345,
+        "title": "Support Proton Mail accounts via Proton Mail Bridge",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/3345"
+      },
+      {
+        "number": 4143,
+        "title": "ask about prj",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4143"
+      },
+      {
+        "number": 6447,
+        "title": "Accessibility audit of the web UI: keyboard and screen reader barriers (WCAG 2.2 AA)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6447"
+      },
+      {
+        "number": 605,
+        "title": "Proposal: Architecture & Codebase Structure v3",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/605"
+      },
+      {
+        "number": 6194,
+        "title": "Agent loses email/calendar tools: \"from <word>\" is misread as a machine name and hard-replaces the tool set with the Terminus toolset",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6194"
+      },
+      {
+        "number": 4686,
+        "title": "Transient dropdown menus stop working until a page refresh (orphaned outside-click listeners)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4686"
+      },
+      {
+        "number": 4388,
+        "title": "🤖 Code Audit: 22 potential issue(s) found",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4388"
+      },
+      {
+        "number": 191,
+        "title": "Downloaded LLMs failed to serve.",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/191"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:pull-request email spam failure": {
+    "total_count": 5,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 2347,
+        "title": "fix(email): guard _extract_text/_extract_html body decode against unknown charset",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2347"
+      },
+      {
+        "number": 2732,
+        "title": "fix(email): never fall back to sequence-number IMAP ops for move/flag",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2732"
+      },
+      {
+        "number": 1354,
+        "title": "fix(email): guard _decode_header against unknown MIME charset",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1354"
+      },
+      {
+        "number": 735,
+        "title": "fix: omit temperature for OpenAI reasoning models (o1/o3/o4/gpt-5)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/735"
+      },
+      {
+        "number": 1472,
+        "title": "fix: guard uid.decode() in auto-classify log against str UIDs",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1472"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:issue email archive response": {
+    "total_count": 11,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 5027,
+        "title": "feat(email): prompt to create Archive folder when archiving has no destination",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5027"
+      },
+      {
+        "number": 5792,
+        "title": "Sent/Trash/Archive/Junk folders not found for localized (non-English) IMAP accounts",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5792"
+      },
+      {
+        "number": 6424,
+        "title": "Opening an older email can silently return a blank stuck message instead of an error",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6424"
+      },
+      {
+        "number": 4858,
+        "title": "Sidebar tree view of email accounts with unread counts (like Thunderbird/Apple Mail)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4858"
+      },
+      {
+        "number": 5015,
+        "title": "Agent does not execute Email tools when using a local Ollama endpoint (LLM) (_is_api_model=False, tools_sent=0)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5015"
+      },
+      {
+        "number": 5533,
+        "title": "Agent refuses to send email for admin account",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5533"
+      },
+      {
+        "number": 6477,
+        "title": "Agent mode appends a raw tool listing (emails/tasks/notes/calendar) after the model's finished answer",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6477"
+      },
+      {
+        "number": 6010,
+        "title": "\"Tool names must be unique\" HTTP 400 error when using Poe API",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6010"
+      },
+      {
+        "number": 5014,
+        "title": "feat(email): add manual custom folder creation and management",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5014"
+      },
+      {
+        "number": 6447,
+        "title": "Accessibility audit of the web UI: keyboard and screen reader barriers (WCAG 2.2 AA)",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/6447"
+      },
+      {
+        "number": 1707,
+        "title": "Agent tool RAG incorrectly excludes web_search/web_fetch in favour of email tools",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/1707"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus is:pull-request email archive response": {
+    "total_count": 8,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 7188,
+        "title": "fix(email): support boolean OR in MCP search",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7188"
+      },
+      {
+        "number": 6848,
+        "title": "fix(documents): retain language extensions in ZIP exports",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6848"
+      },
+      {
+        "number": 5791,
+        "title": "fix(email): resolve Sent/Trash/Archive/Junk folders by IMAP special-use flags, not English name substrings",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5791"
+      },
+      {
+        "number": 5923,
+        "title": "fix(email): make unread opens one authoritative IMAP operation",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5923"
+      },
+      {
+        "number": 5099,
+        "title": "feat(email): prompt to create Archive folder",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5099"
+      },
+      {
+        "number": 5593,
+        "title": "fix(email): preserve reader folder for message actions",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5593"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      },
+      {
+        "number": 4101,
+        "title": "feat: Propose data persistence ADR/RFC",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4101"
+      }
+    ]
+  },
+  "related_closed_5099": {
+    "number": 5099,
+    "author": "uhhgoat",
+    "state": "closed",
+    "merged": false,
+    "summary": "## Summary\n\nArchive now handles IMAP accounts that do not expose an archive-capable folder. The backend returns a structured `needs_archive_folder` response instead of failing ambiguously, the UI prompts the user to create `Archive`, then retries the original archive action only after the user confirms. The archive action now removes messages from the local UI only after a real archive success, archive/all-mail views hide redundant Archive actions, and the Email folder list can be explicitly refreshed so newly created or provider-side folder changes do not stay hidden behind folder cache.\n\n",
+    "comments": []
+  }
+}

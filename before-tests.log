@@ -1,0 +1,566 @@
+FFFFFFFFFFFFFFFFFFFFFFFF....                                             [100%]
+=================================== FAILURES ===================================
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-card-inbox] _
+
+flow = 'card-inbox', mode = 'http-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-card-sent] _
+
+flow = 'card-sent', mode = 'http-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-reader-archive] _
+
+flow = 'reader-archive', mode = 'http-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-reader-spam] _
+
+flow = 'reader-spam', mode = 'http-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-card-inbox] _
+
+flow = 'card-inbox', mode = 'success-false'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-card-sent] _
+
+flow = 'card-sent', mode = 'success-false'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-reader-archive] _
+
+flow = 'reader-archive', mode = 'success-false'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-reader-spam] _
+
+flow = 'reader-spam', mode = 'success-false'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-card-inbox] _
+
+flow = 'card-inbox', mode = 'invalid-json'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-card-sent] _
+
+flow = 'card-sent', mode = 'invalid-json'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-reader-archive] _
+
+flow = 'reader-archive', mode = 'invalid-json'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-reader-spam] _
+
+flow = 'reader-spam', mode = 'invalid-json'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-card-inbox] _
+
+flow = 'card-inbox', mode = 'missing-success'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-card-sent] _
+
+flow = 'card-sent', mode = 'missing-success'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-reader-archive] _
+
+flow = 'reader-archive', mode = 'missing-success'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-reader-spam] _
+
+flow = 'reader-spam', mode = 'missing-success'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-card-inbox] _
+
+flow = 'card-inbox', mode = 'network-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+        assert result['uids'] == ['42']
+        assert result['calls']['animations'] == []
+        assert result['calls']['cache_writes'] == 0
+        assert result['calls']['renders'] == 0
+>       assert len(result['calls']['errors']) == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+tests/test_email_move_menu_results.py:41: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-card-sent] _
+
+flow = 'card-sent', mode = 'network-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+        assert result['uids'] == ['42']
+        assert result['calls']['animations'] == []
+        assert result['calls']['cache_writes'] == 0
+        assert result['calls']['renders'] == 0
+>       assert len(result['calls']['errors']) == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+tests/test_email_move_menu_results.py:41: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-reader-archive] _
+
+flow = 'reader-archive', mode = 'network-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-reader-spam] _
+
+flow = 'reader-spam', mode = 'network-error'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[pending-card-inbox] _
+
+flow = 'card-inbox', mode = 'pending'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[pending-card-sent] _
+
+flow = 'card-sent', mode = 'pending'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[pending-reader-archive] _
+
+flow = 'reader-archive', mode = 'pending'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+_ test_rejected_move_keeps_message_and_cache_and_shows_error[pending-reader-spam] _
+
+flow = 'reader-spam', mode = 'pending'
+
+    @pytest.mark.parametrize('flow', FLOWS)
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_move_keeps_message_and_cache_and_shows_error(flow, mode):
+        result = run(flow, mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:37: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-card-inbox]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-card-sent]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-reader-archive]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[http-error-reader-spam]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-card-inbox]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-card-sent]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-reader-archive]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[success-false-reader-spam]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-card-inbox]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-card-sent]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-reader-archive]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[invalid-json-reader-spam]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-card-inbox]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-card-sent]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-reader-archive]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[missing-success-reader-spam]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-card-inbox]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-card-sent]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-reader-archive]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[network-error-reader-spam]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[pending-card-inbox]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[pending-card-sent]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[pending-reader-archive]
+FAILED tests/test_email_move_menu_results.py::test_rejected_move_keeps_message_and_cache_and_shows_error[pending-reader-spam]
+24 failed, 4 passed, 1 warning in 1.65s
