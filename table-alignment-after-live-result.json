@@ -1,0 +1,368 @@
+{
+  "phase": "after",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "tables": [
+          {
+            "width": 643.796875,
+            "rows": [
+              [
+                {
+                  "tag": "TH",
+                  "text": "Left",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 33.578125,
+                  "center_delta": -12.5390625
+                },
+                {
+                  "tag": "TH",
+                  "text": "Center",
+                  "align": "center",
+                  "left_gap": 12.625,
+                  "right_gap": 12.625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TH",
+                  "text": "Right",
+                  "align": "right",
+                  "left_gap": 25.171875,
+                  "right_gap": 8.5,
+                  "center_delta": 8.3359375
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "A",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 58.84375,
+                  "center_delta": -25.171875
+                },
+                {
+                  "tag": "TD",
+                  "text": "B",
+                  "align": "center",
+                  "left_gap": 33.671875,
+                  "right_gap": 33.671875,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "123",
+                  "align": "right",
+                  "left_gap": 42,
+                  "right_gap": 8.5,
+                  "center_delta": 16.75
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "Longer",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 16.75,
+                  "center_delta": -4.125
+                },
+                {
+                  "tag": "TD",
+                  "text": "Middle",
+                  "align": "center",
+                  "left_gap": 12.625,
+                  "right_gap": 12.625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "7",
+                  "align": "right",
+                  "left_gap": 58.84375,
+                  "right_gap": 8.5,
+                  "center_delta": 25.171875
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "reload_render": {
+        "tables": [
+          {
+            "width": 643.796875,
+            "rows": [
+              [
+                {
+                  "tag": "TH",
+                  "text": "Left",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 33.578125,
+                  "center_delta": -12.5390625
+                },
+                {
+                  "tag": "TH",
+                  "text": "Center",
+                  "align": "center",
+                  "left_gap": 12.625,
+                  "right_gap": 12.625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TH",
+                  "text": "Right",
+                  "align": "right",
+                  "left_gap": 25.171875,
+                  "right_gap": 8.5,
+                  "center_delta": 8.3359375
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "A",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 58.84375,
+                  "center_delta": -25.171875
+                },
+                {
+                  "tag": "TD",
+                  "text": "B",
+                  "align": "center",
+                  "left_gap": 33.671875,
+                  "right_gap": 33.671875,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "123",
+                  "align": "right",
+                  "left_gap": 42,
+                  "right_gap": 8.5,
+                  "center_delta": 16.75
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "Longer",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 16.75,
+                  "center_delta": -4.125
+                },
+                {
+                  "tag": "TD",
+                  "text": "Middle",
+                  "align": "center",
+                  "left_gap": 12.625,
+                  "right_gap": 12.625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "7",
+                  "align": "right",
+                  "left_gap": 58.84375,
+                  "right_gap": 8.5,
+                  "center_delta": 25.171875
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "persisted_alignment_markers": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "tables": [
+          {
+            "width": 332,
+            "rows": [
+              [
+                {
+                  "tag": "TH",
+                  "text": "Left",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 25.359375,
+                  "center_delta": -8.4296875
+                },
+                {
+                  "tag": "TH",
+                  "text": "Center",
+                  "align": "center",
+                  "left_gap": 10.15625,
+                  "right_gap": 10.15625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TH",
+                  "text": "Right",
+                  "align": "right",
+                  "left_gap": 18.578125,
+                  "right_gap": 8.5,
+                  "center_delta": 5.0390625
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "A",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 45.6875,
+                  "center_delta": -18.59375
+                },
+                {
+                  "tag": "TD",
+                  "text": "B",
+                  "align": "center",
+                  "left_gap": 27.09375,
+                  "right_gap": 27.09375,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "123",
+                  "align": "right",
+                  "left_gap": 32.140625,
+                  "right_gap": 8.5,
+                  "center_delta": 11.8203125
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "Longer",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 11.8125,
+                  "center_delta": -1.65625
+                },
+                {
+                  "tag": "TD",
+                  "text": "Middle",
+                  "align": "center",
+                  "left_gap": 10.15625,
+                  "right_gap": 10.15625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "7",
+                  "align": "right",
+                  "left_gap": 45.6875,
+                  "right_gap": 8.5,
+                  "center_delta": 18.59375
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "reload_render": {
+        "tables": [
+          {
+            "width": 332,
+            "rows": [
+              [
+                {
+                  "tag": "TH",
+                  "text": "Left",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 25.359375,
+                  "center_delta": -8.4296875
+                },
+                {
+                  "tag": "TH",
+                  "text": "Center",
+                  "align": "center",
+                  "left_gap": 10.15625,
+                  "right_gap": 10.15625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TH",
+                  "text": "Right",
+                  "align": "right",
+                  "left_gap": 18.578125,
+                  "right_gap": 8.5,
+                  "center_delta": 5.0390625
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "A",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 45.6875,
+                  "center_delta": -18.59375
+                },
+                {
+                  "tag": "TD",
+                  "text": "B",
+                  "align": "center",
+                  "left_gap": 27.09375,
+                  "right_gap": 27.09375,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "123",
+                  "align": "right",
+                  "left_gap": 32.140625,
+                  "right_gap": 8.5,
+                  "center_delta": 11.8203125
+                }
+              ],
+              [
+                {
+                  "tag": "TD",
+                  "text": "Longer",
+                  "align": "left",
+                  "left_gap": 8.5,
+                  "right_gap": 11.8125,
+                  "center_delta": -1.65625
+                },
+                {
+                  "tag": "TD",
+                  "text": "Middle",
+                  "align": "center",
+                  "left_gap": 10.15625,
+                  "right_gap": 10.15625,
+                  "center_delta": 0
+                },
+                {
+                  "tag": "TD",
+                  "text": "7",
+                  "align": "right",
+                  "left_gap": 45.6875,
+                  "right_gap": 8.5,
+                  "center_delta": 18.59375
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "persisted_alignment_markers": true,
+      "page_errors": []
+    }
+  ]
+}

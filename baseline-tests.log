@@ -1,0 +1,141 @@
+.FF..FF.FFFF...                                                          [100%]
+=================================== FAILURES ===================================
+___ test_each_marker_applies_to_header_and_all_body_rows[True-:---:-center] ____
+
+node_available = None, marker = ':---:', expected = 'center', outer_pipes = True
+
+    @pytest.mark.parametrize('marker,expected', [(':---', 'left'), (':---:', 'center'), ('---:', 'right'), ('---', 'left')])
+    @pytest.mark.parametrize('outer_pipes', [True, False])
+    def test_each_marker_applies_to_header_and_all_body_rows(node_available, marker, expected, outer_pipes):
+        rows = ['H1 | H2 | H3', f'{marker} | --- | ---', 'a | b | c', 'd | e | f']
+        source = '\n'.join(f'| {row} |' if outer_pipes else row for row in rows)
+>       assert tables(source) == [[[expected, 'left', 'left']] * 3]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['center', ...ft', 'left']]]
+E         
+E         At index 0 diff: [['left', 'left', 'left'], ['left', 'left', 'left'], ['left', 'left', 'left']] != [['center', 'left', 'left'], ['center', 'left', 'left'], ['center', 'left', 'left']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:35: AssertionError
+____ test_each_marker_applies_to_header_and_all_body_rows[True----:-right] _____
+
+node_available = None, marker = '---:', expected = 'right', outer_pipes = True
+
+    @pytest.mark.parametrize('marker,expected', [(':---', 'left'), (':---:', 'center'), ('---:', 'right'), ('---', 'left')])
+    @pytest.mark.parametrize('outer_pipes', [True, False])
+    def test_each_marker_applies_to_header_and_all_body_rows(node_available, marker, expected, outer_pipes):
+        rows = ['H1 | H2 | H3', f'{marker} | --- | ---', 'a | b | c', 'd | e | f']
+        source = '\n'.join(f'| {row} |' if outer_pipes else row for row in rows)
+>       assert tables(source) == [[[expected, 'left', 'left']] * 3]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['right', '...ft', 'left']]]
+E         
+E         At index 0 diff: [['left', 'left', 'left'], ['left', 'left', 'left'], ['left', 'left', 'left']] != [['right', 'left', 'left'], ['right', 'left', 'left'], ['right', 'left', 'left']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:35: AssertionError
+___ test_each_marker_applies_to_header_and_all_body_rows[False-:---:-center] ___
+
+node_available = None, marker = ':---:', expected = 'center'
+outer_pipes = False
+
+    @pytest.mark.parametrize('marker,expected', [(':---', 'left'), (':---:', 'center'), ('---:', 'right'), ('---', 'left')])
+    @pytest.mark.parametrize('outer_pipes', [True, False])
+    def test_each_marker_applies_to_header_and_all_body_rows(node_available, marker, expected, outer_pipes):
+        rows = ['H1 | H2 | H3', f'{marker} | --- | ---', 'a | b | c', 'd | e | f']
+        source = '\n'.join(f'| {row} |' if outer_pipes else row for row in rows)
+>       assert tables(source) == [[[expected, 'left', 'left']] * 3]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['center', ...ft', 'left']]]
+E         
+E         At index 0 diff: [['left', 'left', 'left'], ['left', 'left', 'left'], ['left', 'left', 'left']] != [['center', 'left', 'left'], ['center', 'left', 'left'], ['center', 'left', 'left']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:35: AssertionError
+____ test_each_marker_applies_to_header_and_all_body_rows[False----:-right] ____
+
+node_available = None, marker = '---:', expected = 'right', outer_pipes = False
+
+    @pytest.mark.parametrize('marker,expected', [(':---', 'left'), (':---:', 'center'), ('---:', 'right'), ('---', 'left')])
+    @pytest.mark.parametrize('outer_pipes', [True, False])
+    def test_each_marker_applies_to_header_and_all_body_rows(node_available, marker, expected, outer_pipes):
+        rows = ['H1 | H2 | H3', f'{marker} | --- | ---', 'a | b | c', 'd | e | f']
+        source = '\n'.join(f'| {row} |' if outer_pipes else row for row in rows)
+>       assert tables(source) == [[[expected, 'left', 'left']] * 3]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['right', '...ft', 'left']]]
+E         
+E         At index 0 diff: [['left', 'left', 'left'], ['left', 'left', 'left'], ['left', 'left', 'left']] != [['right', 'left', 'left'], ['right', 'left', 'left'], ['right', 'left', 'left']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:35: AssertionError
+______________ test_empty_body_cells_keep_their_column_alignment _______________
+
+node_available = None
+
+    def test_empty_body_cells_keep_their_column_alignment(node_available):
+>       assert tables('| Left | Center | Right |\n| :--- | :---: | ---: |\n| A | | 123 |') == [
+            [['left', 'center', 'right'], ['left', 'center', 'right']]
+        ]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['left', 'c...r', 'right']]]
+E         
+E         At index 0 diff: [['left', 'left', 'left'], ['left', 'left', 'left']] != [['left', 'center', 'right'], ['left', 'center', 'right']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:39: AssertionError
+_______________ test_alignment_does_not_carry_to_the_next_table ________________
+
+node_available = None
+
+    def test_alignment_does_not_carry_to_the_next_table(node_available):
+        source = '| A | B |\n| :---: | ---: |\n| 1 | 2 |\n\n| C | D |\n| --- | --- |\n| 3 | 4 |'
+>       assert tables(source) == [
+            [['center', 'right'], ['center', 'right']],
+            [['left', 'left'], ['left', 'left']],
+        ]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['center', ...ft', 'left']]]
+E         
+E         At index 0 diff: [['left', 'left'], ['left', 'left']] != [['center', 'right'], ['center', 'right']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:46: AssertionError
+_____________ test_single_hyphen_delimiters_support_gfm_alignment ______________
+
+node_available = None
+
+    def test_single_hyphen_delimiters_support_gfm_alignment(node_available):
+>       assert tables('| A | B |\n| :-: | -: |\n| 1 | 2 |') == [
+            [['center', 'right'], ['center', 'right']]
+        ]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['center', ...r', 'right']]]
+E         
+E         At index 0 diff: [['left', 'left'], ['left', 'left']] != [['center', 'right'], ['center', 'right']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:53: AssertionError
+___________ test_inline_formatting_does_not_change_column_alignment ____________
+
+node_available = None
+
+    def test_inline_formatting_does_not_change_column_alignment(node_available):
+        source = '| A | B |\n| :---: | ---: |\n| **bold** | `code` |'
+        html = _run_markdown_case(source)
+>       assert TableCells(html).tables == [[['center', 'right'], ['center', 'right']]]
+E       AssertionError: assert [[['left', 'l...ft', 'left']]] == [[['center', ...r', 'right']]]
+E         
+E         At index 0 diff: [['left', 'left'], ['left', 'left']] != [['center', 'right'], ['center', 'right']]
+E         Use -v to get more diff
+
+tests/test_markdown_table_alignment_js.py:61: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_markdown_table_alignment_js.py::test_each_marker_applies_to_header_and_all_body_rows[True-:---:-center]
+FAILED tests/test_markdown_table_alignment_js.py::test_each_marker_applies_to_header_and_all_body_rows[True----:-right]
+FAILED tests/test_markdown_table_alignment_js.py::test_each_marker_applies_to_header_and_all_body_rows[False-:---:-center]
+FAILED tests/test_markdown_table_alignment_js.py::test_each_marker_applies_to_header_and_all_body_rows[False----:-right]
+FAILED tests/test_markdown_table_alignment_js.py::test_empty_body_cells_keep_their_column_alignment
+FAILED tests/test_markdown_table_alignment_js.py::test_alignment_does_not_carry_to_the_next_table
+FAILED tests/test_markdown_table_alignment_js.py::test_single_hyphen_delimiters_support_gfm_alignment
+FAILED tests/test_markdown_table_alignment_js.py::test_inline_formatting_does_not_change_column_alignment
+8 failed, 7 passed, 1 warning in 1.16s

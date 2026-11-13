@@ -1,0 +1,22 @@
+{
+  "source_commit": "dc04b6dbd1016c81f47f8d21a72c30ade613ade0",
+  "base_commit": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "source_sha256": {
+    "static/js/markdown.js": "44b11b50e8f15bd55f19cb64f06d0eab964c53bfb4e6ac07ef4b9dd82f6b0c30",
+    "static/js/markdown/tableRow.js": "832c1f38586d33d1807f9391d5987de0caf56724f15563a3922d04f3b4a48c0d",
+    "tests/test_markdown_table_alignment_js.py": "6633cdd6310c40440430f26cf713d448c00caade9051b85b5ded5ad0e517c9b9",
+    "tests/streaming/corpus.mjs": "55925a46cbed479b902b8e13af3e67307bba9fe84df3cd4f479f321bae6a96b2"
+  },
+  "baseline_production_matches_dev": true,
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "python": "3.12.14",
+  "node": "v24.21.0",
+  "chrome": "157.0.8103.51",
+  "local_compatibility_only": {
+    "pr7201_source": "7eb06d4d8c8607ef2f0bd26aaeadddab7f11e350",
+    "pr7205_source": "8c814b864278cf9c8d9a2534854111132e5c9428",
+    "pytest": 115,
+    "streaming_node": 138,
+    "combination_not_published": true
+  }
+}
