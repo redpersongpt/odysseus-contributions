@@ -1,0 +1,61 @@
+diff --git a/routes/calendar_routes.py b/routes/calendar_routes.py
+index f632919d..c621420f 100644
+--- a/routes/calendar_routes.py
++++ b/routes/calendar_routes.py
+@@ -505,6 +505,14 @@ def _parse_dt_pair(s: str):
+         return parsed, False
+ 
+ 
++def _parse_event_dt(s: str, field: str):
++    """Translate malformed event date input into a client error."""
++    try:
++        return _parse_dt_pair(s)
++    except (ValueError, OverflowError) as exc:
++        raise HTTPException(400, f"Invalid {field}") from exc
++
++
+ def _parse_dt(s: str, *, preserve_timezone: bool = False) -> datetime:
+     """Parse a date/datetime string.
+ 
+@@ -1366,9 +1374,9 @@ def setup_calendar_routes(upload_handler=None) -> APIRouter:
+             # Use the tz-detecting parser so events posted with an offset
+             # (e.g. "2026-05-13T10:00:00+09:00" or "...Z") get stored as UTC
+             # and flagged for proper Z-suffix on read-back.
+-            dtstart, _is_utc = _parse_dt_pair(data.dtstart)
++            dtstart, _is_utc = _parse_event_dt(data.dtstart, "dtstart")
+             if data.dtend:
+-                dtend, _end_utc = _parse_dt_pair(data.dtend)
++                dtend, _end_utc = _parse_event_dt(data.dtend, "dtend")
+                 # If start was tz-aware but end was naive (or vice-versa),
+                 # trust whichever flag is True — they should match.
+                 _is_utc = _is_utc or _end_utc
+@@ -1443,14 +1451,14 @@ def setup_calendar_routes(upload_handler=None) -> APIRouter:
+             if data.location is not None:
+                 ev.location = data.location
+             if data.dtstart is not None:
+-                ev.dtstart, _s_utc = _parse_dt_pair(data.dtstart)
++                ev.dtstart, _s_utc = _parse_event_dt(data.dtstart, "dtstart")
+                 # When the incoming payload carries tz info, mark the row as
+                 # UTC-stored so the serializer adds Z. Don't flip the flag
+                 # off if start arrives naive but end was UTC — only escalate.
+                 if _s_utc:
+                     ev.is_utc = True
+             if data.dtend is not None:
+-                ev.dtend, _e_utc = _parse_dt_pair(data.dtend)
++                ev.dtend, _e_utc = _parse_event_dt(data.dtend, "dtend")
+                 if _e_utc:
+                     ev.is_utc = True
+             if data.all_day is not None:
+diff --git a/tests/test_calendar_default_transaction.py b/tests/test_calendar_default_transaction.py
+index ffd981e5..7ac53e8e 100644
+--- a/tests/test_calendar_default_transaction.py
++++ b/tests/test_calendar_default_transaction.py
+@@ -107,7 +107,7 @@ async def test_route_event_validation_failure_rolls_back_new_default_calendar(
+             EventCreate(summary="Planning", dtstart="not-a-datetime"),
+         )
+ 
+-    assert caught.value.status_code == 500
++    assert caught.value.status_code == 400
+     assert _counts(session_factory) == (0, 0)
+ 
+ 

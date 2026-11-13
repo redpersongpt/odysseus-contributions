@@ -1,0 +1,26 @@
+{
+  "source_commit": "8c0c6cb1fe98bd034f07370aab7bf4450591e75f",
+  "base_dev": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "issue": "https://github.com/odysseus-dev/odysseus/issues/7221",
+  "route_sha256": "ad8183762a9437adce8630ae7b18197fed90d84665b300269f3d42dfcd7d792c",
+  "before_route_sha256": "b1ebdfefd67f6f0b6e7ec3c264d8292c2bb51c686a5d83479029cde6c6cb710f",
+  "before_tests": {
+    "failed": 19,
+    "passed": 5
+  },
+  "calendar_after_passed": 238,
+  "warnings": 7,
+  "actual_HTTP_mutations": 24,
+  "HTTP_positive_controls": 6,
+  "actual_UI_observations": 4,
+  "after_local_time": "14:00\u201315:00",
+  "before_local_time": "05:00\u201306:00",
+  "browser": "157.0.8103.51",
+  "original_four_images_visually_inspected": true,
+  "no_route_dependency_response_DOM_CSS_replacement": true,
+  "actual_external_CalDAV": false,
+  "all_apps_and_children_stopped": true,
+  "port17871_closed": true,
+  "historical_rows_migrated": false,
+  "nearby_PR7217": "textual conflict at added HTTP helper/parser signature; isolated combined semantic validation, source PR independent from dev"
+}

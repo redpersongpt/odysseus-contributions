@@ -1,0 +1,16 @@
+........................................................................ [ 27%]
+........................................................................ [ 54%]
+........................................................................ [ 82%]
+..............................................                           [100%]
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-fallback-error-compat/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+tests/test_calendar_event_date_errors.py: 5 warnings
+tests/test_calendar_fallback_timezone.py: 6 warnings
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-fallback-error-compat/routes/calendar_routes.py:1473: PydanticDeprecatedSince20: The `__fields_set__` attribute is deprecated, use `model_fields_set` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    reminder_fields = getattr(data, "model_fields_set", getattr(data, "__fields_set__", set()))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+262 passed, 12 warnings in 9.75s

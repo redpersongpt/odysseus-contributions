@@ -1,0 +1,2 @@
+{"phase":"before","browser":"157.0.8103.51","UI_cases":2,"times":["05:00 – 06:00","05:00 – 06:00"]}
+{"phase": "before", "HTTP_cases": 12, "controls": 3, "is_utc": false, "cleanup": {"app_exit": -15, "children_left": [], "port_closed": true}}

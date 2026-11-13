@@ -1,0 +1,584 @@
+FFFFFFFFFFFFFFFFFF.....F                                                 [100%]
+=================================== FAILURES ===================================
+_ test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00] _
+
+source = 'Sat, 05 Jan 2030 14:00:00 +0900', expected = '2030-01-05T05:00:00'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    def test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive(source, expected):
+        legacy = calendar._parse_dt(source)
+        parsed, is_utc = calendar._parse_dt_pair(source)
+    
+        assert legacy == parsed == datetime.fromisoformat(expected)
+        assert legacy.tzinfo is parsed.tzinfo is None
+>       assert is_utc is True
+E       assert False is True
+
+tests/test_calendar_fallback_timezone.py:57: AssertionError
+_ test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 +0530-2030-01-05T08:30:00] _
+
+source = 'January 5, 2030 14:00 +0530', expected = '2030-01-05T08:30:00'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    def test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive(source, expected):
+        legacy = calendar._parse_dt(source)
+        parsed, is_utc = calendar._parse_dt_pair(source)
+    
+        assert legacy == parsed == datetime.fromisoformat(expected)
+        assert legacy.tzinfo is parsed.tzinfo is None
+>       assert is_utc is True
+E       assert False is True
+
+tests/test_calendar_fallback_timezone.py:57: AssertionError
+_ test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 +0545-2030-01-05T08:15:00] _
+
+source = 'January 5, 2030 14:00 +0545', expected = '2030-01-05T08:15:00'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    def test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive(source, expected):
+        legacy = calendar._parse_dt(source)
+        parsed, is_utc = calendar._parse_dt_pair(source)
+    
+        assert legacy == parsed == datetime.fromisoformat(expected)
+        assert legacy.tzinfo is parsed.tzinfo is None
+>       assert is_utc is True
+E       assert False is True
+
+tests/test_calendar_fallback_timezone.py:57: AssertionError
+_ test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 -0330-2030-01-05T17:30:00] _
+
+source = 'January 5, 2030 14:00 -0330', expected = '2030-01-05T17:30:00'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    def test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive(source, expected):
+        legacy = calendar._parse_dt(source)
+        parsed, is_utc = calendar._parse_dt_pair(source)
+    
+        assert legacy == parsed == datetime.fromisoformat(expected)
+        assert legacy.tzinfo is parsed.tzinfo is None
+>       assert is_utc is True
+E       assert False is True
+
+tests/test_calendar_fallback_timezone.py:57: AssertionError
+_ test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 UTC-2030-01-05T14:00:00] _
+
+source = 'January 5, 2030 14:00 UTC', expected = '2030-01-05T14:00:00'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    def test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive(source, expected):
+        legacy = calendar._parse_dt(source)
+        parsed, is_utc = calendar._parse_dt_pair(source)
+    
+        assert legacy == parsed == datetime.fromisoformat(expected)
+        assert legacy.tzinfo is parsed.tzinfo is None
+>       assert is_utc is True
+E       assert False is True
+
+tests/test_calendar_fallback_timezone.py:57: AssertionError
+_ test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00] _
+
+source = 'Sat, 05 Jan 2030 14:00:00 GMT', expected = '2030-01-05T14:00:00'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    def test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive(source, expected):
+        legacy = calendar._parse_dt(source)
+        parsed, is_utc = calendar._parse_dt_pair(source)
+    
+        assert legacy == parsed == datetime.fromisoformat(expected)
+        assert legacy.tzinfo is parsed.tzinfo is None
+>       assert is_utc is True
+E       assert False is True
+
+tests/test_calendar_fallback_timezone.py:57: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[create-Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10bc0e930>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and0/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'Sat, 05 Jan 2030 14:00:00 +0900', expected = '2030-01-05T05:00:00'
+operation = 'create'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T05:00:00' == '2030-01-05T05:00:00Z'
+E         
+E         - 2030-01-05T05:00:00Z
+E         ?                    -
+E         + 2030-01-05T05:00:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 +0530-2030-01-05T08:30:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10bd4e390>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and1/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 +0530', expected = '2030-01-05T08:30:00'
+operation = 'create'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T08:30:00' == '2030-01-05T08:30:00Z'
+E         
+E         - 2030-01-05T08:30:00Z
+E         ?                    -
+E         + 2030-01-05T08:30:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 +0545-2030-01-05T08:15:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10bd27530>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and2/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 +0545', expected = '2030-01-05T08:15:00'
+operation = 'create'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T08:15:00' == '2030-01-05T08:15:00Z'
+E         
+E         - 2030-01-05T08:15:00Z
+E         ?                    -
+E         + 2030-01-05T08:15:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 -0330-2030-01-05T17:30:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10cb1cb00>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and3/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 -0330', expected = '2030-01-05T17:30:00'
+operation = 'create'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T17:30:00' == '2030-01-05T17:30:00Z'
+E         
+E         - 2030-01-05T17:30:00Z
+E         ?                    -
+E         + 2030-01-05T17:30:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 UTC-2030-01-05T14:00:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10cbc0ce0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and4/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 UTC', expected = '2030-01-05T14:00:00'
+operation = 'create'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T14:00:00' == '2030-01-05T14:00:00Z'
+E         
+E         - 2030-01-05T14:00:00Z
+E         ?                    -
+E         + 2030-01-05T14:00:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[create-Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10cbd8860>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and5/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'Sat, 05 Jan 2030 14:00:00 GMT', expected = '2030-01-05T14:00:00'
+operation = 'create'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T14:00:00' == '2030-01-05T14:00:00Z'
+E         
+E         - 2030-01-05T14:00:00Z
+E         ?                    -
+E         + 2030-01-05T14:00:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10cb1d640>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and6/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'Sat, 05 Jan 2030 14:00:00 +0900', expected = '2030-01-05T05:00:00'
+operation = 'update'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T05:00:00' == '2030-01-05T05:00:00Z'
+E         
+E         - 2030-01-05T05:00:00Z
+E         ?                    -
+E         + 2030-01-05T05:00:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0530-2030-01-05T08:30:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10cba64e0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and7/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 +0530', expected = '2030-01-05T08:30:00'
+operation = 'update'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T08:30:00' == '2030-01-05T08:30:00Z'
+E         
+E         - 2030-01-05T08:30:00Z
+E         ?                    -
+E         + 2030-01-05T08:30:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0545-2030-01-05T08:15:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10bd85790>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and8/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 +0545', expected = '2030-01-05T08:15:00'
+operation = 'update'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T08:15:00' == '2030-01-05T08:15:00Z'
+E         
+E         - 2030-01-05T08:15:00Z
+E         ?                    -
+E         + 2030-01-05T08:15:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 -0330-2030-01-05T17:30:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10bd14b30>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and9/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 -0330', expected = '2030-01-05T17:30:00'
+operation = 'update'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T17:30:00' == '2030-01-05T17:30:00Z'
+E         
+E         - 2030-01-05T17:30:00Z
+E         ?                    -
+E         + 2030-01-05T17:30:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 UTC-2030-01-05T14:00:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10b8f9a90>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...00gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and10/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'January 5, 2030 14:00 UTC', expected = '2030-01-05T14:00:00'
+operation = 'update'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T14:00:00' == '2030-01-05T14:00:00Z'
+E         
+E         - 2030-01-05T14:00:00Z
+E         ?                    -
+E         + 2030-01-05T14:00:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+_ test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00] _
+
+api = (<starlette.testclient.TestClient object at 0x10ccf5b80>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...00gn/T/ody-main-gpdjywif/pytest/test_offset_input_is_saved_and11/calendar.db), autoflush=False, expire_on_commit=True))
+source = 'Sat, 05 Jan 2030 14:00:00 GMT', expected = '2030-01-05T14:00:00'
+operation = 'update'
+
+    @pytest.mark.parametrize('source,expected', OFFSET_DATES)
+    @pytest.mark.parametrize('operation', ['create', 'update'])
+    def test_offset_input_is_saved_and_serialized_as_utc(api, source, expected, operation):
+        client, factory = api
+        if operation == 'create':
+            response = client.post('/api/calendar/events', json={
+                'summary': 'Offset input', 'dtstart': source,
+                'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+            uid = response.json()['uid']
+        else:
+            seed = client.post('/api/calendar/events', json={
+                'summary': 'Naive original', 'dtstart': '2030-01-01T09:00:00',
+            })
+            assert seed.status_code == 200
+            uid = seed.json()['uid']
+            response = client.put(f'/api/calendar/events/{uid}', json={
+                'dtstart': source, 'dtend': source.replace('14:00', '15:00'),
+            })
+            assert response.status_code == 200, response.text
+        saved = client.get(f'/api/calendar/events/{uid}').json()['event']
+>       assert saved['dtstart'] == expected + 'Z'
+E       AssertionError: assert '2030-01-05T14:00:00' == '2030-01-05T14:00:00Z'
+E         
+E         - 2030-01-05T14:00:00Z
+E         ?                    -
+E         + 2030-01-05T14:00:00
+
+tests/test_calendar_fallback_timezone.py:82: AssertionError
+________________ test_recurring_offset_input_reads_back_in_utc _________________
+
+api = (<starlette.testclient.TestClient object at 0x10cd80c20>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-gpdjywif/pytest/test_recurring_offset_input_re0/calendar.db), autoflush=False, expire_on_commit=True))
+
+    def test_recurring_offset_input_reads_back_in_utc(api):
+        client, _ = api
+        response = client.post('/api/calendar/events', json={
+            'summary': 'Offset recurrence', 'dtstart': OFFSET_DATES[0][0],
+            'rrule': 'FREQ=DAILY;COUNT=2',
+        })
+        assert response.status_code == 200, response.text
+        listed = client.get('/api/calendar/events', params={
+            'start': '2030-01-05T00:00:00Z', 'end': '2030-01-07T00:00:00Z',
+        })
+        assert listed.status_code == 200, listed.text
+>       assert [e['dtstart'] for e in listed.json()['events']] == [
+            '2030-01-05T05:00:00Z', '2030-01-06T05:00:00Z',
+        ]
+E       AssertionError: assert ['2030-01-05T...-06T05:00:00'] == ['2030-01-05T...06T05:00:00Z']
+E         
+E         At index 0 diff: '2030-01-05T05:00:00' != '2030-01-05T05:00:00Z'
+E         Use -v to get more diff
+
+tests/test_calendar_fallback_timezone.py:122: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0530-2030-01-05T08:30:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0545-2030-01-05T08:15:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 -0330-2030-01-05T17:30:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 UTC-2030-01-05T14:00:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00]
+  /Users/red/Documents/ChatGPT/ODY/odysseus/routes/calendar_routes.py:1461: PydanticDeprecatedSince20: The `__fields_set__` attribute is deprecated, use `model_fields_set` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    reminder_fields = getattr(data, "model_fields_set", getattr(data, "__fields_set__", set()))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_calendar_fallback_timezone.py::test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 +0530-2030-01-05T08:30:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 +0545-2030-01-05T08:15:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 -0330-2030-01-05T17:30:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[January 5, 2030 14:00 UTC-2030-01-05T14:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_pair_keeps_offset_provenance_and_legacy_parser_stays_naive[Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[create-Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 +0530-2030-01-05T08:30:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 +0545-2030-01-05T08:15:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 -0330-2030-01-05T17:30:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[create-January 5, 2030 14:00 UTC-2030-01-05T14:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[create-Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0530-2030-01-05T08:30:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0545-2030-01-05T08:15:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 -0330-2030-01-05T17:30:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 UTC-2030-01-05T14:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00]
+FAILED tests/test_calendar_fallback_timezone.py::test_recurring_offset_input_reads_back_in_utc
+19 failed, 5 passed, 7 warnings in 1.68s

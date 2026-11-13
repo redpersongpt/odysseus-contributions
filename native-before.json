@@ -1,0 +1,128 @@
+{
+  "phase": "before",
+  "source": "/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline",
+  "cases": [
+    {
+      "method": "POST",
+      "input": "Sat, 05 Jan 2030 14:00:00 +0900",
+      "status": 200,
+      "start": "2030-01-05T05:00:00",
+      "end": "2030-01-05T06:00:00",
+      "is_utc": false
+    },
+    {
+      "method": "POST",
+      "input": "January 5, 2030 14:00 +0530",
+      "status": 200,
+      "start": "2030-01-05T08:30:00",
+      "end": "2030-01-05T09:30:00",
+      "is_utc": false
+    },
+    {
+      "method": "POST",
+      "input": "January 5, 2030 14:00 +0545",
+      "status": 200,
+      "start": "2030-01-05T08:15:00",
+      "end": "2030-01-05T09:15:00",
+      "is_utc": false
+    },
+    {
+      "method": "POST",
+      "input": "January 5, 2030 14:00 -0330",
+      "status": 200,
+      "start": "2030-01-05T17:30:00",
+      "end": "2030-01-05T18:30:00",
+      "is_utc": false
+    },
+    {
+      "method": "POST",
+      "input": "January 5, 2030 14:00 UTC",
+      "status": 200,
+      "start": "2030-01-05T14:00:00",
+      "end": "2030-01-05T15:00:00",
+      "is_utc": false
+    },
+    {
+      "method": "POST",
+      "input": "Sat, 05 Jan 2030 14:00:00 GMT",
+      "status": 200,
+      "start": "2030-01-05T14:00:00",
+      "end": "2030-01-05T15:00:00",
+      "is_utc": false
+    },
+    {
+      "method": "PUT",
+      "input": "Sat, 05 Jan 2030 14:00:00 +0900",
+      "status": 200,
+      "start": "2030-01-05T05:00:00",
+      "end": "2030-01-05T06:00:00",
+      "is_utc": false
+    },
+    {
+      "method": "PUT",
+      "input": "January 5, 2030 14:00 +0530",
+      "status": 200,
+      "start": "2030-01-05T08:30:00",
+      "end": "2030-01-05T09:30:00",
+      "is_utc": false
+    },
+    {
+      "method": "PUT",
+      "input": "January 5, 2030 14:00 +0545",
+      "status": 200,
+      "start": "2030-01-05T08:15:00",
+      "end": "2030-01-05T09:15:00",
+      "is_utc": false
+    },
+    {
+      "method": "PUT",
+      "input": "January 5, 2030 14:00 -0330",
+      "status": 200,
+      "start": "2030-01-05T17:30:00",
+      "end": "2030-01-05T18:30:00",
+      "is_utc": false
+    },
+    {
+      "method": "PUT",
+      "input": "January 5, 2030 14:00 UTC",
+      "status": 200,
+      "start": "2030-01-05T14:00:00",
+      "end": "2030-01-05T15:00:00",
+      "is_utc": false
+    },
+    {
+      "method": "PUT",
+      "input": "Sat, 05 Jan 2030 14:00:00 GMT",
+      "status": 200,
+      "start": "2030-01-05T14:00:00",
+      "end": "2030-01-05T15:00:00",
+      "is_utc": false
+    }
+  ],
+  "controls": [
+    {
+      "input": "2030-01-05T14:00:00+09:00",
+      "start": "2030-01-05T05:00:00Z",
+      "is_utc": true,
+      "status": 200
+    },
+    {
+      "input": "2030-01-05T14:00:00",
+      "start": "2030-01-05T14:00:00",
+      "is_utc": false,
+      "status": 200
+    },
+    {
+      "input": "January 5, 2030 14:00",
+      "start": "2030-01-05T14:00:00",
+      "is_utc": false,
+      "status": 200
+    }
+  ],
+  "synthetic_HTTP_records_cleaned": 15,
+  "cleanup": {
+    "app_exit": -15,
+    "children_left": [],
+    "port_closed": true
+  }
+}

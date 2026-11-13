@@ -1,0 +1,30 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "width": 1440,
+      "time": "05:00 – 06:00",
+      "expected": "05:00 – 06:00",
+      "environment": {
+        "zone": "Asia/Tokyo",
+        "offset": -540,
+        "scale": 1,
+        "rootZoom": "1"
+      },
+      "errors": []
+    },
+    {
+      "width": 390,
+      "time": "05:00 – 06:00",
+      "expected": "05:00 – 06:00",
+      "environment": {
+        "zone": "Asia/Tokyo",
+        "offset": -540,
+        "scale": 1,
+        "rootZoom": "1"
+      },
+      "errors": []
+    }
+  ]
+}

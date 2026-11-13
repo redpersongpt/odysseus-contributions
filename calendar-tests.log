@@ -1,0 +1,20 @@
+........................................................................ [ 30%]
+........................................................................ [ 60%]
+........................................................................ [ 90%]
+......................                                                   [100%]
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 +0900-2030-01-05T05:00:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0530-2030-01-05T08:30:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 +0545-2030-01-05T08:15:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 -0330-2030-01-05T17:30:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-January 5, 2030 14:00 UTC-2030-01-05T14:00:00]
+tests/test_calendar_fallback_timezone.py::test_offset_input_is_saved_and_serialized_as_utc[update-Sat, 05 Jan 2030 14:00:00 GMT-2030-01-05T14:00:00]
+  /Users/red/Documents/ChatGPT/ODY/odysseus/routes/calendar_routes.py:1465: PydanticDeprecatedSince20: The `__fields_set__` attribute is deprecated, use `model_fields_set` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    reminder_fields = getattr(data, "model_fields_set", getattr(data, "__fields_set__", set()))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+238 passed, 7 warnings in 8.00s
