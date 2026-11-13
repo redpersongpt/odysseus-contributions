@@ -1,0 +1,267 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "viewport": "mobile-touch",
+      "chat_http": 200,
+      "initial_submission": "public frontend controller; native typing not verified",
+      "touch_input": "Chrome DevTools Protocol trusted touch events; emulated mobile",
+      "selection_setup": "actual browser mouse drag; native phone long-press not verified",
+      "middle_drag": {
+        "open": true,
+        "side": "left",
+        "events": [
+          {
+            "type": "touchstart",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 195
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 217.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 228.75
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 240
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 251.25
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 262.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 273.75
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 285
+          }
+        ],
+        "selected_after": ""
+      },
+      "selection_before": "Owned selectable assi",
+      "selection_drag": {
+        "open": true,
+        "side": "left",
+        "events": [
+          {
+            "type": "touchstart",
+            "trusted": true,
+            "prevented": false,
+            "selected": "Owned selectable assi",
+            "x": 10
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "Owned selectable assi",
+            "x": 32.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "Owned selectable assi",
+            "x": 43.75
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "Owned selectable assi",
+            "x": 55
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "Owned selectable assi",
+            "x": 66.25
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "Owned selectable assi",
+            "x": 77.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "Owned selectable assi",
+            "x": 88.75
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "Owned selectable assi",
+            "x": 100
+          }
+        ],
+        "selected_after": "Owned selectable assi"
+      },
+      "left_edge_control": {
+        "open": true,
+        "side": "left",
+        "events": [
+          {
+            "type": "touchstart",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 10
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 32.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 43.75
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 55
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 66.25
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 77.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 88.75
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 100
+          }
+        ],
+        "selected_after": ""
+      },
+      "right_edge_control": {
+        "open": true,
+        "side": "right",
+        "events": [
+          {
+            "type": "touchstart",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 380
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 357.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 346.25
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": true,
+            "selected": "",
+            "x": 335
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 323.75
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 312.5
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 301.25
+          },
+          {
+            "type": "touchmove",
+            "trusted": true,
+            "prevented": false,
+            "selected": "",
+            "x": 290
+          }
+        ],
+        "selected_after": ""
+      },
+      "page_errors": []
+    }
+  ]
+}

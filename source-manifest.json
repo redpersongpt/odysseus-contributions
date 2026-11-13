@@ -1,0 +1,20 @@
+{
+  "source_commit": "bb2c5853a555c238f7180b122e92eca5188cf26d",
+  "base_commit": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "source_sha256": {
+    "static/js/sidebar-layout.js": "3f912a0075a311bee1fe18c6265704882aee0190e145e07fe2d8441dc8bffa94",
+    "tests/helpers/sidebar_edge_swipe.mjs": "3b3a1103b07fe6ddffaca96606f3049a031f75778641fc672849b1763e2723ed",
+    "tests/test_sidebar_edge_swipe_js.py": "be9b40c4a54ebb21244547af9f29f0e38b778309e42607854ce3c1e248fb3405"
+  },
+  "baseline_production_matches_dev": true,
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "python": "3.12.14",
+  "node": "v24.21.0",
+  "chrome": "157.0.8103.51",
+  "native_viewport": {
+    "width": 390,
+    "height": 844,
+    "hasTouch": true,
+    "isMobile": true
+  }
+}

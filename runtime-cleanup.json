@@ -1,0 +1,28 @@
+{
+  "before": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "stream_provider_requests": 1,
+    "gesture_scenarios": 4,
+    "native_mouse_selection_preserved_in_capture": true,
+    "all_recorded_touches_trusted": true,
+    "private_data_excluded": true
+  },
+  "after": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "stream_provider_requests": 1,
+    "gesture_scenarios": 4,
+    "native_mouse_selection_preserved_in_capture": true,
+    "all_recorded_touches_trusted": true,
+    "private_data_excluded": true
+  },
+  "owned_ports_closed": [
+    17871,
+    17872
+  ]
+}

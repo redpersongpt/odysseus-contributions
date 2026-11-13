@@ -1,0 +1,106 @@
+FFFFFF...............                                                    [100%]
+=================================== FAILURES ===================================
+_________________ test_middle_drags_are_never_claimed[195-70] __________________
+
+x = 195, dx = 70
+
+    @pytest.mark.parametrize('x,dx', [(195, 70), (195, -70), (33, 70), (357, -70)])
+    def test_middle_drags_are_never_claimed(x, dx):
+>       assert gesture(x=x, dx=dx) == {'opened': [], 'prevented': 0}
+E       AssertionError: assert {'opened': ['...prevented': 1} == {'opened': [], 'prevented': 0}
+E         
+E         Differing items:
+E         {'opened': ['left']} != {'opened': []}
+E         {'prevented': 1} != {'prevented': 0}
+E         Use -v to get more diff
+
+tests/test_sidebar_edge_swipe_js.py:25: AssertionError
+_________________ test_middle_drags_are_never_claimed[195--70] _________________
+
+x = 195, dx = -70
+
+    @pytest.mark.parametrize('x,dx', [(195, 70), (195, -70), (33, 70), (357, -70)])
+    def test_middle_drags_are_never_claimed(x, dx):
+>       assert gesture(x=x, dx=dx) == {'opened': [], 'prevented': 0}
+E       AssertionError: assert {'opened': ['...prevented': 1} == {'opened': [], 'prevented': 0}
+E         
+E         Differing items:
+E         {'opened': ['right']} != {'opened': []}
+E         {'prevented': 1} != {'prevented': 0}
+E         Use -v to get more diff
+
+tests/test_sidebar_edge_swipe_js.py:25: AssertionError
+__________________ test_middle_drags_are_never_claimed[33-70] __________________
+
+x = 33, dx = 70
+
+    @pytest.mark.parametrize('x,dx', [(195, 70), (195, -70), (33, 70), (357, -70)])
+    def test_middle_drags_are_never_claimed(x, dx):
+>       assert gesture(x=x, dx=dx) == {'opened': [], 'prevented': 0}
+E       AssertionError: assert {'opened': ['...prevented': 1} == {'opened': [], 'prevented': 0}
+E         
+E         Differing items:
+E         {'opened': ['left']} != {'opened': []}
+E         {'prevented': 1} != {'prevented': 0}
+E         Use -v to get more diff
+
+tests/test_sidebar_edge_swipe_js.py:25: AssertionError
+_________________ test_middle_drags_are_never_claimed[357--70] _________________
+
+x = 357, dx = -70
+
+    @pytest.mark.parametrize('x,dx', [(195, 70), (195, -70), (33, 70), (357, -70)])
+    def test_middle_drags_are_never_claimed(x, dx):
+>       assert gesture(x=x, dx=dx) == {'opened': [], 'prevented': 0}
+E       AssertionError: assert {'opened': ['...prevented': 1} == {'opened': [], 'prevented': 0}
+E         
+E         Differing items:
+E         {'opened': ['right']} != {'opened': []}
+E         {'prevented': 1} != {'prevented': 0}
+E         Use -v to get more diff
+
+tests/test_sidebar_edge_swipe_js.py:25: AssertionError
+___ test_active_selection_at_start_or_during_drag_is_never_claimed[options0] ___
+
+options = {'selected': True}
+
+    @pytest.mark.parametrize('options', [{'selected': True}, {'select_during_drag': True}])
+    def test_active_selection_at_start_or_during_drag_is_never_claimed(options):
+>       assert gesture(**options) == {'opened': [], 'prevented': 0}
+E       AssertionError: assert {'opened': ['...prevented': 1} == {'opened': [], 'prevented': 0}
+E         
+E         Differing items:
+E         {'opened': ['left']} != {'opened': []}
+E         {'prevented': 1} != {'prevented': 0}
+E         Use -v to get more diff
+
+tests/test_sidebar_edge_swipe_js.py:30: AssertionError
+___ test_active_selection_at_start_or_during_drag_is_never_claimed[options1] ___
+
+options = {'select_during_drag': True}
+
+    @pytest.mark.parametrize('options', [{'selected': True}, {'select_during_drag': True}])
+    def test_active_selection_at_start_or_during_drag_is_never_claimed(options):
+>       assert gesture(**options) == {'opened': [], 'prevented': 0}
+E       AssertionError: assert {'opened': ['...prevented': 1} == {'opened': [], 'prevented': 0}
+E         
+E         Differing items:
+E         {'opened': ['left']} != {'opened': []}
+E         {'prevented': 1} != {'prevented': 0}
+E         Use -v to get more diff
+
+tests/test_sidebar_edge_swipe_js.py:30: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_sidebar_edge_swipe_js.py::test_middle_drags_are_never_claimed[195-70]
+FAILED tests/test_sidebar_edge_swipe_js.py::test_middle_drags_are_never_claimed[195--70]
+FAILED tests/test_sidebar_edge_swipe_js.py::test_middle_drags_are_never_claimed[33-70]
+FAILED tests/test_sidebar_edge_swipe_js.py::test_middle_drags_are_never_claimed[357--70]
+FAILED tests/test_sidebar_edge_swipe_js.py::test_active_selection_at_start_or_during_drag_is_never_claimed[options0]
+FAILED tests/test_sidebar_edge_swipe_js.py::test_active_selection_at_start_or_during_drag_is_never_claimed[options1]
+6 failed, 15 passed, 1 warning in 1.21s

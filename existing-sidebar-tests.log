@@ -1,0 +1,12 @@
+✔ New Chat drawer behavior at 390px (1.483583ms)
+✔ New Chat drawer behavior at 767px (0.845709ms)
+✔ New Chat drawer behavior at 768px (0.346417ms)
+✔ New Chat drawer behavior at 1280px (0.334709ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 58.78175
