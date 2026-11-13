@@ -1,0 +1,343 @@
+{
+  "repo:odysseus-dev/odysseus calendar \"invalid date\" is:issue": {
+    "total_count": 1,
+    "incomplete": false,
+    "items": [
+      {
+        "number": 3240,
+        "title": "`manage_calendar` always returns events for the next two weeks.",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/3240"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus calendar \"invalid date\" is:pull-request": {
+    "total_count": 1,
+    "incomplete": false,
+    "items": [
+      {
+        "number": 1003,
+        "title": "fix(notes): parse natural-language due_date on manage_notes update",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1003"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus calendar \"empty\" \"500\" is:issue": {
+    "total_count": 6,
+    "incomplete": false,
+    "items": [
+      {
+        "number": 500,
+        "title": "Qwen3.x multimodal models fail to serve - bundled flash-attn v4 incompatible with vLLM's Qwen vision code",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/500"
+      },
+      {
+        "number": 7210,
+        "title": "Calendar discards unsaved event forms after failed create or update",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/7210"
+      },
+      {
+        "number": 605,
+        "title": "Proposal: Architecture & Codebase Structure v3",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/605"
+      },
+      {
+        "number": 4143,
+        "title": "ask about prj",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/4143"
+      },
+      {
+        "number": 5310,
+        "title": "NameError in chat_stream due to missing _explicit_web_intent definition",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/5310"
+      },
+      {
+        "number": 1333,
+        "title": "Follow up on adding skills issue (cant delete them now)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/1333"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus calendar \"empty\" \"500\" is:pull-request": {
+    "total_count": 10,
+    "incomplete": false,
+    "items": [
+      {
+        "number": 7211,
+        "title": "fix(calendar): preserve event drafts after failed writes",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7211"
+      },
+      {
+        "number": 6904,
+        "title": "fix(calendar): answer 400 when a CalDAV config body is not a JSON object (#6903)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6904"
+      },
+      {
+        "number": 6271,
+        "title": "fix(prefs): merge preference updates instead of republishing a snapshot",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6271"
+      },
+      {
+        "number": 6020,
+        "title": "refactor(model-routing): centralize explicit foreground fallback policy",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6020"
+      },
+      {
+        "number": 3288,
+        "title": "fix(calendar): validate created event date phrases",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3288"
+      },
+      {
+        "number": 4796,
+        "title": "fix(calendar): trust operator CA bundle in CalDAV test_connection",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4796"
+      },
+      {
+        "number": 4825,
+        "title": "fix(caldav): align test_connection SSL with the sync path",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4825"
+      },
+      {
+        "number": 297,
+        "title": "fix: don't cache calendar event ranges when the fetch fails",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/297"
+      },
+      {
+        "number": 5151,
+        "title": "Backport MIME sniffing and prompt-injection hardening",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5151"
+      },
+      {
+        "number": 3681,
+        "title": "fix(agent): execute fenced tool calls with inline args and route bare email tool names",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3681"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus calendar datetime \"400\" is:pull-request": {
+    "total_count": 1,
+    "incomplete": false,
+    "items": [
+      {
+        "number": 400,
+        "title": "Clarify first-run admin login",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/400"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus calendar date \"500\" is:issue": {
+    "total_count": 3,
+    "incomplete": false,
+    "items": [
+      {
+        "number": 500,
+        "title": "Qwen3.x multimodal models fail to serve - bundled flash-attn v4 incompatible with vLLM's Qwen vision code",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/500"
+      },
+      {
+        "number": 7210,
+        "title": "Calendar discards unsaved event forms after failed create or update",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/7210"
+      },
+      {
+        "number": 605,
+        "title": "Proposal: Architecture & Codebase Structure v3",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/issues/605"
+      }
+    ]
+  },
+  "repo:odysseus-dev/odysseus calendar \"datetime\" is:pr": {
+    "total_count": 27,
+    "incomplete": false,
+    "items": [
+      {
+        "number": 6404,
+        "title": "fix(caldav): import datetime so EXDATE survives write-back",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6404"
+      },
+      {
+        "number": 7164,
+        "title": "fix(cli): preserve calendar create timezone offsets",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7164"
+      },
+      {
+        "number": 7104,
+        "title": "fix(agent): avoid glibc-only strftime flags in time labels",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7104"
+      },
+      {
+        "number": 7103,
+        "title": "fix(time): add precomputed week dates to the time context",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/7103"
+      },
+      {
+        "number": 6291,
+        "title": "fix(calendar): keep the named date for all-day events",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6291"
+      },
+      {
+        "number": 5958,
+        "title": "fix(backup): version calendar task and note exports",
+        "state": "open",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5958"
+      },
+      {
+        "number": 6835,
+        "title": "fix(agent): avoid glibc-only strftime flags in time labels",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6835"
+      },
+      {
+        "number": 6881,
+        "title": "fix: drop glibc-only strftime directives from the calendar/email labels",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6881"
+      },
+      {
+        "number": 6926,
+        "title": "fix(tasks): render daily brief calendars in local time",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6926"
+      },
+      {
+        "number": 6828,
+        "title": "fix(time): add precomputed week dates to the time context",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6828"
+      },
+      {
+        "number": 5168,
+        "title": "feat(time): precompute ISO week context so models stop deriving dates",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5168"
+      },
+      {
+        "number": 4449,
+        "title": "fix: keep /quick-parse system prefix stable for prefix caching",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4449"
+      },
+      {
+        "number": 4887,
+        "title": "fix(calendar): accept time-first datetimes (\"3pm tomorrow\") in _parse_dt",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4887"
+      },
+      {
+        "number": 6122,
+        "title": "fix(time): prefer IANA timezone name over offset",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/6122"
+      },
+      {
+        "number": 2557,
+        "title": "fix(calendar): keep parsed fallback datetimes naive",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2557"
+      },
+      {
+        "number": 1114,
+        "title": "fix: replace deprecated datetime.utcnow() with datetime.now(timezone.utc)",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1114"
+      },
+      {
+        "number": 1457,
+        "title": "Replace core database datetime.utcnow defaults",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1457"
+      },
+      {
+        "number": 1875,
+        "title": "fix: check-in digest calendar windows shifted by the crew member's UTC offset",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1875"
+      },
+      {
+        "number": 4228,
+        "title": "fix(calendar): prevent invalid same-day timed events",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/4228"
+      },
+      {
+        "number": 2011,
+        "title": "Strip tz in _parse_dt dateutil fallback so non-ISO offset datetimes don't crash calendar list",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2011"
+      },
+      {
+        "number": 2403,
+        "title": "[codex] fix(calendar): preserve user timezone date semantics",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/2403"
+      },
+      {
+        "number": 1174,
+        "title": "fix: ICS export — escape X-WR-CALNAME and honour is_utc on DTSTART/DTEND",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1174"
+      },
+      {
+        "number": 1695,
+        "title": "fix: updating a calendar event ignores user timezone and shifts the time",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1695"
+      },
+      {
+        "number": 3503,
+        "title": "fix: handle batch events format in manage_calendar tool",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3503"
+      },
+      {
+        "number": 1683,
+        "title": "fix: re-importing an ICS file duplicates every tz-aware timed event",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/1683"
+      },
+      {
+        "number": 3299,
+        "title": "fix(notes): use a parseable due_date example in manage_notes docs",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/3299"
+      },
+      {
+        "number": 5336,
+        "title": "build(release): update installers and Android APKs",
+        "state": "closed",
+        "url": "https://github.com/odysseus-dev/odysseus/pull/5336"
+      }
+    ]
+  },
+  "related_4228": {
+    "number": 4228,
+    "merged": true,
+    "body": "## Summary\r\n\r\nThis PR fixes a bug in the calendar event form where users could save timed events whose end datetime was not after the start datetime, for example `06/14/2026 11:00 PM → 06/14/2026 12:00 AM`. Previously, changing the start time late in the day could wrap the end time modulo 24 hours without advancing the end date, and the save handler did not reject chronologically reversed ranges. This patch auto-advances the end date when the user creates an apparent overnight range and adds a save-time validation guard so invalid timed events cannot be persisted.\r\n\r\n\r\n## Target branch\r\n\r\n- [x] This PR targets **`dev`**, not `main`. All PRs land in `dev`; `main` is curated by the maintainer at each release. If your PR is on `main` by accident, click \"Edit\" on this PR and change the base.\r\n\r\n## Linked Issue\r\n\r\nFixes #4227\r\n\r\n## Type of Change\r\n\r\n- [x] Bug fix (non-breaking — fixes a confirmed issue)\r\n- [ ] New feature (non-breaking — adds new behaviour)\r\n- [ ] Breaking change (changes or removes existing behaviour)\r\n- [ ] Refactor / cleanup (behaviour unchanged)\r\n- [ ] Documentation only\r\n- [ ] CI / tooling / configuration\r\n\r\n## Checklist\r\n\r\n- [x] I searched [open issues](https://github.com/pewdiepie-archdaemon/odysseus/issues) and [open PRs](https://github.com/pewdiepie-archdaemon/odysseus/pulls) — this is not a duplicate.\r\n- [x] This PR targets `dev`\r\n- [x] My changes are limited to the scope described above — no unrelated refactors or whitespace changes mixed in.\r\n- [x] I actually ran the app (`docker compose up` or `uvicorn app:app`) and verified the change works end-to-end. Type-checks and unit tests are not enough.\r\n\r\n## How to Test\r\n\r\n1. Open the event creation form on the calendar.\r\n2. Select any start date (e.g., `06/14/2026`).\r\n3. Change the Start Time to `11:00 PM` and then the End Time to `12:00 AM`.\r\n4. Verify that the End Date field automatically and instantly advances to the next day (`06/15/2026`).\r\n5. Change the End Date back to the same date as the Start Date (`06/14/2026`).\r\n6. Click Save and verify that the form rejects the submission and displays a toast message: \"End time must be after start time\".\r\n\r\n## Visual / UI changes — REQUIRED if you touched anything that renders\r\n\r\n**Anything that changes what the UI looks like — buttons, icons, padding, colors, fonts, spacing, layout, CSS, HTML, SVG, or any `static/js/` module that draws to the DOM — needs all of the following. PRs that change rendering without these WILL be closed.**\r\n\r\n- [x] **Screenshot or short clip** of the change in the running app, attached below. Mobile screenshot too if the change affects mobile.\r\n- [x] **Style match**: the change uses Odysseus's existing visual language. Specifically:\r\n  - Reuse existing CSS variables (`--red`, `--fg`, `--bg`, `--card`, `--border`, etc.) — do not introduce new color values, font sizes, or spacing units.\r\n  - Reuse existing button/input/card/border classes. Don't invent parallel styling.\r\n  - **No Unicode emoji in UI or code.** Use inline SVG (matching the monochrome icon style already in `static/index.html`) or plain text.\r\n  - Monospaced font (`Fira Code`) for primary UI text. Don't override.\r\n  - Dark theme is the default; any light-mode work must be wired through the existing theme system, not hard-coded.\r\n- [x] **No new component patterns.** If a similar widget already exists in the app, extend it instead of writing a parallel one.\r\n- [x] **I am not an LLM agent submitting a bulk PR.** If you are, please open an issue describing the problem first — bulk auto-generated PRs that don't match the project's visual style are closed on sight, even when the underlying fix is correct.\r\n\r\n### Screenshots / clips\r\n\r\n<img width=\"1117\" height=\"741\" alt=\"image\" src=\"https://github.com/user-attachments/assets/8f431dc9-1de2-4f03-8050-636f0c416ce9\" />\r\n"
+  }
+}

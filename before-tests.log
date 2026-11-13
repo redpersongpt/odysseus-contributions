@@ -1,0 +1,543 @@
+FFFFFFFFFFFFFFFFFFF.....                                                 [100%]
+=================================== FAILURES ===================================
+_____ test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-] _____
+
+api = (<starlette.testclient.TestClient object at 0x10dc4dd90>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and0/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = ''
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: empty datetime string
+____ test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart- ] _____
+
+api = (<starlette.testclient.TestClient object at 0x10dc4efc0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and1/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = ' '
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: empty datetime string
+_ test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-not-a-date] _
+
+api = (<starlette.testclient.TestClient object at 0x10dd95df0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and2/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = 'not-a-date'
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: could not parse datetime: 'not-a-date'
+_ test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-2030-02-30] _
+
+api = (<starlette.testclient.TestClient object at 0x10eb098b0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and3/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = '2030-02-30'
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: could not parse datetime: '2030-02-30'
+_ test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-999999999999999999999] _
+
+api = (<starlette.testclient.TestClient object at 0x10dd94cb0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and4/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = '999999999999999999999'
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: could not parse datetime: '999999999999999999999'
+_____ test_invalid_create_is_400_and_rolls_back_default_calendar[dtend- ] ______
+
+api = (<starlette.testclient.TestClient object at 0x10ec42420>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and5/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = ' '
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: empty datetime string
+_ test_invalid_create_is_400_and_rolls_back_default_calendar[dtend-not-a-date] _
+
+api = (<starlette.testclient.TestClient object at 0x10ddceb40>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and6/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = 'not-a-date'
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: could not parse datetime: 'not-a-date'
+_ test_invalid_create_is_400_and_rolls_back_default_calendar[dtend-2030-02-30] _
+
+api = (<starlette.testclient.TestClient object at 0x10ed30ad0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and7/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = '2030-02-30'
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: could not parse datetime: '2030-02-30'
+_ test_invalid_create_is_400_and_rolls_back_default_calendar[dtend-999999999999999999999] _
+
+api = (<starlette.testclient.TestClient object at 0x10ed321e0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_create_is_400_and8/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = '999999999999999999999'
+
+    @pytest.mark.parametrize("field,value", [
+        (field, value) for field in ["dtstart", "dtend"] for value in INVALID_DATES
+        if not (field == "dtend" and value == "")
+    ])
+    def test_invalid_create_is_400_and_rolls_back_default_calendar(api, field, value):
+        client, factory = api
+        payload = {"summary": "Must not persist", "dtstart": "2030-01-02T09:00:00",
+                   field: value}
+    
+        response = client.post("/api/calendar/events", json=payload)
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:52: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1408 Failed to create event: could not parse datetime: '999999999999999999999'
+______ test_invalid_update_is_400_and_keeps_the_original_event[-dtstart] _______
+
+api = (<starlette.testclient.TestClient object at 0x10ed8b560>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and0/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = ''
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: empty datetime string
+_______ test_invalid_update_is_400_and_keeps_the_original_event[-dtend] ________
+
+api = (<starlette.testclient.TestClient object at 0x10ec3aa20>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and1/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = ''
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: empty datetime string
+______ test_invalid_update_is_400_and_keeps_the_original_event[ -dtstart] ______
+
+api = (<starlette.testclient.TestClient object at 0x10ec3ac90>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and2/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = ' '
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: empty datetime string
+_______ test_invalid_update_is_400_and_keeps_the_original_event[ -dtend] _______
+
+api = (<starlette.testclient.TestClient object at 0x10eac0530>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and3/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = ' '
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: empty datetime string
+_ test_invalid_update_is_400_and_keeps_the_original_event[not-a-date-dtstart] __
+
+api = (<starlette.testclient.TestClient object at 0x10eac0c50>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and4/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = 'not-a-date'
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: could not parse datetime: 'not-a-date'
+__ test_invalid_update_is_400_and_keeps_the_original_event[not-a-date-dtend] ___
+
+api = (<starlette.testclient.TestClient object at 0x10ec672c0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and5/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = 'not-a-date'
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: could not parse datetime: 'not-a-date'
+_ test_invalid_update_is_400_and_keeps_the_original_event[2030-02-30-dtstart] __
+
+api = (<starlette.testclient.TestClient object at 0x10dd594c0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and6/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = '2030-02-30'
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: could not parse datetime: '2030-02-30'
+__ test_invalid_update_is_400_and_keeps_the_original_event[2030-02-30-dtend] ___
+
+api = (<starlette.testclient.TestClient object at 0x10d919250>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and7/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = '2030-02-30'
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: could not parse datetime: '2030-02-30'
+_ test_invalid_update_is_400_and_keeps_the_original_event[999999999999999999999-dtstart] _
+
+api = (<starlette.testclient.TestClient object at 0x10d8df1d0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and8/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtstart', value = '999999999999999999999'
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: could not parse datetime: '999999999999999999999'
+_ test_invalid_update_is_400_and_keeps_the_original_event[999999999999999999999-dtend] _
+
+api = (<starlette.testclient.TestClient object at 0x10d8de9f0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-871uyps8/pytest/test_invalid_update_is_400_and9/calendar.db), autoflush=False, expire_on_commit=True))
+field = 'dtend', value = '999999999999999999999'
+
+    @pytest.mark.parametrize("field", ["dtstart", "dtend"])
+    @pytest.mark.parametrize("value", INVALID_DATES)
+    def test_invalid_update_is_400_and_keeps_the_original_event(api, field, value):
+        client, factory = api
+        created = client.post("/api/calendar/events", json={
+            "summary": "Original", "dtstart": "2030-01-02T09:00:00+03:00",
+            "dtend": "2030-01-02T10:00:00+03:00", "location": "Original location",
+        })
+        assert created.status_code == 200
+        uid = created.json()["uid"]
+        original = client.get(f"/api/calendar/events/{uid}").json()["event"]
+    
+        response = client.put(f"/api/calendar/events/{uid}", json={
+            "summary": "Must not persist", "location": "Changed", field: value,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to update event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:75: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1482 Failed to update event: could not parse datetime: '999999999999999999999'
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02T09:00:00+03:00-2030-01-02T10:00:00+03:00-False-2030-01-02T06:00:00Z-2030-01-02T07:00:00Z]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02T09:00:00Z-None-False-2030-01-02T09:00:00Z-2030-01-02T10:00:00Z]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02-None-True-2030-01-02-2030-01-03]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02T09:00:00--False-2030-01-02T09:00:00-2030-01-02T10:00:00]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[January 2, 2030 9am-January 2, 2030 10am-False-2030-01-02T09:00:00-2030-01-02T10:00:00]
+  /Users/red/Documents/ChatGPT/ODY/odysseus/routes/calendar_routes.py:1461: PydanticDeprecatedSince20: The `__fields_set__` attribute is deprecated, use `model_fields_set` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    reminder_fields = getattr(data, "model_fields_set", getattr(data, "__fields_set__", set()))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart- ]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-not-a-date]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-2030-02-30]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtstart-999999999999999999999]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtend- ]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtend-not-a-date]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtend-2030-02-30]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_create_is_400_and_rolls_back_default_calendar[dtend-999999999999999999999]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[-dtstart]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[-dtend]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[ -dtstart]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[ -dtend]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[not-a-date-dtstart]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[not-a-date-dtend]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[2030-02-30-dtstart]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[2030-02-30-dtend]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[999999999999999999999-dtstart]
+FAILED tests/test_calendar_event_date_errors.py::test_invalid_update_is_400_and_keeps_the_original_event[999999999999999999999-dtend]
+19 failed, 5 passed, 6 warnings in 1.70s

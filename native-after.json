@@ -1,0 +1,95 @@
+{
+  "phase": "after",
+  "source": "/Users/red/Documents/ChatGPT/ODY/odysseus",
+  "cases": [
+    {
+      "method": "POST",
+      "field": "dtstart",
+      "value": "",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtstart"
+      },
+      "original_event_unchanged": true
+    },
+    {
+      "method": "POST",
+      "field": "dtstart",
+      "value": "not-a-date",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtstart"
+      },
+      "original_event_unchanged": true
+    },
+    {
+      "method": "POST",
+      "field": "dtend",
+      "value": "not-a-date",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtend"
+      },
+      "original_event_unchanged": true
+    },
+    {
+      "method": "POST",
+      "field": "dtend",
+      "value": "2030-02-30",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtend"
+      },
+      "original_event_unchanged": true
+    },
+    {
+      "method": "PUT",
+      "field": "dtstart",
+      "value": "",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtstart"
+      },
+      "original_event_unchanged": true
+    },
+    {
+      "method": "PUT",
+      "field": "dtstart",
+      "value": "not-a-date",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtstart"
+      },
+      "original_event_unchanged": true
+    },
+    {
+      "method": "PUT",
+      "field": "dtend",
+      "value": "not-a-date",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtend"
+      },
+      "original_event_unchanged": true
+    },
+    {
+      "method": "PUT",
+      "field": "dtend",
+      "value": "2030-02-30",
+      "status": 400,
+      "response": {
+        "detail": "Invalid dtend"
+      },
+      "original_event_unchanged": true
+    }
+  ],
+  "valid_create": 200,
+  "valid_retry_update": 200,
+  "saved_start": "2030-01-03T06:00:00Z",
+  "saved_end": "2030-01-03T07:00:00Z",
+  "cleanup": {
+    "app_exit": -15,
+    "children_left": [],
+    "port_closed": true
+  }
+}
