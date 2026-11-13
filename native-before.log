@@ -1,0 +1,12 @@
+{"phase":"before","label":"desktop","action":"create","stage":"open calendar"}
+{"phase":"before","label":"desktop","action":"create","stage":"fill"}
+{"phase":"before","label":"desktop","action":"create","stage":"save"}
+{"phase":"before","label":"desktop","action":"update","stage":"open calendar"}
+{"phase":"before","label":"desktop","action":"update","stage":"fill"}
+{"phase":"before","label":"desktop","action":"update","stage":"save"}
+{"phase":"before","label":"mobile","action":"create","stage":"open calendar"}
+{"phase":"before","label":"mobile","action":"create","stage":"fill"}
+{"phase":"before","label":"mobile","action":"create","stage":"save"}
+{"phase":"before","label":"mobile","action":"update","stage":"open calendar"}
+{"phase":"before","label":"mobile","action":"update","stage":"fill"}
+{"phase":"before","label":"mobile","action":"update","stage":"save"}

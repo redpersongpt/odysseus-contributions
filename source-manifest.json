@@ -1,0 +1,17 @@
+{
+  "source_commit": "40bb83111fc00fcab26bb515f10079b1fefc6055",
+  "base_dev": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "issue": "https://github.com/odysseus-dev/odysseus/issues/7210",
+  "files": {
+    "static/js/calendar.js": "bff5183a34d4a7b253137d7f1fe01f94f856eaa5a0b0dc405e5531944aae3ce8",
+    "tests/test_calendar_event_save_drafts_js.py": "e003ab0bb4db6a83334833edcb39c9a402aa57bf7369da74beaddebd2ee4d726"
+  },
+  "actual_browser": "157.0.8103.51",
+  "native_cases": 8,
+  "all_original_8_PNGs_visually_inspected": true,
+  "preflights_excluded": [
+    "First native check attempted hidden switch input; final driver clicks visible label.",
+    "First result formatter checked a UID variable after retry mutation and misreported create server_unchanged; corrected driver derives it from actual failure-phase listing and original-event GET; both phases rerun from fresh data."
+  ],
+  "render_scope": "Only create/update error refreshes; unrelated background refresh/empty date parsing/mobile form overflow unchanged"
+}

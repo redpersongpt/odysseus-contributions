@@ -1,0 +1,117 @@
+FFFFFF........F...                                                       [100%]
+=================================== FAILURES ===================================
+_ test_failed_write_restores_cache_and_preserves_any_open_draft[True-403-create] _
+
+action = 'create', outcome = '403', form = True
+
+    @pytest.mark.parametrize('action', ['create', 'update'])
+    @pytest.mark.parametrize('outcome', ['403', '500', 'network'])
+    @pytest.mark.parametrize('form', [True, False])
+    def test_failed_write_restores_cache_and_preserves_any_open_draft(action, outcome, form):
+        result = run_write(action, outcome, form=form)
+        assert result['rejected']
+        assert result['events'] == {'owned': {'uid': 'owned', 'summary': 'Saved', 'location': 'Old office'}}
+>       assert result['form'] == ({'summary': 'Draft', 'description': 'Unsaved body'} if form else None)
+E       AssertionError: assert None == {'summary': 'Draft', 'description': 'Unsaved body'}
+
+tests/test_calendar_event_save_drafts_js.py:72: AssertionError
+_ test_failed_write_restores_cache_and_preserves_any_open_draft[True-403-update] _
+
+action = 'update', outcome = '403', form = True
+
+    @pytest.mark.parametrize('action', ['create', 'update'])
+    @pytest.mark.parametrize('outcome', ['403', '500', 'network'])
+    @pytest.mark.parametrize('form', [True, False])
+    def test_failed_write_restores_cache_and_preserves_any_open_draft(action, outcome, form):
+        result = run_write(action, outcome, form=form)
+        assert result['rejected']
+        assert result['events'] == {'owned': {'uid': 'owned', 'summary': 'Saved', 'location': 'Old office'}}
+>       assert result['form'] == ({'summary': 'Draft', 'description': 'Unsaved body'} if form else None)
+E       AssertionError: assert None == {'summary': 'Draft', 'description': 'Unsaved body'}
+
+tests/test_calendar_event_save_drafts_js.py:72: AssertionError
+_ test_failed_write_restores_cache_and_preserves_any_open_draft[True-500-create] _
+
+action = 'create', outcome = '500', form = True
+
+    @pytest.mark.parametrize('action', ['create', 'update'])
+    @pytest.mark.parametrize('outcome', ['403', '500', 'network'])
+    @pytest.mark.parametrize('form', [True, False])
+    def test_failed_write_restores_cache_and_preserves_any_open_draft(action, outcome, form):
+        result = run_write(action, outcome, form=form)
+        assert result['rejected']
+        assert result['events'] == {'owned': {'uid': 'owned', 'summary': 'Saved', 'location': 'Old office'}}
+>       assert result['form'] == ({'summary': 'Draft', 'description': 'Unsaved body'} if form else None)
+E       AssertionError: assert None == {'summary': 'Draft', 'description': 'Unsaved body'}
+
+tests/test_calendar_event_save_drafts_js.py:72: AssertionError
+_ test_failed_write_restores_cache_and_preserves_any_open_draft[True-500-update] _
+
+action = 'update', outcome = '500', form = True
+
+    @pytest.mark.parametrize('action', ['create', 'update'])
+    @pytest.mark.parametrize('outcome', ['403', '500', 'network'])
+    @pytest.mark.parametrize('form', [True, False])
+    def test_failed_write_restores_cache_and_preserves_any_open_draft(action, outcome, form):
+        result = run_write(action, outcome, form=form)
+        assert result['rejected']
+        assert result['events'] == {'owned': {'uid': 'owned', 'summary': 'Saved', 'location': 'Old office'}}
+>       assert result['form'] == ({'summary': 'Draft', 'description': 'Unsaved body'} if form else None)
+E       AssertionError: assert None == {'summary': 'Draft', 'description': 'Unsaved body'}
+
+tests/test_calendar_event_save_drafts_js.py:72: AssertionError
+_ test_failed_write_restores_cache_and_preserves_any_open_draft[True-network-create] _
+
+action = 'create', outcome = 'network', form = True
+
+    @pytest.mark.parametrize('action', ['create', 'update'])
+    @pytest.mark.parametrize('outcome', ['403', '500', 'network'])
+    @pytest.mark.parametrize('form', [True, False])
+    def test_failed_write_restores_cache_and_preserves_any_open_draft(action, outcome, form):
+        result = run_write(action, outcome, form=form)
+        assert result['rejected']
+        assert result['events'] == {'owned': {'uid': 'owned', 'summary': 'Saved', 'location': 'Old office'}}
+>       assert result['form'] == ({'summary': 'Draft', 'description': 'Unsaved body'} if form else None)
+E       AssertionError: assert None == {'summary': 'Draft', 'description': 'Unsaved body'}
+
+tests/test_calendar_event_save_drafts_js.py:72: AssertionError
+_ test_failed_write_restores_cache_and_preserves_any_open_draft[True-network-update] _
+
+action = 'update', outcome = 'network', form = True
+
+    @pytest.mark.parametrize('action', ['create', 'update'])
+    @pytest.mark.parametrize('outcome', ['403', '500', 'network'])
+    @pytest.mark.parametrize('form', [True, False])
+    def test_failed_write_restores_cache_and_preserves_any_open_draft(action, outcome, form):
+        result = run_write(action, outcome, form=form)
+        assert result['rejected']
+        assert result['events'] == {'owned': {'uid': 'owned', 'summary': 'Saved', 'location': 'Old office'}}
+>       assert result['form'] == ({'summary': 'Draft', 'description': 'Unsaved body'} if form else None)
+E       AssertionError: assert None == {'summary': 'Draft', 'description': 'Unsaved body'}
+
+tests/test_calendar_event_save_drafts_js.py:72: AssertionError
+___ test_unreadable_create_response_keeps_draft_and_removes_temporary_event ____
+
+    def test_unreadable_create_response_keeps_draft_and_removes_temporary_event():
+        result = run_write('create', 'json')
+        assert result['rejected']
+>       assert result['form']['description'] == 'Unsaved body'
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'NoneType' object is not subscriptable
+
+tests/test_calendar_event_save_drafts_js.py:93: TypeError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_calendar_event_save_drafts_js.py::test_failed_write_restores_cache_and_preserves_any_open_draft[True-403-create]
+FAILED tests/test_calendar_event_save_drafts_js.py::test_failed_write_restores_cache_and_preserves_any_open_draft[True-403-update]
+FAILED tests/test_calendar_event_save_drafts_js.py::test_failed_write_restores_cache_and_preserves_any_open_draft[True-500-create]
+FAILED tests/test_calendar_event_save_drafts_js.py::test_failed_write_restores_cache_and_preserves_any_open_draft[True-500-update]
+FAILED tests/test_calendar_event_save_drafts_js.py::test_failed_write_restores_cache_and_preserves_any_open_draft[True-network-create]
+FAILED tests/test_calendar_event_save_drafts_js.py::test_failed_write_restores_cache_and_preserves_any_open_draft[True-network-update]
+FAILED tests/test_calendar_event_save_drafts_js.py::test_unreadable_create_response_keeps_draft_and_removes_temporary_event
+7 failed, 11 passed, 1 warning in 1.15s

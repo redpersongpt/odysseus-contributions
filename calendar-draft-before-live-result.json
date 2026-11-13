@@ -1,0 +1,58 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "action": "create",
+      "rejected_http": 500,
+      "error_detail": "Failed to create event",
+      "form_retained": false,
+      "draft_after_failure": null,
+      "server_unchanged": true,
+      "retry_saved": false,
+      "reload_verified": false,
+      "page_errors": [],
+      "trigger": "Native all-day date input cleared; actual backend empty-date parse returns 500; no response interception"
+    },
+    {
+      "viewport": "desktop",
+      "action": "update",
+      "rejected_http": 500,
+      "error_detail": "Failed to update event",
+      "form_retained": false,
+      "draft_after_failure": null,
+      "server_unchanged": true,
+      "retry_saved": false,
+      "reload_verified": false,
+      "page_errors": [],
+      "trigger": "Native all-day date input cleared; actual backend empty-date parse returns 500; no response interception"
+    },
+    {
+      "viewport": "mobile",
+      "action": "create",
+      "rejected_http": 500,
+      "error_detail": "Failed to create event",
+      "form_retained": false,
+      "draft_after_failure": null,
+      "server_unchanged": true,
+      "retry_saved": false,
+      "reload_verified": false,
+      "page_errors": [],
+      "trigger": "Native all-day date input cleared; actual backend empty-date parse returns 500; no response interception"
+    },
+    {
+      "viewport": "mobile",
+      "action": "update",
+      "rejected_http": 500,
+      "error_detail": "Failed to update event",
+      "form_retained": false,
+      "draft_after_failure": null,
+      "server_unchanged": true,
+      "retry_saved": false,
+      "reload_verified": false,
+      "page_errors": [],
+      "trigger": "Native all-day date input cleared; actual backend empty-date parse returns 500; no response interception"
+    }
+  ]
+}

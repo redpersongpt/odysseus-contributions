@@ -1,0 +1,16 @@
+{"phase":"after","label":"desktop","action":"create","stage":"open calendar"}
+{"phase":"after","label":"desktop","action":"create","stage":"fill"}
+{"phase":"after","label":"desktop","action":"create","stage":"save"}
+{"phase":"after","label":"desktop","action":"create","stage":"retry"}
+{"phase":"after","label":"desktop","action":"update","stage":"open calendar"}
+{"phase":"after","label":"desktop","action":"update","stage":"fill"}
+{"phase":"after","label":"desktop","action":"update","stage":"save"}
+{"phase":"after","label":"desktop","action":"update","stage":"retry"}
+{"phase":"after","label":"mobile","action":"create","stage":"open calendar"}
+{"phase":"after","label":"mobile","action":"create","stage":"fill"}
+{"phase":"after","label":"mobile","action":"create","stage":"save"}
+{"phase":"after","label":"mobile","action":"create","stage":"retry"}
+{"phase":"after","label":"mobile","action":"update","stage":"open calendar"}
+{"phase":"after","label":"mobile","action":"update","stage":"fill"}
+{"phase":"after","label":"mobile","action":"update","stage":"save"}
+{"phase":"after","label":"mobile","action":"update","stage":"retry"}
