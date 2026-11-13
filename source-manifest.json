@@ -1,0 +1,20 @@
+{
+  "source_commit": "8c814b864278cf9c8d9a2534854111132e5c9428",
+  "base_commit": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "source_sha256": {
+    "static/js/markdown.js": "eba2ecf76b8102ca05fbae008a9f85d7c28ecd704a4374c1d1f411fa7ea30240",
+    "static/css/01-agent-chat.css": "af6a2a1e68037f01eff3a845d86c64042ea2d7fe35270a04c28061ea243085e6",
+    "tests/test_markdown_nested_lists_js.py": "afd83041bf211e5736501b3345d04a0a779aa1c7840cb280bec307757e533d87",
+    "tests/streaming/corpus.mjs": "e85ad9b0980b413b4906c62f9bc1a806a30314354ea9330f17018589af6269d9"
+  },
+  "baseline_production_files_match_dev": true,
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "node": "v24.21.0",
+  "chrome": "157.0.8103.51",
+  "compatibility": {
+    "local_only": true,
+    "additional_pr": 7201,
+    "additional_source": "7eb06d4d8c8607ef2f0bd26aaeadddab7f11e350",
+    "production_combination_not_published": true
+  }
+}

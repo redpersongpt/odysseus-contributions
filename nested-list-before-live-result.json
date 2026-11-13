@@ -1,0 +1,192 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 0,
+        "nested_ol": 0,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          2,
+          1
+        ],
+        "tasks": 2,
+        "done": 1,
+        "list_in_paragraph": 0,
+        "pending": null,
+        "html": "<div class=\"stream-content\"><p>Owned nested list response.</p>\n\n<ul><li>Backend</li></ul>  - API routes\n<p>  - Database models</p>\n<ul><li>Frontend</li></ul><!--tail--><ol><li>First</li>\n<li>Second</li></ol>\n<p>   1. Sub</p><ol><li>Third</li></ol><p></p><span class=\"token-new\">\n\n</span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Parent task</span></span></li></ul><span class=\"token-new\">  - [x] Child task\n</span><ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Completed parent</span></span></li></ul><span class=\"token-new\">  - [ ] Pending child\n\n</span><p><span class=\"token-new\">End of owned response.</span></p></div>"
+      },
+      "reload_render": {
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 0,
+        "nested_ol": 0,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          2,
+          1
+        ],
+        "tasks": 2,
+        "done": 1,
+        "list_in_paragraph": 0,
+        "pending": null,
+        "html": "<p>Owned nested list response.</p>\n\n<ul><li>Backend</li></ul>  - API routes\n<p>  - Database models</p>\n<ul><li>Frontend</li></ul><ol><li>First</li>\n<li>Second</li></ol>\n<p>   1. Sub</p><ol><li>Third</li></ol><p></p>\n\n<ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Parent task</span></li></ul>  - [x] Child task\n<ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Completed parent</span></li></ul>  - [ ] Pending child\n\n<p>End of owned response.</p>"
+      },
+      "persisted_lists": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 0,
+        "nested_ol": 0,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          2,
+          1
+        ],
+        "tasks": 2,
+        "done": 1,
+        "list_in_paragraph": 0,
+        "pending": null,
+        "html": "<div class=\"stream-content\"><p>Owned nested list response.</p>\n\n<ul><li>Backend</li></ul>  - API routes\n<p>  - Database models</p>\n<ul><li>Frontend</li></ul><!--tail--><ol><li>First</li>\n<li>Second</li></ol>\n<p>   1. Sub</p><ol><li>Third</li></ol><p></p><span class=\"token-new\">\n\n</span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Parent task</span></span></li></ul><span class=\"token-new\">  - [x] Child task\n</span><ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Completed parent</span></span></li></ul><span class=\"token-new\">  - [ ] Pending child\n\n</span><p><span class=\"token-new\">End of owned response.</span></p></div>"
+      },
+      "reload_render": {
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 0,
+        "nested_ol": 0,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          2,
+          1
+        ],
+        "tasks": 2,
+        "done": 1,
+        "list_in_paragraph": 0,
+        "pending": null,
+        "html": "<p>Owned nested list response.</p>\n\n<ul><li>Backend</li></ul>  - API routes\n<p>  - Database models</p>\n<ul><li>Frontend</li></ul><ol><li>First</li>\n<li>Second</li></ol>\n<p>   1. Sub</p><ol><li>Third</li></ol><p></p>\n\n<ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Parent task</span></li></ul>  - [x] Child task\n<ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Completed parent</span></li></ul>  - [ ] Pending child\n\n<p>End of owned response.</p>"
+      },
+      "persisted_lists": true,
+      "page_errors": []
+    }
+  ]
+}

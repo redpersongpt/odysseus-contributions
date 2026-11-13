@@ -1,0 +1,22 @@
+{
+  "before": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "provider_request_count": 2,
+    "stream_requests": 2,
+    "content_chunks_per_fixture_response": 4,
+    "private_data_not_published": true
+  },
+  "after": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "provider_request_count": 2,
+    "stream_requests": 2,
+    "content_chunks_per_fixture_response": 4,
+    "private_data_not_published": true
+  }
+}
