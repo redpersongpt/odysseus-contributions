@@ -1,0 +1,16 @@
+{
+  "source_commit": "da8c86a80d3daea9d53443f304545fc2c1a8f832",
+  "base_dev": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "previous_PR_head": "8c814b864278cf9c8d9a2534854111132e5c9428",
+  "files": {
+    "static/js/markdown.js": "5b63b1e4afea3f16b31bfc075483b3488e3afb77ef5be7eaddb420c1b9f7cf35",
+    "static/css/01-agent-chat.css": "af6a2a1e68037f01eff3a845d86c64042ea2d7fe35270a04c28061ea243085e6",
+    "static/css/03-agent-chat.css": "79b49815007416a6e0aa1d2ebaf565fdbe61c10e63dea1240e430b41a74a78f4",
+    "tests/test_markdown_nested_lists_js.py": "1ab3136cf9688f472a3fc544205e184bb7084c44f80fc0a0ff9b5dc5d4c5afcd",
+    "tests/streaming/corpus.mjs": "7345068fff963a1f1659feeeaad4ca33492d60dbcd61a1d8a20481ea75e856cf"
+  },
+  "actual_browser": "Chrome 157.0.8103.51",
+  "all_four_final_PNGs_visually_inspected": true,
+  "native_scope": "auth app / real owned provider / actual multipart chat_stream / streaming and history renderer / no model inference",
+  "preflight_excluded": "Earlier first fixture root collided with before worktree; earlier marker width used empty CSS font shorthand/canvas default, not valid evidence. Final verified driver sets explicit computed font weight, size, family and both phases use the same two-digit fixture."
+}

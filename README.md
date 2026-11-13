@@ -1,0 +1,16 @@
+# Nested lists and ordered-start follow-up for PR #7205
+
+Source head da8c86a80d3daea9d53443f304545fc2c1a8f832, base dev 3d01007b9f573af9b4fed8e6e152bafcddeaeba5. This updates existing PR #7205, not a new upstream PR.
+
+Issue #6335 documented lost ordered starts before this work; attribution to desmvu for its diagnosis/proposal. Ordered starts use the same nesting stack, so the correction stays in that PR. Each new run retains its first numeric marker; later markers increment normally. Ordered-list margin now leaves room for the tested one/two-digit markers in the clipped message body. Full CommonMark and arbitrarily large markers are not claimed.
+
+- Exact unchanged-dev extended regression file: 27 behavioral failures / 7 controls passed. Previous PR head 8c814b86: 9 new failures / 25 passed. Final focused tests: 102 passed. Streaming: 138 passed.
+- Final native fixtures: Chrome 157.0.8103.51/macOS, real authenticated Uvicorn application and owned OpenAI-compatible HTTP provider, real multipart chat stream, four content chunks and real renderer/history reload. Both phases contain exactly the same owned fixture text, no real model inference.
+- Before runtime source is the prior PR head 8c814b86 (nesting already present). After is the new source head. Both desktop 1440x1000 and mobile 390x844 verify starts [1,1,1] -> [23,17,26], root sibling counts [3,2], three nested UL/one nested OL, four independent checkbox states, no invalid paragraph/list and zero page errors. Served JS and both changed CSS files match phase source bytes.
+- Correct final marker measurement explicitly sets canvas font from computed marker weight/size/family after fonts ready; earlier shorthand-font measurement was invalid and is excluded. Desktop available 38 vs measured 37.4153 pixels; mobile 30.5938 vs 30.1292. These are font-width/geometry observations, not direct marker bounding boxes. All four final original screenshots inspected visually, including visible two-digit root numbers.
+- Submission uses the public frontend controller/input accessor; native typing/Send activation is not verified. No route/renderer/DOM result replacement. Mobile is a viewport check, not actual phone/touch. No Docker/Windows/Safari/Firefox/external provider/model inference/full suite claim. Earlier app-root collision and intermediate source/fixture runs are not canonical evidence.
+- Passwords, databases, raw provider captures and private app logs are excluded. Both app/MCP trees stopped, owned providers closed, ports verified closed.
+
+Original nesting-only unchanged-dev reproduction and runtime evidence remains at https://github.com/redpersongpt/odysseus-contributions/tree/5586020e71b47cd43de16edaceb41927f7857a94 .
+
+Local-only compatibility checkout: new source plus open #7201 raster images (7eb06d4d), #7207 table alignment (dc04b6db), #7209 Mermaid palettes (47ea40c3) applied cleanly; 135 focused pytest and 144 streaming tests passed. Initial compatibility run had 3 SVG browser tests fail because this detached worktree could not resolve Playwright. The final run supplies NODE_PATH pointing to the existing workspace node_modules; no product source changed for that setup correction. No additional native app claim for the combined checkout.

@@ -1,0 +1,16 @@
+{
+  "before": {
+    "app_exit": -15,
+    "children_left": [],
+    "provider_POSTs": 2
+  },
+  "after": {
+    "app_exit": -15,
+    "children_left": [],
+    "provider_POSTs": 2
+  },
+  "ports_closed": {
+    "17871": true,
+    "17872": true
+  }
+}

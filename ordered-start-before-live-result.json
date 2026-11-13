@@ -1,0 +1,332 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "marker_room": [
+          {
+            "available": 18.234375,
+            "required": 28.061508178710938,
+            "font": "15.2px \"Fira Code\", monospace"
+          },
+          {
+            "available": 18.234375,
+            "required": 28.061508178710938,
+            "font": "15.2px \"Fira Code\", monospace"
+          }
+        ],
+        "ordered_starts": [
+          1,
+          1,
+          1
+        ],
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 3,
+        "nested_ol": 1,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          3,
+          2
+        ],
+        "tasks": 4,
+        "done": 2,
+        "list_in_paragraph": 0,
+        "pending": {
+          "done": false,
+          "decoration": "none",
+          "checkbox_fill": "rgba(0, 0, 0, 0)",
+          "child_top": 683.0625,
+          "parent_bottom": 668.25,
+          "child_left": 520.46875,
+          "parent_left": 479.234375
+        },
+        "html": "<div class=\"stream-content\"><!--tail--><p>Owned nested list response.</p>\n\n<ul><li>Backend<ul><li>API routes</li><li>Database models</li></ul></li><li>Frontend</li></ul>\n\n<ol><li>First</li><li>Second<ol><li>Sub</li></ol></li><li>Third</li></ol>\n\n<p>A note between lists.</p>\n\n<ol><li>Continued</li><li>Last</li></ol><span class=\"token-new\">\n\n</span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Parent task</span></span><ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Child task</span></span></li></ul></li><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Completed parent</span></span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Pending child</span></span></li></ul></li></ul><span class=\"token-new\">\n\n</span><p><span class=\"token-new\">End of owned response.</span></p></div>"
+      },
+      "reload_render": {
+        "marker_room": [
+          {
+            "available": 18.234375,
+            "required": 28.061508178710938,
+            "font": "15.2px \"Fira Code\", monospace"
+          },
+          {
+            "available": 18.234375,
+            "required": 28.061508178710938,
+            "font": "15.2px \"Fira Code\", monospace"
+          }
+        ],
+        "ordered_starts": [
+          1,
+          1,
+          1
+        ],
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 3,
+        "nested_ol": 1,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          3,
+          2
+        ],
+        "tasks": 4,
+        "done": 2,
+        "list_in_paragraph": 0,
+        "pending": {
+          "done": false,
+          "decoration": "none",
+          "checkbox_fill": "rgba(0, 0, 0, 0)",
+          "child_top": 486.21875,
+          "parent_bottom": 471.40625,
+          "child_left": 520.46875,
+          "parent_left": 479.234375
+        },
+        "html": "<p>Owned nested list response.</p>\n\n<ul><li>Backend<ul><li>API routes</li><li>Database models</li></ul></li><li>Frontend</li></ul>\n\n<ol><li>First</li><li>Second<ol><li>Sub</li></ol></li><li>Third</li></ol>\n\n<p>A note between lists.</p>\n\n<ol><li>Continued</li><li>Last</li></ol>\n\n<ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Parent task</span><ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Child task</span></li></ul></li><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Completed parent</span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Pending child</span></li></ul></li></ul>\n\n<p>End of owned response.</p>"
+      },
+      "persisted_lists": true,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "chat_http": 200,
+      "submission": "public frontend controller; native typing not verified",
+      "initial_render": {
+        "marker_room": [
+          {
+            "available": 14.6875,
+            "required": 22.596908569335938,
+            "font": "12.24px \"Fira Code\", monospace"
+          },
+          {
+            "available": 14.6875,
+            "required": 22.596908569335938,
+            "font": "12.24px \"Fira Code\", monospace"
+          }
+        ],
+        "ordered_starts": [
+          1,
+          1,
+          1
+        ],
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 3,
+        "nested_ol": 1,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          3,
+          2
+        ],
+        "tasks": 4,
+        "done": 2,
+        "list_in_paragraph": 0,
+        "pending": {
+          "done": false,
+          "decoration": "none",
+          "checkbox_fill": "rgba(0, 0, 0, 0)",
+          "child_top": 588.34375,
+          "parent_bottom": 574.84375,
+          "child_left": 75.375,
+          "parent_left": 37.6875
+        },
+        "html": "<div class=\"stream-content\"><!--tail--><p>Owned nested list response.</p>\n\n<ul><li>Backend<ul><li>API routes</li><li>Database models</li></ul></li><li>Frontend</li></ul>\n\n<ol><li>First</li><li>Second<ol><li>Sub</li></ol></li><li>Third</li></ol>\n\n<p>A note between lists.</p>\n\n<ol><li>Continued</li><li>Last</li></ol><span class=\"token-new\">\n\n</span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Parent task</span></span><ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Child task</span></span></li></ul></li><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Completed parent</span></span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\"><span class=\"token-new\">Pending child</span></span></li></ul></li></ul><span class=\"token-new\">\n\n</span><p><span class=\"token-new\">End of owned response.</span></p></div>"
+      },
+      "reload_render": {
+        "marker_room": [
+          {
+            "available": 14.6875,
+            "required": 22.596908569335938,
+            "font": "12.24px \"Fira Code\", monospace"
+          },
+          {
+            "available": 14.6875,
+            "required": 22.596908569335938,
+            "font": "12.24px \"Fira Code\", monospace"
+          }
+        ],
+        "ordered_starts": [
+          1,
+          1,
+          1
+        ],
+        "ordered_styles": [
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          },
+          {
+            "tag": "OL",
+            "list_style": "decimal",
+            "children": [
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              },
+              {
+                "style": "decimal",
+                "marker": "normal",
+                "display": "list-item"
+              }
+            ]
+          }
+        ],
+        "nested_ul": 3,
+        "nested_ol": 1,
+        "root_ol_count": 2,
+        "ordered_siblings": [
+          3,
+          2
+        ],
+        "tasks": 4,
+        "done": 2,
+        "list_in_paragraph": 0,
+        "pending": {
+          "done": false,
+          "decoration": "none",
+          "checkbox_fill": "rgba(0, 0, 0, 0)",
+          "child_top": 586.0625,
+          "parent_bottom": 572.5625,
+          "child_left": 75.375,
+          "parent_left": 37.6875
+        },
+        "html": "<p>Owned nested list response.</p>\n\n<ul><li>Backend<ul><li>API routes</li><li>Database models</li></ul></li><li>Frontend</li></ul>\n\n<ol><li>First</li><li>Second<ol><li>Sub</li></ol></li><li>Third</li></ol>\n\n<p>A note between lists.</p>\n\n<ol><li>Continued</li><li>Last</li></ol>\n\n<ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Parent task</span><ul><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Child task</span></li></ul></li><li class=\"task-item task-done\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Completed parent</span><ul><li class=\"task-item\"><span class=\"task-check\" aria-hidden=\"true\"></span><span class=\"task-text\">Pending child</span></li></ul></li></ul>\n\n<p>End of owned response.</p>"
+      },
+      "persisted_lists": true,
+      "page_errors": []
+    }
+  ]
+}

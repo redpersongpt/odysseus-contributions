@@ -1,0 +1,779 @@
+FFFFFFFFFFFFFFFFFF.....FFFFFFFF.F.                                       [100%]
+=================================== FAILURES ===================================
+____________ test_nested_items_stay_inside_the_parent_list[--ul-  ] ____________
+
+node_available = None, indent = '  ', marker = '-', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+        structure = ListStructure(html)
+>       assert structure.lists == [(tag, 0), (tag, 1)]
+E       AssertionError: assert [('ul', 0), ('ul', 0)] == [('ul', 0), ('ul', 1)]
+E         
+E         At index 1 diff: ('ul', 0) != ('ul', 1)
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:39: AssertionError
+___________ test_nested_items_stay_inside_the_parent_list[--ul-   ] ____________
+
+node_available = None, indent = '   ', marker = '-', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+        structure = ListStructure(html)
+>       assert structure.lists == [(tag, 0), (tag, 1)]
+E       AssertionError: assert [('ul', 0), ('ul', 0)] == [('ul', 0), ('ul', 1)]
+E         
+E         At index 1 diff: ('ul', 0) != ('ul', 1)
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:39: AssertionError
+___________ test_nested_items_stay_inside_the_parent_list[--ul-    ] ___________
+
+node_available = None, indent = '    ', marker = '-', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+        structure = ListStructure(html)
+>       assert structure.lists == [(tag, 0), (tag, 1)]
+E       AssertionError: assert [('ul', 0), ('ul', 0)] == [('ul', 0), ('ul', 1)]
+E         
+E         At index 1 diff: ('ul', 0) != ('ul', 1)
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:39: AssertionError
+____________ test_nested_items_stay_inside_the_parent_list[--ul-\t] ____________
+
+node_available = None, indent = '\t', marker = '-', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+        structure = ListStructure(html)
+>       assert structure.lists == [(tag, 0), (tag, 1)]
+E       AssertionError: assert [('ul', 0), ('ul', 0)] == [('ul', 0), ('ul', 1)]
+E         
+E         At index 1 diff: ('ul', 0) != ('ul', 1)
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:39: AssertionError
+____________ test_nested_items_stay_inside_the_parent_list[*-ul-  ] ____________
+
+node_available = None, indent = '  ', marker = '*', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:262: in goahead
+    k = self.parse_endtag(i)
+        ^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:521: in parse_endtag
+    self.handle_endtag(tag)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d4530>
+tag = 'p'
+
+    def handle_endtag(self, tag):
+>       assert self.stack and self.stack[-1] == tag, f'unbalanced {tag}: {self.stack}'
+E       AssertionError: unbalanced p: ['p', 'em']
+E       assert (['p', 'em'] and 'em' == 'p'
+E        +  where ['p', 'em'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d4530>.stack
+E         
+E         - p
+E         + em)
+
+tests/test_markdown_nested_lists_js.py:30: AssertionError
+___________ test_nested_items_stay_inside_the_parent_list[*-ul-   ] ____________
+
+node_available = None, indent = '   ', marker = '*', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:262: in goahead
+    k = self.parse_endtag(i)
+        ^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:521: in parse_endtag
+    self.handle_endtag(tag)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d6cc0>
+tag = 'p'
+
+    def handle_endtag(self, tag):
+>       assert self.stack and self.stack[-1] == tag, f'unbalanced {tag}: {self.stack}'
+E       AssertionError: unbalanced p: ['p', 'em']
+E       assert (['p', 'em'] and 'em' == 'p'
+E        +  where ['p', 'em'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d6cc0>.stack
+E         
+E         - p
+E         + em)
+
+tests/test_markdown_nested_lists_js.py:30: AssertionError
+___________ test_nested_items_stay_inside_the_parent_list[*-ul-    ] ___________
+
+node_available = None, indent = '    ', marker = '*', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:262: in goahead
+    k = self.parse_endtag(i)
+        ^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:521: in parse_endtag
+    self.handle_endtag(tag)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b476ba0>
+tag = 'p'
+
+    def handle_endtag(self, tag):
+>       assert self.stack and self.stack[-1] == tag, f'unbalanced {tag}: {self.stack}'
+E       AssertionError: unbalanced p: ['p', 'em']
+E       assert (['p', 'em'] and 'em' == 'p'
+E        +  where ['p', 'em'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b476ba0>.stack
+E         
+E         - p
+E         + em)
+
+tests/test_markdown_nested_lists_js.py:30: AssertionError
+____________ test_nested_items_stay_inside_the_parent_list[*-ul-\t] ____________
+
+node_available = None, indent = '\t', marker = '*', tag = 'ul'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:262: in goahead
+    k = self.parse_endtag(i)
+        ^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:521: in parse_endtag
+    self.handle_endtag(tag)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b475d60>
+tag = 'p'
+
+    def handle_endtag(self, tag):
+>       assert self.stack and self.stack[-1] == tag, f'unbalanced {tag}: {self.stack}'
+E       AssertionError: unbalanced p: ['p', 'em']
+E       assert (['p', 'em'] and 'em' == 'p'
+E        +  where ['p', 'em'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b475d60>.stack
+E         
+E         - p
+E         + em)
+
+tests/test_markdown_nested_lists_js.py:30: AssertionError
+___________ test_nested_items_stay_inside_the_parent_list[1.-ol-  ] ____________
+
+node_available = None, indent = '  ', marker = '1.', tag = 'ol'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:260: in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:475: in parse_starttag
+    self.handle_starttag(tag, attrs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d6690>
+tag = 'ol', attrs = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {'ul', 'ol'}:
+            self.lists.append((tag, sum(t in {'ul', 'ol'} for t in self.stack)))
+>           assert 'p' not in self.stack, 'a list must not be inside a paragraph'
+E           AssertionError: a list must not be inside a paragraph
+E           assert 'p' not in ['p']
+E            +  where ['p'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d6690>.stack
+
+tests/test_markdown_nested_lists_js.py:21: AssertionError
+___________ test_nested_items_stay_inside_the_parent_list[1.-ol-   ] ___________
+
+node_available = None, indent = '   ', marker = '1.', tag = 'ol'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:260: in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:475: in parse_starttag
+    self.handle_starttag(tag, attrs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d5040>
+tag = 'ol', attrs = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {'ul', 'ol'}:
+            self.lists.append((tag, sum(t in {'ul', 'ol'} for t in self.stack)))
+>           assert 'p' not in self.stack, 'a list must not be inside a paragraph'
+E           AssertionError: a list must not be inside a paragraph
+E           assert 'p' not in ['p']
+E            +  where ['p'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d5040>.stack
+
+tests/test_markdown_nested_lists_js.py:21: AssertionError
+__________ test_nested_items_stay_inside_the_parent_list[1.-ol-    ] ___________
+
+node_available = None, indent = '    ', marker = '1.', tag = 'ol'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:260: in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:475: in parse_starttag
+    self.handle_starttag(tag, attrs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d7320>
+tag = 'ol', attrs = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {'ul', 'ol'}:
+            self.lists.append((tag, sum(t in {'ul', 'ol'} for t in self.stack)))
+>           assert 'p' not in self.stack, 'a list must not be inside a paragraph'
+E           AssertionError: a list must not be inside a paragraph
+E           assert 'p' not in ['p']
+E            +  where ['p'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d7320>.stack
+
+tests/test_markdown_nested_lists_js.py:21: AssertionError
+___________ test_nested_items_stay_inside_the_parent_list[1.-ol-\t] ____________
+
+node_available = None, indent = '\t', marker = '1.', tag = 'ol'
+
+    @pytest.mark.parametrize('indent', ['  ', '   ', '    ', '\t'])
+    @pytest.mark.parametrize('marker,tag', [('-', 'ul'), ('*', 'ul'), ('1.', 'ol')])
+    def test_nested_items_stay_inside_the_parent_list(node_available, indent, marker, tag):
+        html = _run_markdown_case(f'{marker} Parent\n{indent}{marker} Child\n{indent}{marker} Child two\n{marker} Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:260: in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:475: in parse_starttag
+    self.handle_starttag(tag, attrs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b501ca0>
+tag = 'ol', attrs = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {'ul', 'ol'}:
+            self.lists.append((tag, sum(t in {'ul', 'ol'} for t in self.stack)))
+>           assert 'p' not in self.stack, 'a list must not be inside a paragraph'
+E           AssertionError: a list must not be inside a paragraph
+E           assert 'p' not in ['p']
+E            +  where ['p'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b501ca0>.stack
+
+tests/test_markdown_nested_lists_js.py:21: AssertionError
+_____ test_mixed_nesting_dedents_and_ordered_siblings_keep_one_outer_list ______
+
+node_available = None
+
+    def test_mixed_nesting_dedents_and_ordered_siblings_keep_one_outer_list(node_available):
+        html = _run_markdown_case('1. First\n2. Second\n   - Child\n     1. Grandchild\n   - Child two\n3. Third')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:260: in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:475: in parse_starttag
+    self.handle_starttag(tag, attrs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d6ed0>
+tag = 'ol', attrs = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {'ul', 'ol'}:
+            self.lists.append((tag, sum(t in {'ul', 'ol'} for t in self.stack)))
+>           assert 'p' not in self.stack, 'a list must not be inside a paragraph'
+E           AssertionError: a list must not be inside a paragraph
+E           assert 'p' not in ['p']
+E            +  where ['p'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b4d6ed0>.stack
+
+tests/test_markdown_nested_lists_js.py:21: AssertionError
+___________ test_nested_task_items_keep_independent_checked_markers ____________
+
+node_available = None
+
+    def test_nested_task_items_keep_independent_checked_markers(node_available):
+        html = _run_markdown_case('- [ ] Parent\n  - [x] Child\n- [X] Complete parent\n  - [ ] Pending child')
+        structure = ListStructure(html)
+>       assert [depth for depth, _ in structure.items] == [1, 2, 1, 2]
+E       assert [1, 1] == [1, 2, 1, 2]
+E         
+E         At index 1 diff: 1 != 2
+E         Right contains 2 more items, first extra item: 1
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:54: AssertionError
+___________ test_list_markers_do_not_consume_inline_emphasis_or_code ___________
+
+node_available = None
+
+    def test_list_markers_do_not_consume_inline_emphasis_or_code(node_available):
+        html = _run_markdown_case('* **Parent**\n  * *Child* with `code`\n* Sibling')
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:262: in goahead
+    k = self.parse_endtag(i)
+        ^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:521: in parse_endtag
+    self.handle_endtag(tag)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b475f40>
+tag = 'p'
+
+    def handle_endtag(self, tag):
+>       assert self.stack and self.stack[-1] == tag, f'unbalanced {tag}: {self.stack}'
+E       AssertionError: unbalanced p: ['p', 'em']
+E       assert (['p', 'em'] and 'em' == 'p'
+E        +  where ['p', 'em'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b475f40>.stack
+E         
+E         - p
+E         + em)
+
+tests/test_markdown_nested_lists_js.py:30: AssertionError
+_____________ test_indented_continuation_stays_with_its_list_item ______________
+
+node_available = None
+
+    def test_indented_continuation_stays_with_its_list_item(node_available):
+        html = _run_markdown_case('- Parent\n  continued text\n  - Child\n- Sibling')
+>       assert 'Parent<br>continued text<ul>' in html
+E       AssertionError: assert 'Parent<br>continued text<ul>' in '<ul><li>Parent</li></ul>  continued text\n<p>  - Child</p>\n<ul><li>Sibling</li></ul>'
+
+tests/test_markdown_nested_lists_js.py:71: AssertionError
+_____ test_task_continuations_before_and_after_children_stay_in_task_text ______
+
+node_available = None
+
+    def test_task_continuations_before_and_after_children_stay_in_task_text(node_available):
+        html = _run_markdown_case('- [ ] Parent\n  continued\n  - Child\n  parent continuation\n- Sibling')
+>       assert 'Parent<br>continued</span><ul>' in html
+E       assert 'Parent<br>continued</span><ul>' in '<ul><li class="task-item"><span class="task-check" aria-hidden="true"></span><span class="task-text">Parent</span></li></ul>  continued\n<p>  - Child</p>\n<p>  parent continuation</p>\n<ul><li>Sibling</li></ul>'
+
+tests/test_markdown_nested_lists_js.py:77: AssertionError
+_____________ test_changing_child_list_type_keeps_the_parent_open ______________
+
+node_available = None
+
+    def test_changing_child_list_type_keeps_the_parent_open(node_available):
+        html = _run_markdown_case('- Parent\n  - Bullet\n  1. Number\n- Sibling\n1. New ordered list')
+        structure = ListStructure(html)
+>       assert structure.lists == [('ul', 0), ('ul', 1), ('ol', 1), ('ol', 0)]
+E       AssertionError: assert [('ul', 0), (...0), ('ol', 1)] == [('ul', 0), (...1), ('ol', 0)]
+E         
+E         At index 1 diff: ('ul', 0) != ('ul', 1)
+E         Right contains one more item: ('ol', 0)
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:85: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[7. Seven\n8. Eight-starts0] _
+
+node_available = None, source = '7. Seven\n8. Eight', starts = [7]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [7]
+E         
+E         At index 0 diff: 1 != 7
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[1. First\n\nA note.\n\n2. Second-starts1] _
+
+node_available = None, source = '1. First\n\nA note.\n\n2. Second'
+starts = [1, 2]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1, 1] == [1, 2]
+E         
+E         At index 1 diff: 1 != 2
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[4. First\n1. Next\n99. Last-starts2] _
+
+node_available = None, source = '4. First\n1. Next\n99. Last', starts = [4]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [4]
+E         
+E         At index 0 diff: 1 != 4
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+__ test_each_ordered_run_preserves_its_first_marker[0. Zero\n1. One-starts3] ___
+
+node_available = None, source = '0. Zero\n1. One', starts = [0]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [0]
+E         
+E         At index 0 diff: 1 != 0
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[007. Seven\n008. Eight-starts4] _
+
+node_available = None, source = '007. Seven\n008. Eight', starts = [7]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [7]
+E         
+E         At index 0 diff: 1 != 7
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[- Parent\n  5. Child\n  6. Next child\n- Sibling-starts5] _
+
+node_available = None
+source = '- Parent\n  5. Child\n  6. Next child\n- Sibling', starts = [5]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [] == [5]
+E         
+E         Right contains one more item: 5
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[3. Parent\n   8. Child\n   9. Next child\n4. Sibling-starts6] _
+
+node_available = None
+source = '3. Parent\n   8. Child\n   9. Next child\n4. Sibling', starts = [3, 8]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+>       structure = ListStructure(html)
+                    ^^^^^^^^^^^^^^^^^^^
+
+tests/test_markdown_nested_lists_js.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_markdown_nested_lists_js.py:16: in __init__
+    self.feed(html)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:168: in feed
+    self.goahead(0)
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:260: in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/html/parser.py:475: in parse_starttag
+    self.handle_starttag(tag, attrs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <test_markdown_nested_lists_js.ListStructure object at 0x10b4762a0>
+tag = 'ol', attrs = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {'ul', 'ol'}:
+            self.lists.append((tag, sum(t in {'ul', 'ol'} for t in self.stack)))
+>           assert 'p' not in self.stack, 'a list must not be inside a paragraph'
+E           AssertionError: a list must not be inside a paragraph
+E           assert 'p' not in ['p']
+E            +  where ['p'] = <test_markdown_nested_lists_js.ListStructure object at 0x10b4762a0>.stack
+
+tests/test_markdown_nested_lists_js.py:21: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[- Parent\n  4. Number\n  - Bullet\n  9. New number-starts7] _
+
+node_available = None
+source = '- Parent\n  4. Number\n  - Bullet\n  9. New number', starts = [4, 9]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [] == [4, 9]
+E         
+E         Right contains 2 more items, first extra item: 4
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[Before\n\n5. **Five**\n\nAfter-starts9] _
+
+node_available = None, source = 'Before\n\n5. **Five**\n\nAfter', starts = [5]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [5]
+E         
+E         At index 0 diff: 1 != 5
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[--ul-  ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[--ul-   ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[--ul-    ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[--ul-\t]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[*-ul-  ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[*-ul-   ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[*-ul-    ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[*-ul-\t]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[1.-ol-  ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[1.-ol-   ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[1.-ol-    ]
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_items_stay_inside_the_parent_list[1.-ol-\t]
+FAILED tests/test_markdown_nested_lists_js.py::test_mixed_nesting_dedents_and_ordered_siblings_keep_one_outer_list
+FAILED tests/test_markdown_nested_lists_js.py::test_nested_task_items_keep_independent_checked_markers
+FAILED tests/test_markdown_nested_lists_js.py::test_list_markers_do_not_consume_inline_emphasis_or_code
+FAILED tests/test_markdown_nested_lists_js.py::test_indented_continuation_stays_with_its_list_item
+FAILED tests/test_markdown_nested_lists_js.py::test_task_continuations_before_and_after_children_stay_in_task_text
+FAILED tests/test_markdown_nested_lists_js.py::test_changing_child_list_type_keeps_the_parent_open
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[7. Seven\n8. Eight-starts0]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[1. First\n\nA note.\n\n2. Second-starts1]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[4. First\n1. Next\n99. Last-starts2]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[0. Zero\n1. One-starts3]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[007. Seven\n008. Eight-starts4]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[- Parent\n  5. Child\n  6. Next child\n- Sibling-starts5]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[3. Parent\n   8. Child\n   9. Next child\n4. Sibling-starts6]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[- Parent\n  4. Number\n  - Bullet\n  9. New number-starts7]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[Before\n\n5. **Five**\n\nAfter-starts9]
+27 failed, 7 passed, 1 warning in 2.71s

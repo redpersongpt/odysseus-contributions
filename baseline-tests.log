@@ -1,0 +1,266 @@
+.......................FFFFFFFF.F.                                       [100%]
+=================================== FAILURES ===================================
+_ test_each_ordered_run_preserves_its_first_marker[7. Seven\n8. Eight-starts0] _
+
+node_available = None, source = '7. Seven\n8. Eight', starts = [7]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [7]
+E         
+E         At index 0 diff: 1 != 7
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[1. First\n\nA note.\n\n2. Second-starts1] _
+
+node_available = None, source = '1. First\n\nA note.\n\n2. Second'
+starts = [1, 2]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1, 1] == [1, 2]
+E         
+E         At index 1 diff: 1 != 2
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[4. First\n1. Next\n99. Last-starts2] _
+
+node_available = None, source = '4. First\n1. Next\n99. Last', starts = [4]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [4]
+E         
+E         At index 0 diff: 1 != 4
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+__ test_each_ordered_run_preserves_its_first_marker[0. Zero\n1. One-starts3] ___
+
+node_available = None, source = '0. Zero\n1. One', starts = [0]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [0]
+E         
+E         At index 0 diff: 1 != 0
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[007. Seven\n008. Eight-starts4] _
+
+node_available = None, source = '007. Seven\n008. Eight', starts = [7]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [7]
+E         
+E         At index 0 diff: 1 != 7
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[- Parent\n  5. Child\n  6. Next child\n- Sibling-starts5] _
+
+node_available = None
+source = '- Parent\n  5. Child\n  6. Next child\n- Sibling', starts = [5]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [5]
+E         
+E         At index 0 diff: 1 != 5
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[3. Parent\n   8. Child\n   9. Next child\n4. Sibling-starts6] _
+
+node_available = None
+source = '3. Parent\n   8. Child\n   9. Next child\n4. Sibling', starts = [3, 8]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1, 1] == [3, 8]
+E         
+E         At index 0 diff: 1 != 3
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[- Parent\n  4. Number\n  - Bullet\n  9. New number-starts7] _
+
+node_available = None
+source = '- Parent\n  4. Number\n  - Bullet\n  9. New number', starts = [4, 9]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1, 1] == [4, 9]
+E         
+E         At index 0 diff: 1 != 4
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+_ test_each_ordered_run_preserves_its_first_marker[Before\n\n5. **Five**\n\nAfter-starts9] _
+
+node_available = None, source = 'Before\n\n5. **Five**\n\nAfter', starts = [5]
+
+    @pytest.mark.parametrize('source,starts', [
+        ('7. Seven\n8. Eight', [7]),
+        ('1. First\n\nA note.\n\n2. Second', [1, 2]),
+        ('4. First\n1. Next\n99. Last', [4]),
+        ('0. Zero\n1. One', [0]),
+        ('007. Seven\n008. Eight', [7]),
+        ('- Parent\n  5. Child\n  6. Next child\n- Sibling', [5]),
+        ('3. Parent\n   8. Child\n   9. Next child\n4. Sibling', [3, 8]),
+        ('- Parent\n  4. Number\n  - Bullet\n  9. New number', [4, 9]),
+        ('1. First\n2. Second', [1]),
+        ('Before\n\n5. **Five**\n\nAfter', [5]),
+        ('```text\n7. Literal\n```', []),
+    ])
+    def test_each_ordered_run_preserves_its_first_marker(node_available, source, starts):
+        html = _run_markdown_case(source)
+        structure = ListStructure(html)
+>       assert structure.ordered_starts == starts
+E       assert [1] == [5]
+E         
+E         At index 0 diff: 1 != 5
+E         Use -v to get more diff
+
+tests/test_markdown_nested_lists_js.py:118: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/ordered-start-before/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[7. Seven\n8. Eight-starts0]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[1. First\n\nA note.\n\n2. Second-starts1]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[4. First\n1. Next\n99. Last-starts2]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[0. Zero\n1. One-starts3]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[007. Seven\n008. Eight-starts4]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[- Parent\n  5. Child\n  6. Next child\n- Sibling-starts5]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[3. Parent\n   8. Child\n   9. Next child\n4. Sibling-starts6]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[- Parent\n  4. Number\n  - Bullet\n  9. New number-starts7]
+FAILED tests/test_markdown_nested_lists_js.py::test_each_ordered_run_preserves_its_first_marker[Before\n\n5. **Five**\n\nAfter-starts9]
+9 failed, 25 passed, 1 warning in 2.21s
