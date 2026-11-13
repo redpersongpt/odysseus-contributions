@@ -1,0 +1,112 @@
+....F..............................                                      [100%]
+=================================== FAILURES ===================================
+________ test_reordering_two_conflicting_declarations_moves_the_digest _________
+
+    @_requires_browser
+    def test_reordering_two_conflicting_declarations_moves_the_digest():
+        """The harness has to fail when the cascade changes, or it proves nothing.
+    
+        Captures one variant twice - once normally, once with the first two
+        top-level `.attach-strip` blocks swapped - and asserts the digest moves and
+        points at the affected element.
+        """
+        variants = ["desktop-dark-comfortable"]
+        unchanged = snapshot.summarize(
+            snapshot.capture(static_origin(), variants=variants)["snapshot"]
+        )
+        reordered = snapshot.summarize(
+>           snapshot.capture(static_origin(), variants=variants,
+                             swap_rule=CONFLICTING_SELECTOR)["snapshot"]
+        )
+
+tests/test_css_computed_style_snapshot.py:186: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+origin = 'http://127.0.0.1:50478'
+inventory = {'//': 'Fixed inventory for the computed-style snapshot harness. See README.md in this directory.', 'properties': ['di..., '.note-card', '.chat-meta-overlay', '#welcome-screen .welcome-name', ...], 'stylesheetsFrom': '/static/index.html'}]}
+swap_rule = '.attach-strip', variants = ['desktop-dark-comfortable']
+measurement_delay_ms = 0, node = 'node'
+cwd = PosixPath('/Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline')
+timeout = 900
+
+    def capture(origin, inventory=None, *, swap_rule=None, variants=None,
+                measurement_delay_ms=0, node="node", cwd=ROOT,
+                timeout=CAPTURE_TIMEOUT_SECONDS):
+        """Drive the browser capture and return ``{"snapshot": ..., "missing": ...}``.
+    
+        ``swap_rule`` swaps the first two top-level declarations of one selector
+        before the stylesheet reaches the browser. It exists for the harness
+        self-test: a snapshot that does not move when two conflicting rules trade
+        places is not evidence of anything.
+    
+        ``variants`` restricts the run to the named variants, for a faster
+        focused capture.
+    
+        ``measurement_delay_ms`` perturbs the capture timing for the determinism
+        self-test; elapsed wall time must not change an idle-state snapshot.
+        """
+        inventory = inventory or load_inventory()
+        selected = inventory["variants"]
+        if variants:
+            wanted = set(variants)
+            selected = [v for v in selected if v["name"] in wanted]
+            unknown = wanted - {v["name"] for v in inventory["variants"]}
+            if unknown:
+                raise ValueError(f"unknown variants: {sorted(unknown)}")
+        job = {
+            "origin": origin.rstrip("/"),
+            "properties": inventory["properties"],
+            "variants": selected,
+            "pages": inventory["pages"],
+            "swapRule": swap_rule,
+            "measurementDelayMs": measurement_delay_ms,
+        }
+        result = subprocess.run(
+            [node, str(CAPTURE_SCRIPT)],
+            input=json.dumps(job), cwd=str(cwd),
+            capture_output=True, text=True, check=False, timeout=timeout,
+        )
+        if result.returncode != 0:
+>           raise RuntimeError(f"css snapshot capture failed:\n{result.stderr.strip()}")
+E           RuntimeError: css snapshot capture failed:
+E           node:internal/process/promises:394
+E               triggerUncaughtException(err, true /* fromPromise */);
+E               ^
+E           
+E           route.fetch: connect ECONNRESET 127.0.0.1:50478
+E           Call log:
+E           [2m  - → GET http://127.0.0.1:50478/static/css/email-calendar-notes-tasks.css?v=20261021confirmalign1[22m
+E           [2m    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36[22m
+E           [2m    - accept: text/css,*/*;q=0.1[22m
+E           [2m    - accept-encoding: gzip,deflate,br[22m
+E           [2m    - referer: http://127.0.0.1:50478/tests/css_snapshot/bench.html[22m
+E           [2m    - sec-ch-ua: "Not=A?Brand";v="99", "HeadlessChrome";v="151", "Chromium";v="151"[22m
+E           [2m    - sec-ch-ua-mobile: ?0[22m
+E           [2m    - sec-ch-ua-platform: "macOS"[22m
+E           
+E               at /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/tests/css_snapshot/capture.mjs:273:42 {
+E             log: [
+E               '  - → GET http://127.0.0.1:50478/static/css/email-calendar-notes-tasks.css?v=20261021confirmalign1',
+E               '    - user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36',
+E               '    - accept: text/css,*/*;q=0.1',
+E               '    - accept-encoding: gzip,deflate,br',
+E               '    - referer: http://127.0.0.1:50478/tests/css_snapshot/bench.html',
+E               '    - sec-ch-ua: "Not=A?Brand";v="99", "HeadlessChrome";v="151", "Chromium";v="151"',
+E               '    - sec-ch-ua-mobile: ?0',
+E               '    - sec-ch-ua-platform: "macOS"'
+E             ],
+E             name: 'Error'
+E           }
+E           
+E           Node.js v24.21.0
+
+scripts/css_snapshot.py:137: RuntimeError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_css_computed_style_snapshot.py::test_reordering_two_conflicting_declarations_moves_the_digest
+1 failed, 34 passed, 1 warning in 27.75s

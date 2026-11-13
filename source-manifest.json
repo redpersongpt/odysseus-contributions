@@ -1,0 +1,15 @@
+{
+  "source_commit": "1cfd23ecf446301b1f661968eee7d197dda2235c",
+  "base_dev": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "issue": "https://github.com/odysseus-dev/odysseus/issues/7212",
+  "CSS_sha256": "b90b5a4c485d0c8c138c7a984f692ca83b8f01b33c3dd577e4f1c6055c335db8",
+  "native_browser": "157.0.8103.51",
+  "native_cases": 32,
+  "observations": 96,
+  "before_failing_cases": 8,
+  "before_passing_controls": 8,
+  "after_saves": 16,
+  "all8finalPNGs_visually_inspected": true,
+  "source_diff": "one CSS file, six inserted lines",
+  "test_environment": "Full35 tests pass with only auxiliary Python test-server accept backlog5->128. Standard full run reset connection on unchanged dev AND modified CSS. No application/DOM/CSS/snapshot/assertion replacement."
+}

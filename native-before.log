@@ -1,0 +1,16 @@
+{"width":320,"touch":false,"kind":"create","timed":["cal-f-date-end","all-day-control"],"focused":["cal-f-date-end","all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc","cal-f-remind","cal-f-type"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":320,"touch":false,"kind":"update","timed":["cal-f-date-end","cal-f-del","all-day-control"],"focused":["cal-f-date-end","cal-f-del","all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc","cal-f-remind","cal-f-type","cal-f-del"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":390,"touch":false,"kind":"create","timed":["all-day-control"],"focused":["all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":390,"touch":false,"kind":"update","timed":["all-day-control"],"focused":["all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":520,"touch":false,"kind":"create","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":520,"touch":false,"kind":"update","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":768,"touch":false,"kind":"create","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":768,"touch":false,"kind":"update","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":1440,"touch":false,"kind":"create","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":1440,"touch":false,"kind":"update","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":320,"touch":true,"kind":"create","timed":["cal-f-date-end","all-day-control"],"focused":["cal-f-date-end","all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc","cal-f-remind","cal-f-type"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":320,"touch":true,"kind":"update","timed":["cal-f-date-end","cal-f-del","all-day-control"],"focused":["cal-f-date-end","cal-f-del","all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc","cal-f-remind","cal-f-type","cal-f-del"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":390,"touch":true,"kind":"create","timed":["all-day-control"],"focused":["all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":390,"touch":true,"kind":"update","timed":["all-day-control"],"focused":["all-day-control"],"all_day":["cal-f-date","cal-f-loc","cal-f-rrule","cal-f-desc"],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":520,"touch":true,"kind":"create","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}
+{"width":520,"touch":true,"kind":"update","timed":[],"focused":[],"all_day":[],"zoom":{"root":"1","body":"1","form":"1","visual":1}}

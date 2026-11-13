@@ -1,0 +1,74 @@
+[
+  {
+    "width": 768,
+    "kind": "create",
+    "state": "timed",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 768,
+    "kind": "create",
+    "state": "focused",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 768,
+    "kind": "create",
+    "state": "all_day",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 768,
+    "kind": "update",
+    "state": "timed",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 768,
+    "kind": "update",
+    "state": "focused",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 768,
+    "kind": "update",
+    "state": "all_day",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 1440,
+    "kind": "create",
+    "state": "timed",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 1440,
+    "kind": "create",
+    "state": "focused",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 1440,
+    "kind": "create",
+    "state": "all_day",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 1440,
+    "kind": "update",
+    "state": "timed",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 1440,
+    "kind": "update",
+    "state": "focused",
+    "horizontal_geometry_equal": true
+  },
+  {
+    "width": 1440,
+    "kind": "update",
+    "state": "all_day",
+    "horizontal_geometry_equal": true
+  }
+]
