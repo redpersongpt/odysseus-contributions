@@ -1,0 +1,33 @@
+{
+  "source_commit": "21892441e64d8c028910fb01c00741611cfb1a78",
+  "base_dev": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "issue": "https://github.com/odysseus-dev/odysseus/issues/7218",
+  "scope": "Only active reader Move to Spam failure handling; Archive overlap removed from same PR in favor of existing open5843. Count stays97.",
+  "menu_sha256": "5fa1ba7d0bf4954f3c46d5e5415425356531bb0c2e17483a67b0c7f6b13168a9",
+  "unit_before": {
+    "failed": 6,
+    "passed": 1
+  },
+  "focused_after_passed": 52,
+  "native_cases": 4,
+  "after_retained_error": 2,
+  "after_retry_success": 2,
+  "browser": "157.0.8103.51",
+  "transport": "built-in mailbox fixture, normal actual app HTTP endpoints; not external IMAP",
+  "known_limit": "Narrow reader text clipping remains; no layout fix claimed",
+  "supersedes_source_commit": "a9fa21b79d3c0860ea0b4fbc0f2a29f725b82a86",
+  "supersedes_evidence_commit": "bb5a749bad9b7ea999159a5afab0b4a752333916",
+  "four_final_original_PNGs_inspected": true,
+  "initial_CodeQL_alert": "Incomplete multi-character sanitization in test helper HTML stripping. Removed unnecessary stripping; helper reads only textContent. No suppression.",
+  "initial_pytest_graph_failure": "Static vocabulary check false positive from function-scoped dynamic showError imports in other modules. Local named-import alias avoids binding collision; detector unchanged.",
+  "standard_expanded": {
+    "passed": 58,
+    "transport_failed": 1
+  },
+  "standard_baseline_module_graph": {
+    "passed": 6,
+    "transport_failed": 1
+  },
+  "configured_expanded_passed": 59,
+  "configured_test_listener_backlog": 128
+}

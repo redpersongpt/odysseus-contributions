@@ -1,0 +1,67 @@
+.....F.                                                                  [100%]
+=================================== FAILURES ===================================
+_________ test_every_package_module_evaluates_on_its_own_in_a_browser __________
+
+    def test_every_package_module_evaluates_on_its_own_in_a_browser():
+        """Import each module first, alone, and require it to evaluate.
+    
+        Entering the package at a submodule is what turns an import cycle from
+        harmless into a `ReferenceError: cannot access '…' before initialization`.
+        Importing the entry module first would hide exactly that.
+        """
+        urls = ["/static/js/emailLibrary.js"] + [
+            "/static/js/emailLibrary/" + p.name for p in email_library_paths()
+        ]
+        script = r'''
+          import { chromium } from 'playwright';
+          const origin = process.env.ODYSSEUS_TEST_STATIC_ORIGIN;
+          const urls = JSON.parse(process.env.ODYSSEUS_EMAIL_MODULE_URLS);
+          const browser = await chromium.launch({ headless: true });
+          const results = {};
+          for (const url of urls) {
+            const page = await browser.newPage();
+            // Same synthetic shell the other email browser tests use: these
+            // modules touch #toast and #sidebar while evaluating.
+            await page.goto(`${origin}/static/js/documentStats.js`);
+            await page.setContent('<div id="toast"></div><div id="chat-container"></div><div id="sidebar"></div>');
+            results[url] = await page.evaluate(async (target) => {
+              try {
+                const mod = await import(target);
+                return { ok: true, exports: Object.keys(mod).sort() };
+              } catch (err) {
+                return { ok: false, error: String(err && err.message || err) };
+              }
+            }, url);
+            await page.close();
+          }
+          console.log(JSON.stringify(results));
+          await browser.close();
+        '''
+        result = subprocess.run(
+            ["node", "--input-type=module", "-e", script],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+            env={
+                **__import__("os").environ,
+                "ODYSSEUS_EMAIL_MODULE_URLS": json.dumps(urls),
+            },
+        )
+        assert result.returncode == 0, result.stderr
+        data = json.loads(result.stdout)
+        broken = {url: info["error"] for url, info in data.items() if not info["ok"]}
+>       assert not broken, f"modules that failed to evaluate on their own: {broken}"
+E       AssertionError: modules that failed to evaluate on their own: {'/static/js/emailLibrary/aiReply.js': 'Failed to fetch dynamically imported module: http://127.0.0.1:60848/static/js/emailLibrary/aiReply.js'}
+E       assert not {'/static/js/emailLibrary/aiReply.js': 'Failed to fetch dynamically imported module: http://127.0.0.1:60848/static/js/emailLibrary/aiReply.js'}
+
+tests/test_email_library_module_graph_js.py:268: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_email_library_module_graph_js.py::test_every_package_module_evaluates_on_its_own_in_a_browser
+1 failed, 6 passed, 1 warning in 5.34s

@@ -1,0 +1,142 @@
+FFFFFF.                                                                  [100%]
+=================================== FAILURES ===================================
+_ test_rejected_spam_move_keeps_message_and_cache_and_shows_error[http-error] __
+
+mode = 'http-error'
+
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_spam_move_keeps_message_and_cache_and_shows_error(mode):
+        result = run(mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:35: AssertionError
+_ test_rejected_spam_move_keeps_message_and_cache_and_shows_error[success-false] _
+
+mode = 'success-false'
+
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_spam_move_keeps_message_and_cache_and_shows_error(mode):
+        result = run(mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:35: AssertionError
+_ test_rejected_spam_move_keeps_message_and_cache_and_shows_error[invalid-json] _
+
+mode = 'invalid-json'
+
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_spam_move_keeps_message_and_cache_and_shows_error(mode):
+        result = run(mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:35: AssertionError
+_ test_rejected_spam_move_keeps_message_and_cache_and_shows_error[missing-success] _
+
+mode = 'missing-success'
+
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_spam_move_keeps_message_and_cache_and_shows_error(mode):
+        result = run(mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:35: AssertionError
+_ test_rejected_spam_move_keeps_message_and_cache_and_shows_error[network-error] _
+
+mode = 'network-error'
+
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_spam_move_keeps_message_and_cache_and_shows_error(mode):
+        result = run(mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:35: AssertionError
+___ test_rejected_spam_move_keeps_message_and_cache_and_shows_error[pending] ___
+
+mode = 'pending'
+
+    @pytest.mark.parametrize('mode', [
+        'http-error', 'success-false', 'invalid-json', 'missing-success', 'network-error', 'pending',
+    ])
+    def test_rejected_spam_move_keeps_message_and_cache_and_shows_error(mode):
+        result = run(mode)
+    
+        if mode == 'pending':
+            assert result['while_pending'] == {
+                'uids': ['42'], 'animations': 0, 'cache_writes': 0, 'error_count': 0,
+            }
+>       assert result['uids'] == ['42']
+E       AssertionError: assert [] == ['42']
+E         
+E         Right contains one more item: '42'
+E         Use -v to get more diff
+
+tests/test_email_move_menu_results.py:35: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_email_move_menu_results.py::test_rejected_spam_move_keeps_message_and_cache_and_shows_error[http-error]
+FAILED tests/test_email_move_menu_results.py::test_rejected_spam_move_keeps_message_and_cache_and_shows_error[success-false]
+FAILED tests/test_email_move_menu_results.py::test_rejected_spam_move_keeps_message_and_cache_and_shows_error[invalid-json]
+FAILED tests/test_email_move_menu_results.py::test_rejected_spam_move_keeps_message_and_cache_and_shows_error[missing-success]
+FAILED tests/test_email_move_menu_results.py::test_rejected_spam_move_keeps_message_and_cache_and_shows_error[network-error]
+FAILED tests/test_email_move_menu_results.py::test_rejected_spam_move_keeps_message_and_cache_and_shows_error[pending]
+6 failed, 1 passed, 1 warning in 1.15s

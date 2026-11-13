@@ -1,0 +1,36 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "built_in_email_fixture": true,
+  "no_response_or_route_replacement": true,
+  "cases": [
+    {
+      "width": 1440,
+      "flow": "reader-spam",
+      "folder": "INBOX",
+      "rejected_status": 200,
+      "rejected_body": {
+        "success": false,
+        "error": "Mail operation failed"
+      },
+      "kept_original": false,
+      "cached_uids": [],
+      "visible_error": false,
+      "page_errors": []
+    },
+    {
+      "width": 390,
+      "flow": "reader-spam",
+      "folder": "INBOX",
+      "rejected_status": 200,
+      "rejected_body": {
+        "success": false,
+        "error": "Mail operation failed"
+      },
+      "kept_original": false,
+      "cached_uids": [],
+      "visible_error": false,
+      "page_errors": []
+    }
+  ]
+}

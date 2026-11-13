@@ -1,0 +1,95 @@
+.........................................................F.              [100%]
+=================================== FAILURES ===================================
+_________ test_every_package_module_evaluates_on_its_own_in_a_browser __________
+
+    def test_every_package_module_evaluates_on_its_own_in_a_browser():
+        """Import each module first, alone, and require it to evaluate.
+    
+        Entering the package at a submodule is what turns an import cycle from
+        harmless into a `ReferenceError: cannot access '…' before initialization`.
+        Importing the entry module first would hide exactly that.
+        """
+        urls = ["/static/js/emailLibrary.js"] + [
+            "/static/js/emailLibrary/" + p.name for p in email_library_paths()
+        ]
+        script = r'''
+          import { chromium } from 'playwright';
+          const origin = process.env.ODYSSEUS_TEST_STATIC_ORIGIN;
+          const urls = JSON.parse(process.env.ODYSSEUS_EMAIL_MODULE_URLS);
+          const browser = await chromium.launch({ headless: true });
+          const results = {};
+          for (const url of urls) {
+            const page = await browser.newPage();
+            // Same synthetic shell the other email browser tests use: these
+            // modules touch #toast and #sidebar while evaluating.
+            await page.goto(`${origin}/static/js/documentStats.js`);
+            await page.setContent('<div id="toast"></div><div id="chat-container"></div><div id="sidebar"></div>');
+            results[url] = await page.evaluate(async (target) => {
+              try {
+                const mod = await import(target);
+                return { ok: true, exports: Object.keys(mod).sort() };
+              } catch (err) {
+                return { ok: false, error: String(err && err.message || err) };
+              }
+            }, url);
+            await page.close();
+          }
+          console.log(JSON.stringify(results));
+          await browser.close();
+        '''
+        result = subprocess.run(
+            ["node", "--input-type=module", "-e", script],
+            cwd=ROOT,
+            check=False,
+            capture_output=True,
+            text=True,
+            env={
+                **__import__("os").environ,
+                "ODYSSEUS_EMAIL_MODULE_URLS": json.dumps(urls),
+            },
+        )
+        assert result.returncode == 0, result.stderr
+        data = json.loads(result.stdout)
+        broken = {url: info["error"] for url, info in data.items() if not info["ok"]}
+>       assert not broken, f"modules that failed to evaluate on their own: {broken}"
+E       AssertionError: modules that failed to evaluate on their own: {'/static/js/emailLibrary.js': 'Failed to fetch dynamically imported module: http://127.0.0.1:60116/static/js/emailLibrary.js'}
+E       assert not {'/static/js/emailLibrary.js': 'Failed to fetch dynamically imported module: http://127.0.0.1:60116/static/js/emailLibrary.js'}
+
+tests/test_email_library_module_graph_js.py:268: AssertionError
+----------------------------- Captured stderr call -----------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 60183)
+Traceback (most recent call last):
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Users/red/Documents/ChatGPT/ODY/odysseus/tests/conftest.py", line 199, in __init__
+    super().__init__(*args, directory=str(root_dir), **kwargs)
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 676, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 766, in __init__
+    self.handle()
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 440, in handle
+    self.handle_one_request()
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 428, in handle_one_request
+    method()
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 683, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/server.py", line 882, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 204, in copyfileobj
+    fdst_write(buf)
+  File "/Users/red/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_email_library_module_graph_js.py::test_every_package_module_evaluates_on_its_own_in_a_browser
+1 failed, 58 passed, 1 warning in 8.88s

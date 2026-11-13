@@ -1,0 +1,67 @@
+{
+  "related_5843": {
+    "number": 5843,
+    "author": "uhhgoat",
+    "state": "open",
+    "head": "24dc1e185fca5bbcddf61906aa2f161fd81436c0",
+    "changed_files": 6,
+    "fetched_files": 6,
+    "summary": "## Summary\n\nRecreates the closed #5099 Archive-folder fallback feature after the July 23 repository cleanup wiped old PR refs/diffs. The branch restores the prompt/create flow plus explicit folder-list refresh after Archive creation.\n\nReview follow-up in `2e9637cf` makes the asynchronous fallback account-safe across both the sidebar and Email Library:\n\n- captures and freezes the account ID, source folder, and UID when the action starts;\n- keys/deduplicates the setup prompt per account;\n- passes the captured account through Archive creation, folder refresh, and retry;\n- aborts stale work when the active account changes and prevents stale sidebar/card/bulk UI mutation;\n- replaces the sidebar's undefined `_loadFolders()` call with its real captured-account refresh path;\n- adds Node-driven regressions, including switching accounts while the confirmation is pending.\n\n",
+    "source_paths": [
+      "routes/email_routes.py",
+      "static/js/emailArchiveFallback.js",
+      "static/js/emailInbox.js",
+      "static/js/emailLibrary.js",
+      "tests/test_email_archive_fallback.py",
+      "tests/test_email_archive_fallback_js.py"
+    ],
+    "archive_guards_present": true,
+    "spam_move_request_diff": false
+  },
+  "related_5845": {
+    "files": 9,
+    "spam_request_changed": false
+  },
+  "queries": {
+    "repo:odysseus-dev/odysseus is:pull-request \"Move to Spam\"": {
+      "total": 3,
+      "items": [
+        {
+          "number": 7219,
+          "title": "fix(email): retain messages after rejected archive and spam actions",
+          "state": "open",
+          "url": "https://github.com/odysseus-dev/odysseus/pull/7219"
+        },
+        {
+          "number": 5593,
+          "title": "fix(email): preserve reader folder for message actions",
+          "state": "closed",
+          "url": "https://github.com/odysseus-dev/odysseus/pull/5593"
+        },
+        {
+          "number": 1874,
+          "title": "fix: auto-spam move/delete targets the wrong message (sequence number vs UID)",
+          "state": "closed",
+          "url": "https://github.com/odysseus-dev/odysseus/pull/1874"
+        }
+      ]
+    },
+    "repo:odysseus-dev/odysseus is:pull-request spam \"success\" \"reader\"": {
+      "total": 2,
+      "items": [
+        {
+          "number": 7219,
+          "title": "fix(email): retain messages after rejected archive and spam actions",
+          "state": "open",
+          "url": "https://github.com/odysseus-dev/odysseus/pull/7219"
+        },
+        {
+          "number": 5593,
+          "title": "fix(email): preserve reader folder for message actions",
+          "state": "closed",
+          "url": "https://github.com/odysseus-dev/odysseus/pull/5593"
+        }
+      ]
+    }
+  }
+}
