@@ -1,0 +1,15 @@
+{
+  "source_commit": "897d0f0514ec70f77353883f96e3220f750bc9b9",
+  "base_commit": "3d01007b9f573af9b4fed8e6e152bafcddeaeba5",
+  "source_sha256": {
+    "static/js/chat.js": "17773370ae929e26c8daccfb863a3ea858a86d04bcdffa0b80f28ee561cec060",
+    "static/js/chatStreamErrors.js": "dee55e32e2fe726abb04f20d0a8655402cddcf48a8c3cc9be5a0c21d958c2431",
+    "tests/helpers/chat_rewrite_errors.mjs": "fb9003fadfd4fed885ed427162460fd7517e901ddc1241e65cd9e1b90f4efdd3",
+    "tests/test_chat_rewrite_errors_js.py": "9eb5551fcccafabf2be74bb2140bdfe7bef753b369cda6056968c54d7f2c714c"
+  },
+  "baseline_production_files_match_dev": true,
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "python": "3.12.14",
+  "node": "v24.21.0",
+  "chrome": "157.0.8103.51"
+}

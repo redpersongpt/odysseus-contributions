@@ -1,0 +1,336 @@
+FFFFFF.FFFFFF....                                                        [100%]
+=================================== FAILURES ===================================
+_ test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload0-Credentials rejected; reconnect.] _
+
+event = 'error'
+payload = {'status': 401, 'text': 'Credentials rejected; reconnect.'}
+expected = 'Credentials rejected; reconnect.', chunk_size = 1
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai...; reconnect.']
+E         
+E         Right contains one more item: 'Rewrite failed: Credentials rejected; reconnect.'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload1-Provider unavailable] _
+
+event = 'error', payload = {'status': 503, 'text': 'Provider unavailable'}
+expected = 'Provider unavailable', chunk_size = 1
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai... unavailable']
+E         
+E         Right contains one more item: 'Rewrite failed: Provider unavailable'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload2-Access denied] _
+
+event = 'error'
+payload = {'status': 403, 'error': {'message': 'Access denied'}}
+expected = 'Access denied', chunk_size = 1
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert ['Rewrite fai...ject Object]'] == ['Rewrite fai...ccess denied']
+E         
+E         At index 0 diff: 'Rewrite failed: [object Object]' != 'Rewrite failed: Access denied'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload3-Error 429] _
+
+event = 'error', payload = {'status': 429}, expected = 'Error 429'
+chunk_size = 1
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite failed: Error 429']
+E         
+E         Right contains one more item: 'Rewrite failed: Error 429'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload4-Error unknown] _
+
+event = 'error', payload = {}, expected = 'Error unknown', chunk_size = 1
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai...rror unknown']
+E         
+E         Right contains one more item: 'Rewrite failed: Error unknown'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[1--payload5-Invalid key] _
+
+event = '', payload = {'status': 401, 'text': 'Invalid key'}
+expected = 'Invalid key', chunk_size = 1
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai... Invalid key']
+E         
+E         Right contains one more item: 'Rewrite failed: Invalid key'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload0-Credentials rejected; reconnect.] _
+
+event = 'error'
+payload = {'status': 401, 'text': 'Credentials rejected; reconnect.'}
+expected = 'Credentials rejected; reconnect.', chunk_size = 4096
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai...; reconnect.']
+E         
+E         Right contains one more item: 'Rewrite failed: Credentials rejected; reconnect.'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload1-Provider unavailable] _
+
+event = 'error', payload = {'status': 503, 'text': 'Provider unavailable'}
+expected = 'Provider unavailable', chunk_size = 4096
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai... unavailable']
+E         
+E         Right contains one more item: 'Rewrite failed: Provider unavailable'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload2-Access denied] _
+
+event = 'error'
+payload = {'status': 403, 'error': {'message': 'Access denied'}}
+expected = 'Access denied', chunk_size = 4096
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert ['Rewrite fai...ject Object]'] == ['Rewrite fai...ccess denied']
+E         
+E         At index 0 diff: 'Rewrite failed: [object Object]' != 'Rewrite failed: Access denied'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload3-Error 429] _
+
+event = 'error', payload = {'status': 429}, expected = 'Error 429'
+chunk_size = 4096
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite failed: Error 429']
+E         
+E         Right contains one more item: 'Rewrite failed: Error 429'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload4-Error unknown] _
+
+event = 'error', payload = {}, expected = 'Error unknown', chunk_size = 4096
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai...rror unknown']
+E         
+E         Right contains one more item: 'Rewrite failed: Error unknown'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+_ test_provider_errors_restore_original_and_never_save_a_variant[4096--payload5-Invalid key] _
+
+event = '', payload = {'status': 401, 'text': 'Invalid key'}
+expected = 'Invalid key', chunk_size = 4096
+
+    @pytest.mark.parametrize('event,payload,expected', [
+        ('error', {'status': 401, 'text': 'Credentials rejected; reconnect.'}, 'Credentials rejected; reconnect.'),
+        ('error', {'status': 503, 'text': 'Provider unavailable'}, 'Provider unavailable'),
+        ('error', {'status': 403, 'error': {'message': 'Access denied'}}, 'Access denied'),
+        ('error', {'status': 429}, 'Error 429'),
+        ('error', {}, 'Error unknown'),
+        ('', {'status': 401, 'text': 'Invalid key'}, 'Invalid key'),
+        ('', {'error': 'Existing error'}, 'Existing error'),
+    ])
+    @pytest.mark.parametrize('chunk_size', [1, 4096])
+    def test_provider_errors_restore_original_and_never_save_a_variant(event, payload, expected, chunk_size):
+        stream = 'data: {"delta":"Partial rewrite"}\n\n'
+        stream += (f'event: {event}\n' if event else '') + 'data: ' + json.dumps(payload) + '\n\n'
+        result = run_rewrite(stream, chunk_size=chunk_size)
+>       assert result['errors'] == ['Rewrite failed: ' + expected]
+E       AssertionError: assert [] == ['Rewrite fai... Invalid key']
+E         
+E         Right contains one more item: 'Rewrite failed: Invalid key'
+E         Use -v to get more diff
+
+tests/test_chat_rewrite_errors_js.py:37: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload0-Credentials rejected; reconnect.]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload1-Provider unavailable]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload2-Access denied]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload3-Error 429]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[1-error-payload4-Error unknown]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[1--payload5-Invalid key]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload0-Credentials rejected; reconnect.]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload1-Provider unavailable]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload2-Access denied]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload3-Error 429]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[4096-error-payload4-Error unknown]
+FAILED tests/test_chat_rewrite_errors_js.py::test_provider_errors_restore_original_and_never_save_a_variant[4096--payload5-Invalid key]
+12 failed, 5 passed, 1 warning in 1.15s

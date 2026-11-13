@@ -1,0 +1,26 @@
+{
+  "before": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "provider_post_requests": 4,
+    "initial_chat_success_requests": 2,
+    "rewrite_401_requests": 2,
+    "private_data_excluded": true
+  },
+  "after": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "provider_post_requests": 4,
+    "initial_chat_success_requests": 2,
+    "rewrite_401_requests": 2,
+    "private_data_excluded": true
+  },
+  "owned_app_provider_ports_closed": [
+    17871,
+    17872
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "phase": "after",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "chat_http": 200,
+      "rewrite_http": 200,
+      "provider_http": 401,
+      "sse": "event: error\ndata: {\"status\": 401, \"text\": \"local endpoint rejected the API key \\u2014 Owned fixture credentials rejected.. Check Model Endpoints \\u2192 local endpoint and re-paste the key.\"}\n\n",
+      "toast": "Rewrite failed: local endpoint rejected the API key — Owned fixture credentials rejected.. Check Model Endpoints → local endpoint and re-paste the key.",
+      "initial_chat_submission": "public frontend controller; native typing not verified",
+      "rewrite_activation": "actual More actions / Rewrite shorter buttons",
+      "original_preserved": true,
+      "reload_original_preserved": true,
+      "metadata_posts_after_failure": 0,
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "chat_http": 200,
+      "rewrite_http": 200,
+      "provider_http": 401,
+      "sse": "event: error\ndata: {\"status\": 401, \"text\": \"local endpoint rejected the API key \\u2014 Owned fixture credentials rejected.. Check Model Endpoints \\u2192 local endpoint and re-paste the key.\"}\n\n",
+      "toast": "Rewrite failed: local endpoint rejected the API key — Owned fixture credentials rejected.. Check Model Endpoints → local endpoint and re-paste the key.",
+      "initial_chat_submission": "public frontend controller; native typing not verified",
+      "rewrite_activation": "actual More actions / Rewrite shorter buttons",
+      "original_preserved": true,
+      "reload_original_preserved": true,
+      "metadata_posts_after_failure": 0,
+      "page_errors": []
+    }
+  ]
+}
