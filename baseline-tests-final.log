@@ -1,0 +1,66 @@
+FFF...                                                                   [100%]
+=================================== FAILURES ===================================
+________ test_initial_mermaid_config_uses_the_existing_palette_and_font ________
+
+node_available = None
+
+    def test_initial_mermaid_config_uses_the_existing_palette_and_font(node_available):
+        out = _run_node(_PALETTE + r'''
+          diagram();const pending=mod.renderMermaid(document);install();await pending;
+          emit({config:initialized.at(-1),observers:observers.length,fetches:injected.scripts.length});
+        ''')
+>       assert out['config']['theme'] == 'base'
+E       AssertionError: assert 'dark' == 'base'
+E         
+E         - base
+E         + dark
+
+tests/test_mermaid_palette_js.py:48: AssertionError
+______ test_theme_switch_restores_original_source_before_rendering_again _______
+
+node_available = None
+
+    def test_theme_switch_restores_original_source_before_rendering_again(node_available):
+        out = _run_node(_PALETTE + r'''
+          const node=diagram(),diagramSource=node.textContent;
+          const pending=mod.renderMermaid(document);install();await pending;
+          await changed({'--bg':'#f3f5f7','--panel':'#ffffff','--fg':'#26313a','--red':'#b34d5c'});
+          emit({source:diagramSource,inputs,theme:initialized.at(-1)?.themeVariables?.primaryColor,fetches:injected.scripts.length});
+        ''')
+>       assert out['inputs'] == [[out['source']], [out['source']]]
+E       AssertionError: assert [['flowchart ...Owned next]']] == [['flowchart ...Owned next]']]
+E         
+E         Right contains one more item: ['flowchart LR\nA[Owned start] --> B[Owned next]']
+E         Use -v to get more diff
+
+tests/test_mermaid_palette_js.py:65: AssertionError
+_ test_rapid_theme_switches_wait_for_inflight_render_and_use_the_latest_palette _
+
+node_available = None
+
+    def test_rapid_theme_switches_wait_for_inflight_render_and_use_the_latest_palette(node_available):
+        out = _run_node(_PALETTE + r'''
+          const node=diagram(),diagramSource=node.textContent;
+          const pending=mod.renderMermaid(document);install({holdFirst:true});
+          await new Promise(resolve=>setTimeout(resolve,0));
+          const p1=changed({'--panel':'#ffffff'});
+          const p2=changed({'--panel':'#161b22'});
+          const beforeRelease=runCount;firstRelease();await Promise.all([pending,p1,p2]);
+          emit({source:diagramSource,inputs,peak,beforeRelease,runCount,theme:initialized.at(-1)?.themeVariables?.primaryColor});
+        ''')
+        assert out['beforeRelease'] == out['peak'] == 1
+>       assert out['runCount'] == 2
+E       assert 1 == 2
+
+tests/test_mermaid_palette_js.py:81: AssertionError
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/.runtime/calendar-ics-baseline/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_mermaid_palette_js.py::test_initial_mermaid_config_uses_the_existing_palette_and_font
+FAILED tests/test_mermaid_palette_js.py::test_theme_switch_restores_original_source_before_rendering_again
+FAILED tests/test_mermaid_palette_js.py::test_rapid_theme_switches_wait_for_inflight_render_and_use_the_latest_palette
+3 failed, 3 passed, 1 warning in 0.71s

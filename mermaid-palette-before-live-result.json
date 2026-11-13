@@ -1,0 +1,164 @@
+{
+  "phase": "before",
+  "browser": "157.0.8103.51",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "chat_http": 200,
+      "initial_submission": "public frontend controller; native typing not verified",
+      "theme_activation": "actual Theme / palette swatch buttons; rapid batch uses public applyColors",
+      "closeMethods": [
+        "button",
+        "button"
+      ],
+      "initial": {
+        "palette": {
+          "bg": "#282c34",
+          "panel": "#111111",
+          "fg": "#9cdef2",
+          "accent": "#e06c75"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "light": {
+        "palette": {
+          "bg": "#f3f5f7",
+          "panel": "#ffffff",
+          "fg": "#26313a",
+          "accent": "#b34d5c"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "midnight": {
+        "palette": {
+          "bg": "#0d1117",
+          "panel": "#161b22",
+          "fg": "#c9d1d9",
+          "accent": "#f85149"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "rapid": {
+        "palette": {
+          "bg": "#0d1117",
+          "panel": "#161b22",
+          "fg": "#c9d1d9",
+          "accent": "#f85149"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "page_errors": []
+    },
+    {
+      "viewport": "mobile",
+      "chat_http": 200,
+      "initial_submission": "public frontend controller; native typing not verified",
+      "theme_activation": "actual Theme / palette swatch buttons; rapid batch uses public applyColors",
+      "closeMethods": [
+        "Escape",
+        "Escape"
+      ],
+      "initial": {
+        "palette": {
+          "bg": "#0d1117",
+          "panel": "#161b22",
+          "fg": "#c9d1d9",
+          "accent": "#f85149"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "light": {
+        "palette": {
+          "bg": "#f3f5f7",
+          "panel": "#ffffff",
+          "fg": "#26313a",
+          "accent": "#b34d5c"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "midnight": {
+        "palette": {
+          "bg": "#0d1117",
+          "panel": "#161b22",
+          "fg": "#c9d1d9",
+          "accent": "#f85149"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "rapid": {
+        "palette": {
+          "bg": "#0d1117",
+          "panel": "#161b22",
+          "fg": "#c9d1d9",
+          "accent": "#f85149"
+        },
+        "svg_count": 2,
+        "flow_nodes": 2,
+        "has_flow_labels": true,
+        "has_sequence_message": true,
+        "fill": "rgb(31, 32, 32)",
+        "stroke": "rgb(204, 204, 204)",
+        "text": "rgb(204, 204, 204)",
+        "font": "\"trebuchet ms\", verdana, arial, sans-serif",
+        "actor_fill": "rgb(31, 32, 32)"
+      },
+      "page_errors": []
+    }
+  ]
+}

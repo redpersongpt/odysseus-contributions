@@ -1,0 +1,66 @@
+{
+  "before": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "stream_provider_requests": 2,
+    "content_chunks_per_response": 3,
+    "native_viewports": 2,
+    "diagram_types": [
+      "flowchart",
+      "sequence"
+    ],
+    "stages_per_viewport": [
+      "initial",
+      "light",
+      "midnight",
+      "rapid_latest"
+    ],
+    "theme_close_inputs": {
+      "desktop": [
+        "button",
+        "button"
+      ],
+      "mobile": [
+        "Escape",
+        "Escape"
+      ]
+    },
+    "private_data_excluded": true
+  },
+  "after": {
+    "shutdown": {
+      "app_exit": -15,
+      "children_left": []
+    },
+    "stream_provider_requests": 2,
+    "content_chunks_per_response": 3,
+    "native_viewports": 2,
+    "diagram_types": [
+      "flowchart",
+      "sequence"
+    ],
+    "stages_per_viewport": [
+      "initial",
+      "light",
+      "midnight",
+      "rapid_latest"
+    ],
+    "theme_close_inputs": {
+      "desktop": [
+        "button",
+        "button"
+      ],
+      "mobile": [
+        "Escape",
+        "Escape"
+      ]
+    },
+    "private_data_excluded": true
+  },
+  "owned_ports_closed": [
+    17871,
+    17872
+  ]
+}
