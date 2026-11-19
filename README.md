@@ -1,0 +1,7 @@
+# Contacts module graph follow-up — 20 November 2026
+
+Same PR7150. The initial port added a shared Contacts write module. CI exposed a coordinator fixture that did not admit the new real module; the offline static import graph also needs that module cached. Added the exact module to the real (not stubbed) coordinator graph and service-worker precache, bumping the cache version. No assertions, failure conditions or suites disabled.
+
+65Contacts/coordinator/static-cache tests passed. Full actual browser wrappers:3passed (pinned previous revision available, real service-worker upgrade/offlineSettings and full Settings modernization suite). Unchanged current-dev comparison: offline wrapper2passed and modernization1passed. CI had also observed a rapid-reopen request-count mismatch; it was not reproduced in either final local baseline or candidate run, and its assertion is retained. Initial source CI is superseded by the current source head recorded in source.json; no green new-source CI is claimed in these local records.
+
+Original current-base Contacts mutation validation remains at maintenance evidence9ca309292e89c37cfdc638c4b07e5fedd2efaba9:12real filesystem failures/12successful retries,2original screenshots. The three production Contacts modules are byte-identical here; only SW cache and test graph changed. No new styles or product components. No secrets, databases or raw server logs. Docker/otherOSes/realphone/full local suite not run.
