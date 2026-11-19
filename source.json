@@ -1,11 +1,16 @@
 {
-  "head": "51948c249f4f95fef9fec7844382903615bd545f",
+  "head": "e324ab46a20e34c3edc16ea386b03723f629a02b",
   "base": "cbd87ecd",
   "sha256": {
-    "static/sw.js": "703b34e916e86dee3ad37d80d144b2aabc4c08106a32a61d2845240786587ee4",
+    "static/sw.js": "3abcad975cb79e68d890b09e6aa4265efee30e58696e7153c8aaf7db94fb85bb",
     "tests/helpers/test_settings_shell_coordinator.mjs": "cf42df87cd22c29a5a356be6239ac04f9e519dd260e1f4d5b99254b0de08997d",
     "static/js/settings/integrations/contactsWrite.js": "4c0e7569e0288213e5bcda4a846dca8d50eab93eaaf915263380b605fd3d4e5c",
     "static/js/settings/integrations/forms/carddav.js": "9eabc4c091d0e9a1fb94b7ad794f5d0d2cfaea144412bfcb8b03deed9c0c0810",
     "static/js/settings/integrations/unified.js": "b11abebbf553d0fc5a95d42479bc31be4b0da3fbc9acfd9a0843626d02f9e7f3"
+  },
+  "final_validation": {
+    "cache_static_selection_passed": 519,
+    "offline_wrapper_passed": 2,
+    "prior_settings_wrapper_passed": 3
   }
 }
