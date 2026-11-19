@@ -1,0 +1,4 @@
+{"kind": "all-day", "source_after_delete": 2, "export_occurrences": 2, "export_exdates": ["2026-12-02T00:00:00"], "roundtrip_occurrences": 2, "independent_import_occurrences": 2, "deleted_exdate": "2026-12-02"}
+{"kind": "utc", "source_after_delete": 2, "export_occurrences": 2, "export_exdates": ["2026-12-02T10:00:00+00:00"], "roundtrip_occurrences": 2, "independent_import_occurrences": 2, "deleted_exdate": "2026-12-02T10:00"}
+{"kind": "floating", "source_after_delete": 2, "export_occurrences": 2, "export_exdates": ["2026-12-02T10:00:00"], "roundtrip_occurrences": 2, "independent_import_occurrences": 2, "deleted_exdate": "2026-12-02T10:00"}
+{"kind": "seconds", "source_after_delete": 2, "export_occurrences": 2, "export_exdates": ["2026-12-02T10:00:30+00:00"], "roundtrip_occurrences": 2, "independent_import_occurrences": 2, "deleted_exdate": "2026-12-02T10:00"}

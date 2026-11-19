@@ -1,0 +1,14 @@
+........................................................................ [ 48%]
+........................................................................ [ 96%]
+......                                                                   [100%]
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+tests/test_memory_store_transactions.py::test_child_does_not_inherit_another_threads_locked_rlock
+  /Users/red/Documents/ChatGPT/ODY/odysseus/tests/test_memory_store_transactions.py:254: DeprecationWarning: This process (pid=4436) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    child = os.fork()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+150 passed, 2 warnings in 6.32s

@@ -1,0 +1,10 @@
+{
+  "phase": "after",
+  "source": "/Users/red/Documents/ChatGPT/ODY/odysseus",
+  "cases": [],
+  "cleanup": {
+    "app_exit": -15,
+    "children_left": [],
+    "port_closed": true
+  }
+}

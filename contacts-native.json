@@ -1,0 +1,282 @@
+{
+  "phase": "after",
+  "fixture": "Only named CONTACTS_FILE is placed in an owned directory. Real chmod write denial; authentication/settings stay writable. Actual app, HTTP and atomic writer, no response/storage mocks. Settings pane opened through existing public controller; mutation buttons/confirmations clicked normally.",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "scenario": "add",
+      "http_status": 500,
+      "state": {
+        "addVisible": true,
+        "addName": "Owned new draft",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not add contact"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 2
+      }
+    },
+    {
+      "viewport": "desktop",
+      "scenario": "edit",
+      "http_status": 500,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": true,
+        "editName": "Owned edited draft",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not save contact"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 1
+      }
+    },
+    {
+      "viewport": "desktop",
+      "scenario": "delete",
+      "http_status": 500,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not delete contact"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 0
+      }
+    },
+    {
+      "viewport": "desktop",
+      "scenario": "clear",
+      "http_status": 500,
+      "state": {
+        "addVisible": true,
+        "addName": "Owned new draft",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not clear contacts"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 0
+      }
+    },
+    {
+      "viewport": "desktop",
+      "scenario": "config",
+      "http_status": 400,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "Rejected CardDAV URL: scheme must be http or https, got 'file'",
+        "errorVisible": false,
+        "errorText": ""
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 1
+      }
+    },
+    {
+      "viewport": "desktop",
+      "scenario": "validation",
+      "http_status": 200,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": true,
+        "editName": "",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Name, email, or address required"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 1
+      }
+    },
+    {
+      "viewport": "mobile",
+      "scenario": "add",
+      "http_status": 500,
+      "state": {
+        "addVisible": true,
+        "addName": "Owned new draft",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not add contact"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 2
+      }
+    },
+    {
+      "viewport": "mobile",
+      "scenario": "edit",
+      "http_status": 500,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": true,
+        "editName": "Owned edited draft",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not save contact"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 1
+      }
+    },
+    {
+      "viewport": "mobile",
+      "scenario": "delete",
+      "http_status": 500,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not delete contact"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 0
+      }
+    },
+    {
+      "viewport": "mobile",
+      "scenario": "clear",
+      "http_status": 500,
+      "state": {
+        "addVisible": true,
+        "addName": "Owned new draft",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Could not clear contacts"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 0
+      }
+    },
+    {
+      "viewport": "mobile",
+      "scenario": "config",
+      "http_status": 400,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": false,
+        "editName": "Owned contact",
+        "formVisible": true,
+        "configMessage": "Rejected CardDAV URL: scheme must be http or https, got 'file'",
+        "errorVisible": false,
+        "errorText": ""
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 1
+      }
+    },
+    {
+      "viewport": "mobile",
+      "scenario": "validation",
+      "http_status": 200,
+      "state": {
+        "addVisible": false,
+        "addName": "",
+        "editVisible": true,
+        "editName": "",
+        "formVisible": true,
+        "configMessage": "",
+        "errorVisible": true,
+        "errorText": "Name, email, or address required"
+      },
+      "contacts_file_unchanged": true,
+      "page_errors": [],
+      "served_source_sha256": "e8a006847285b4818213a493adfed330d7a3b0d33f18826a62df11fd898f7797",
+      "successful_retry": {
+        "status": 200,
+        "success": true,
+        "contacts_count": 1
+      }
+    }
+  ]
+}
