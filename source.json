@@ -1,0 +1,11 @@
+{
+  "head": "7c43c04645cf678c2116507b3b86c30f5eda3089",
+  "base": "cbd87ecda5bc565c07572727425237e59456bad2",
+  "contributor_original": "77c919b706dbf569851aae9c8665accc086839f0",
+  "preserved_author_commit": "4cbec76f",
+  "tests": {
+    "red_failed": 2,
+    "red_passed": 39,
+    "calendar_passed": 271
+  }
+}

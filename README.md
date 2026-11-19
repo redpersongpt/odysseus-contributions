@@ -1,0 +1,5 @@
+# Calendar review follow-up, 19 November2026
+
+PR7217 / issue7216. Contributor kvnloo reported and supplied commit77c919b706dbf569851aae9c8665accc086839f0. Cherry-picked preserving Kevin Rajan authorship (4cbec76f), then merged current dev cbd87ecd resolving the neighboring parser signature conflict while retaining UTC provenance.
+
+Two implicit-end overflow regressions on original PR production:2failed/39passed. Updated branch:271 Calendar tests passed/12existingwarnings. Actual authenticated Uvicorn/disposableSQLite before/after: maximum-year timed and all-day starts returned500 before,400 Invalid dtstart after; both requests leave zero calendars/events. Valid near-boundary start still returns200 and correct next-day default end. No route/auth/response/DB replacement. Process children stopped,17871closed. Initial harness used the wrong calendar table name; final runs query actual calendars/calendar_events and are the evidence included here. No UI changed; no screenshots required. Docker/externalCalDAV/otherOS/full local suite not run. Full source SHA/base in source.json. Database failures remain500, as exercised by existing tests.

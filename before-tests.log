@@ -1,0 +1,72 @@
+........................FF...............                                [100%]
+=================================== FAILURES ===================================
+_ test_implicit_end_overflow_is_400_and_rolls_back[9999-12-31T23:30:00-False] __
+
+api = (<starlette.testclient.TestClient object at 0x10b5d7f80>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-e0flfnq6/pytest/test_implicit_end_overflow_is_0/calendar.db), autoflush=False, expire_on_commit=True))
+start = '9999-12-31T23:30:00', all_day = False
+
+    @pytest.mark.parametrize("start,all_day", [
+        ("9999-12-31T23:30:00", False),
+        ("9999-12-31", True),
+    ])
+    def test_implicit_end_overflow_is_400_and_rolls_back(api, start, all_day):
+        """A valid start cannot imply an end past datetime.max."""
+        client, factory = api
+        response = client.post("/api/calendar/events", json={
+            "summary": "Out-of-range default end",
+            "dtstart": start,
+            "all_day": all_day,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:128: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1416 Failed to create event: date value out of range
+______ test_implicit_end_overflow_is_400_and_rolls_back[9999-12-31-True] _______
+
+api = (<starlette.testclient.TestClient object at 0x10b6117c0>, sessionmaker(class_='Session', bind=Engine(sqlite:////privat...000gn/T/ody-main-e0flfnq6/pytest/test_implicit_end_overflow_is_1/calendar.db), autoflush=False, expire_on_commit=True))
+start = '9999-12-31', all_day = True
+
+    @pytest.mark.parametrize("start,all_day", [
+        ("9999-12-31T23:30:00", False),
+        ("9999-12-31", True),
+    ])
+    def test_implicit_end_overflow_is_400_and_rolls_back(api, start, all_day):
+        """A valid start cannot imply an end past datetime.max."""
+        client, factory = api
+        response = client.post("/api/calendar/events", json={
+            "summary": "Out-of-range default end",
+            "dtstart": start,
+            "all_day": all_day,
+        })
+    
+>       assert response.status_code == 400, response.text
+E       AssertionError: {"detail":"Failed to create event"}
+E       assert 500 == 400
+E        +  where 500 = <Response [500 Internal Server Error]>.status_code
+
+tests/test_calendar_event_date_errors.py:128: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    routes.calendar_routes:calendar_routes.py:1416 Failed to create event: date value out of range
+=============================== warnings summary ===============================
+core/database.py:20
+  /Users/red/Documents/ChatGPT/ODY/odysseus/core/database.py:20: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+    Base = declarative_base()
+
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02T09:00:00+03:00-2030-01-02T10:00:00+03:00-False-2030-01-02T06:00:00Z-2030-01-02T07:00:00Z]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02T09:00:00Z-None-False-2030-01-02T09:00:00Z-2030-01-02T10:00:00Z]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02-None-True-2030-01-02-2030-01-03]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[2030-01-02T09:00:00--False-2030-01-02T09:00:00-2030-01-02T10:00:00]
+tests/test_calendar_event_date_errors.py::test_valid_create_and_update_keep_supported_formats[January 2, 2030 9am-January 2, 2030 10am-False-2030-01-02T09:00:00-2030-01-02T10:00:00]
+  /Users/red/Documents/ChatGPT/ODY/odysseus/routes/calendar_routes.py:1469: PydanticDeprecatedSince20: The `__fields_set__` attribute is deprecated, use `model_fields_set` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    reminder_fields = getattr(data, "model_fields_set", getattr(data, "__fields_set__", set()))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_calendar_event_date_errors.py::test_implicit_end_overflow_is_400_and_rolls_back[9999-12-31T23:30:00-False]
+FAILED tests/test_calendar_event_date_errors.py::test_implicit_end_overflow_is_400_and_rolls_back[9999-12-31-True]
+2 failed, 39 passed, 6 warnings in 3.36s
